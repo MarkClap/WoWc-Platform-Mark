@@ -9,7 +9,7 @@
             <p>Already have an account?</p>
         </x-slot>
         <x-slot name="content_button">
-            <p>LOGIN</p>
+            <a href="{{ route('login') }}">Login</a>
         </x-slot>
     </x-authentication-header>
 
