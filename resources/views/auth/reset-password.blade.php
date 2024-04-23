@@ -1,5 +1,9 @@
 <x-guest-layout>
     <x-authentication-card>
+        <section class="h-20 w-auto m-8 flex justify-center items-center">
+            <x-authentication-card-logo />
+        </section>
+        
         <x-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('password.update') }}">

@@ -1,5 +1,9 @@
 <x-guest-layout>
     <x-authentication-card>
+        <section class="h-20 w-auto m-8 flex justify-center items-center">
+            <x-authentication-card-logo />
+        </section>
+        
         <div class="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
             {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
         </div>

@@ -3,8 +3,8 @@
         <x-slot name="helper_text_button">
             <p>No account yet?</p>
         </x-slot>
-        <x-slot name="content_button"">
-                <p>REGISTER</p>
+        <x-slot name="content_button">
+            <p>REGISTER</p>
         </x-slot>
     </x-authentication-header>
 
