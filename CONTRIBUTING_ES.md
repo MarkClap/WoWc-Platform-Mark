@@ -32,7 +32,7 @@ Para contribuir a este proyecto, sigue estos pasos:
    ```
    Para correcciones de errores:
       ```bash
-   git switch -c bugfix/nombre-de-tu-correccion
+   git push origin bugfix/nombre-de-tu-correccion
    ```
    
 7. Abre una solicitud de extracción (PR) a la rama `main` del repositorio original.

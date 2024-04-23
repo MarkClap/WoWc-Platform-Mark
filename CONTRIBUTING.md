@@ -32,9 +32,9 @@ To contribute to this project, follow these steps:
    ```
    For bug fixes:
    ```bash
-   git switch -c bugfix/your-bugfix-name
+   git push origin -c bugfix/your-bugfix-name
    ```
-   
+
 7. Open a pull request (PR) against the `main` branch of the original repository.
 
 ## Code Guidelines
