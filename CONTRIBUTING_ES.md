@@ -7,12 +7,9 @@
 
 Para contribuir a este proyecto, sigue estos pasos:
 
-1. Haz un "fork" del repositorio en GitHub.
-2. Clona tu repositorio bifurcado en tu máquina local:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto.git
-   ```
-3. Crea una nueva rama para tu contribución:
+1. Sigue las instrucciones del [README_ES.md](README_ES.md).
+
+2. Crea una nueva rama para tu contribución:
    ```bash
    git switch -c feature/nombre-de-tu-caracteristica
    ```
@@ -20,13 +17,13 @@ Para contribuir a este proyecto, sigue estos pasos:
    ```bash
    git switch -c bugfix/nombre-de-tu-correccion
    ```
-4. Realiza tus cambios en el código.
+3. Realiza tus cambios en el código.
 
-5. Haz "commit" de tus cambios con un título descriptivo en inglés:
+4. Haz "commit" de tus cambios con un título descriptivo en inglés:
    ```bash
    git commit -m 'Agrega alguna característica o corrige algún problema'
    ```
-6. Sube tus cambios a tu repositorio bifurcado:
+5. Sube tus cambios a tu repositorio bifurcado:
    ```bash
    git push origin feature/nombre-de-tu-caracteristica
    ```
@@ -35,7 +32,7 @@ Para contribuir a este proyecto, sigue estos pasos:
    git push origin bugfix/nombre-de-tu-correccion
    ```
    
-7. Abre una solicitud de extracción (PR) a la rama `main` del repositorio original.
+6. Abre una solicitud de extracción (PR) a la rama `main` del repositorio original.
 
 ## Directrices de Código
 

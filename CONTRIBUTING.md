@@ -7,12 +7,9 @@ Thank you for considering contributing to this project! Whether you're fixing a 
 
 To contribute to this project, follow these steps:
 
-1. Fork the repository on GitHub.
-2. Clone your forked repository to your local machine:
-   ```bash
-   git clone https://github.com/your-username/your-project.git
-   ```
-3. Create a new branch for your contribution:
+1. Follow the instructions in the [README.md](README.md) file.
+
+2. Create a new branch for your contribution:
    ```bash
    git switch -c feature/your-feature-name
    ```
@@ -20,22 +17,22 @@ To contribute to this project, follow these steps:
    ```bash
    git switch -c bugfix/your-bugfix-name
    ```
-4. Make your changes in the codebase.
+3. Make your changes in the codebase.
 
-5. Commit your changes with a descriptive commit message:
+4. Commit your changes with a descriptive commit message:
    ```bash
    git commit -m 'Add some feature or fix some issue'
    ```
-6. Push your changes to your forked repository:
+5. Push your changes to your forked repository:
    ```bash
    git push origin feature/your-feature-name
    ```
    For bug fixes:
    ```bash
-   git push origin -c bugfix/your-bugfix-name
+   git push origin bugfix/your-bugfix-name
    ```
 
-7. Open a pull request (PR) against the `main` branch of the original repository.
+6. Open a pull request (PR) against the `main` branch of the original repository.
 
 ## Code Guidelines
 
