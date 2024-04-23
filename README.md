@@ -46,7 +46,6 @@ Follow these steps to install and configure the project:
    ```
 
 7. **Compile Assets:**
-   Compile assets if necessary for your project:
    ```bash
    npm run dev
    ```
