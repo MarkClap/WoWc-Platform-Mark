@@ -2,6 +2,8 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 
+const { addDynamicIconSelectors } = require('@iconify/tailwind')
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -19,5 +21,5 @@ export default {
         },
     },
 
-    plugins: [forms, typography,require("daisyui")],
+    plugins: [forms, typography, require("daisyui"), addDynamicIconSelectors()],
 };

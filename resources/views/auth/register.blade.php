@@ -1,11 +1,16 @@
 <x-guest-layout>
-    <x-authentication-header routeButton="{{ route('login') }}">
+    <x-authentication-header>
+
         <x-slot name="helper_text_button">
             <p>Already have an account?</p>
         </x-slot>
-        <x-slot name="content_button">
-            <p>LOGIN</p>
+
+        <x-slot name="button">
+            <x-authentication-navigation-button href="{{ route('login') }}">
+                <p>LOGIN</p>
+            </x-authentication-navigation-button>
         </x-slot>
+
     </x-authentication-header>
 
     <x-authentication-card>
