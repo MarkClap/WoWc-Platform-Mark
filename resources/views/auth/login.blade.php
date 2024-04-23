@@ -9,7 +9,7 @@
             <p>No account yet?</p>
         </x-slot>
         <x-slot name="content_button">
-            <p>REGISTER</p>
+            <a href="{{ route('register') }}">REGISTER</a>
         </x-slot>
     </x-authentication-header>
 
