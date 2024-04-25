@@ -28,6 +28,7 @@ Follow these steps to install and configure the project:
 
 3. **Environment Configuration:**
    - Copy the `.env.example` file and rename it to `.env`.
+   - To change the language, you can configure your `.env` file: `APP_LOCALE=en`.
 
 4. **Generate a Key:**
    ```bash

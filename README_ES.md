@@ -29,6 +29,7 @@ Sigue estos pasos para instalar y configurar el proyecto:
 
 3. **Configuración del Entorno:**
    - Copia el archivo `.env.example` y renómbralo como `.env`.
+   - Puedes cambiar el idioma configurando tu `.env`: `APP_LOCALE=es`
 
 4. **Genera una Clave:**
    ```bash
