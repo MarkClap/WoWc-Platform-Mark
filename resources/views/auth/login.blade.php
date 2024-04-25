@@ -1,14 +1,12 @@
 <x-guest-layout>
     <x-authentication-header>
 
-        <x-slot name="helper_text_button">
-            <p>No account yet?</p>
-        </x-slot>
+        @section('helper_text_button', 'No account yet?')
 
         <x-slot name="button">
-            <x-authentication-navigation-button href="{{ route('register') }}">
+            <x-anchor-button href="{{ route('register') }}">
                 <p>REGISTER</p>
-            </x-authentication-navigation-button>
+            </x-anchor-button>
         </x-slot>
 
     </x-authentication-header>
