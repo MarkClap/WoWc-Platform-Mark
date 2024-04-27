@@ -14,3 +14,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::view('/board', 'layouts/board');
