@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sidebar</title>
-    <script src="https://kit.fontawesome.com/da2325cb65.js" crossorigin="anonymous"></script>
+    <title>Tablero</title>
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -14,86 +13,71 @@
     @livewireStyles
 </head>
 
-<body class="bg-neutral-900 flex flex-col min-h-screen">
+<body class="bg-base-100 flex flex-col min-h-screen">
     <header class="shadow-md w-full">
-        <nav class="bg-neutral-800 p-2 flex items-center gap-2 justify-between">
-            <div class="p-2.5 mt-1 flex items-center rounded-md text-white">
-                <x-authentication-card-logo />
-                <h1 class="ml-3 text-2xl text-gray-200 font-bold">WoW</h1>
+        <nav class="bg-primary dark:bg-neutral-800 p-6 flex items-center gap-2 justify-between">
+            <label class="swap swap-rotate grid place-items-center text-xl text-white">
+                <input type="checkbox" class="hidden" onclick="Openbar()"/>
+                <span class="icon-[ion--navicon-round] swap-on fill-white"></span>               
+                <span class="icon-[ion--close-round] swap-off fill-white"></span>
+            </label>
 
-            </div>
-            {{-- -------------------------------------------------------------------- --}}
-
-            <div class="flex items-center text-lg text-white gap-5 ">
-                <i class="fa-solid fa-calendar-days"></i>
-                <i class="fa-regular fa-hourglass-half"></i>
-                <i class="fa-regular fa-circle-user"></i>
-            </div>
+            <section class="flex flex-row items-center text-3xl text-white gap-6 ">
+                <span class="icon-[ph--scroll-fill] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
+                <span class="icon-[emojione-monotone--broken-heart] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
+                <span class="icon-[heroicons--user-circle-solid] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
+            </section>
         </nav>
     </header>
 
     <main class="flex flex-row flex-grow relative">
-        <div
-            class="sidebar absolute h-full bottom-0 left-0 duration-500 p-2 w-52 text-center bg-neutral-700 shadow">
+        <nav class="text-white sidebar absolute h-full bottom-0 left-0 duration-500 p-2 w-52 text-center bg-neutral-700 shadow">
 
-            <div class="text-gray-100 text-xl flex flex-row h-full justify-between">
-                <div>
-                    <div
-                        class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-yellow-500">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span class="text-[15px] ml-4 text-gray-200">Mi personaje</span>
-                    </div>
+            <div class="text-lg flex flex-row h-full justify-between w-full">
+                <ul class="flex flex-col gap-2 w-full">
+                    <x-sidebar-item name="Personaje">
+                        <x-slot name="icon">
+                            <span class="icon-[heroicons--user-solid]"></span>
+                        </x-slot>
+                    </x-sidebar-item>
 
-                    <div
-                        class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-yellow-500">
-                        <i class="fa-solid fa-book"></i>
-                        <span class="text-[15px] ml-4 text-gray-200">Misiones</span>
-                    </div>
+                    <x-sidebar-item name="Misiones">
+                        <x-slot name="icon">
+                            <span class="icon-[mingcute--task-2-fill]"></span>
+                        </x-slot>
+                    </x-sidebar-item>
 
-                    <div
-                        class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-yellow-500">
-                        <i class="fa-solid fa-users"></i>
-                        <div class="flex justify-between w-full items-center" onclick="dropDown()">
-                            <span class="text-[15px] ml-4 text-gray-200">Sección</span>
-                            <span class="text-sm rotate-180" id="arrow">
-                                <i class="fa-solid fa-caret-down"></i>
-                            </span>
-                        </div>
-                    </div>
-                    {{-- -------------------------------------------------------------------- --}}
+                    <x-sidebar-collapse name="Gremio">
+                        <x-slot name="icon">
+                            <span class="icon-[game-icons--vertical-banner]"></span>
+                        </x-slot>
 
-                    <div class=" leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto" id="submenu">
-                        <h1 class="cursor-pointer duration-300 p-2 hover:bg-neutral-700 rounded-md mt-1">Clase</h1>
-                        <h1 class="cursor-pointer duration-300 p-2 hover:bg-neutral-700 rounded-md mt-1">Grupo</h1>
-                    </div>
-                    <div
-                        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-yellow-500">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        <span class="text-[15px] ml-4 text-gray-200">Logout</span>
-                    </div>
-                    {{-- -------------------------------------------------------------------- --}}
+                        <x-slot name="items">
 
-                </div>
-                <label class="swap swap-rotate">
-                    <input type="checkbox" class="hidden"/>
-                    <a class=" cursor-pointer swap-on" onclick="Openbar()"><span class="icon-[material-symbols--arrow-forward-ios-rounded]"></span></a>
-                    <a class=" cursor-pointer swap-off" onclick="Openbar()"><span class="icon-[material-symbols--arrow-back-ios-rounded]"></span></a>
-                </label>
+                            <x-sidebar-subitem name="Miembros">
+                                <x-slot name="icon">
+                                    <span class="icon-[heroicons--user-group-solid]"></span>
+                                </x-slot>
+                            </x-sidebar-subitem>
+
+                            <x-sidebar-subitem name="Grupo">
+                                <x-slot name="icon">
+                                    <span class="icon-[heroicons--users-solid]"></span>
+                                </x-slot>
+                            </x-sidebar-subitem>
+
+                        </x-slot>
+                    </x-sidebar-collapse>
+
+                </ul>
 
             </div>
-        </div>
-        <p>XD</p>
+        </nav>
     </main>
 
     <script>
-        function dropDown() {
-            document.querySelector('#submenu').classList.toggle('hidden')
-            document.querySelector('#arrow').classList.toggle('rotate-0')
-        }
-        dropDown()
-
         function Openbar() {
-            document.querySelector('.sidebar').classList.toggle('left-[-10rem]')
+            document.querySelector('.sidebar').classList.toggle('-left-52')
         }
     </script>
 </body>
