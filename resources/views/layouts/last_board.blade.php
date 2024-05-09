@@ -13,15 +13,13 @@
     @livewireStyles
 </head>
 
-<body class="bg-base-100 flex flex-col min-h-screen w-full">
+<body class="bg-base-100 flex flex-col min-h-screen">
     <header class="shadow-md w-full">
         <nav class="bg-primary dark:bg-neutral-800 p-6 flex items-center gap-2 justify-between">
-            <label class="swap swap-rotate grid place-items-center text-xl text-white">
-                <input id="menu-button" type="checkbox" class="hidden" checked/>
+            <label for="my-drawer" class="swap swap-rotate grid place-items-center text-xl text-white">   
                 <span class="icon-[ion--navicon-round] swap-on fill-white"></span>               
                 <span class="icon-[ion--close-round] swap-off fill-white"></span>
             </label>
-
             <section class="flex flex-row items-center text-3xl text-white gap-6 ">
                 <span class="icon-[ph--scroll-fill] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
                 <span class="icon-[emojione-monotone--broken-heart] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
@@ -30,11 +28,13 @@
         </nav>
     </header>
 
-    <main class="flex flex-row flex-grow relative">
-        <nav id="menu" class="text-white absolute h-full bottom-0 left-0 duration-500 p-2 w-52 text-center bg-neutral-700 shadow">
-
-            <div class="text-lg flex flex-row h-full justify-between w-full">
-                <ul class="flex flex-col gap-2 w-full">
+    <main class="flex flex-row flex-grow relative bg-neutral-500">
+        <div class="drawer ">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <nav class="drawer-side text-white sidebar absolute h-full bottom-0 left-0 duration-500  w-52 text-center">
+                  <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                  <ul class=" min-h-full  text-base-content flex flex-col gap-2 w-full bg-neutral-700">{{-- <!-- menu--> --}}
+                    
                     <x-sidebar-item name="Personaje">
                         <x-slot name="icon">
                             <span class="icon-[heroicons--user-solid]"></span>
@@ -68,38 +68,19 @@
 
                         </x-slot>
                     </x-sidebar-collapse>
-
-                </ul>
-
-            </div>
-        </nav>
-        <div class="bg-black  w-full flex flex-col items-center">
-            <div>
-                
+                  </ul>
+                  
+            </nav>
+            
         </div>
+        <div class="relative w-full bg-white">jpwjps</div>
+        
+        
+        
+        
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            updateMenu();
-            document.getElementById('menu-button').addEventListener('change', function() {
-                updateMenu();
-            });
-        });
-
-        function updateMenu() {
-            const menu = document.getElementById('menu');
-            const menu_button = document.getElementById('menu-button');
-
-            if (menu_button.checked) {
-                menu.classList.remove('left-0');
-                menu.classList.add('-left-52');
-            } else {
-                menu.classList.remove('-left-52');
-                menu.classList.add('left-0');
-            }
-        }
-    </script>
+    
 </body>
 
 </html>
