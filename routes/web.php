@@ -16,3 +16,9 @@ Route::middleware([
 });
 
 Route::view('/board', 'layouts/board');
+Route::view('/board-opcion-avatar', 'layouts/board-opcion-avatar');
+Route::view('/board-opcion-mision', 'layouts/board-opcion-mision');
+Route::view('/board-opcion-group', 'layouts/board-opcion-group');
+Route::view('/board-opcion-members', 'layouts/board-opcion-members');
+
+Route::view('/board2', 'layouts/board2');
