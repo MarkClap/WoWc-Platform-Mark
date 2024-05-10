@@ -1,35 +1,93 @@
 <x-guest-layout>
-    <x-welcome-header>
-    </x-welcome-header>
+    <div class="max-h-screen overflow-hidden">
+        <x-welcome-header>
+        </x-welcome-header>
 
-    {{-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" /> --}}
+        {{-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" /> --}}
 
-    <main class="mt-6 m-20">
-        {{-- 
-        <div role="alert" class="alert alert-info">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span>New software update available.</span>
-          </div>
-          <div role="alert" class="alert alert-success">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span>Your purchase has been confirmed!</span>
-          </div>
-          <div role="alert" class="alert alert-warning">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-            <span>Warning: Invalid email address!</span>
-          </div>
-          <div role="alert" class="alert alert-error">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span>Error! Task failed successfully.</span>
-          </div>
-    --}}
-    <button role="link" class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100">Hover me</button>s
-    </main>
+        <div class="w-full">
+            <div class="absolute bottom-0 right-36 p-8 rounded-t-3xl bg-accent flex flex-col gap-4">
+                <h1 class="text-7xl font-extrabold">World of Warclass</h1>
+                <p class="text-3xl font-medium">Transformando al mundo</p>
+            </div>
+
+            <img src="https://cdn.discordapp.com/attachments/1224189197406044311/1238346409586200626/Home-WC.jpg?ex=663ef377&is=663da1f7&hm=0f8ba5bee07f0088d688568823d6a1f050a33c47c80cff29d66961732c0afc88&"
+                class="w-screen h-full" alt="Teacher and student smiling at each other in the classroom" loading="auto">
+        </div>
+
+    </div>
+
+    <section class="bg-base-100 p-32 mx-auto flex flex-col gap-16 w-full">
+
+        <article class="flex flex-col-reverse lg:flex-row gap-x-0 gap-y-8 lg:gap-x-16 lg:gap-y-0 text-3xl items-center">
+            <div class="flex-1 flex flex-col gap-8">
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-5xl font-bold">¿Qué es "World of Warclass"?</h2>
+                    <p>Es una plataforma educativa innovadora que motiva a los estudiantes mediante
+                        misiones temáticas,
+                        recompensas y competencias, fomentando un clima escolar positivo.</p>
+                </section>
+
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-5xl font-bold">Nuestros Objetivos</h2>
+                    <ul>
+                        <li>Conectar a los alumnos a través de principios recreativos para incentivar el aprendizaje.
+                        </li>
+                        <li>Facilitar la administración del proceso educativo y maximizando su eficiencia.</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="flex-1">
+                <img src="https://cdn.discordapp.com/attachments/1224189197406044311/1238346409170829452/Home-gamificacion.png?ex=663ef377&is=663da1f7&hm=76f0f6bb9855d41f3cff2a04dad81a04f19011d90e9e93814f81d132fdfbf64d&" alt="">
+            </div>
+        </article>
+    </section>
+
+    <section class="flex flex-col gap-4 bg-accent p-32 mx-auto w-full text-3xl text-center">
+        <h1 class="text-5xl font-bold">Nuestra misión</h1>
+        <p class="">Mejorar la experiencia educativa mediante la integración de elementos de gamificación,
+            aventuras de
+            aprendizaje personalizadas y aprendizaje socioemocional en el entorno del aula, lo que en última instancia
+            conduce a estudiantes más felices y comprometidos.</p>
+    </section>
+
+    <section class="flex flex-col gap-16 items-center bg-base-100 w-full p-32 mx-auto text-3xl text-center">
+        <div class="flex flex-col gap-4">
+            <h1 class="text-5xl font-bold text-center">Tenemos esto para ti</h1>
+            <p class="text-center">Sé parte de la nueva comunidad educativa del país y accede a todos los servicios digitales que te
+                ofrecemos en nuestra plataforma online.</p>
+        </div>
+
+        <article id="image-carousel" class="splide card w-[40rem] bg-accent shadow-xl">
+            <div class="splide__track card-body">
+                <ul class="splide__list">
+                    <li class="splide__slide px-32 flex flex-col gap-4">
+                        <div class="bg-red-500 w-full h-40">Image</div>
+                        <p class="">
+                            Conectamos a los alumnos a través de principios recreativos para incentivar el aprendizaje y lograr desarrollar su habilidad cognitiva.
+                        </p>
+                    </li>
+
+
+                    <li class="splide__slide px-32 flex flex-col gap-4">
+                        <div class="bg-red-500 w-full h-40">Image</div>
+                        <div>
+                            Los estudiantes acceden a una metodología de aprendizaje competitivo junto al sistema de apoyo de múltiples niveles.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+
+
+    </section>
 
 
 
 
-    <footer class="footer p-10 bg-base text-base-content mt-auto" data-theme="wowc_neutral">
+
+    <footer class="footer p-8 bg-base text-base-content mt-auto" data-theme="wowc_neutral">
         <nav>
             <h6 class="footer-title">Team</h6>
             <a class="link link-hover">About us</a>
@@ -43,15 +101,23 @@
         </nav>
         <nav>
             <h6 class="footer-title">Social</h6>
-            <div class="grid grid-flow-col gap-4 place-items-center text-2xl">
-                <a href="https://github.com/World-of-Warclass" target="_blank" class="transition-transform transform-growth hover:scale-110 duration-200"><span class="icon-[ri--github-fill]"></span></a>
-                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span class="icon-[ri--facebook-circle-fill]"></span></a>
-                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span class="icon-[ri--twitter-x-line]"></span></a>
-                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span class="icon-[ri--youtube-fill]"></span></a>
-                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span class="icon-[ri--soundcloud-line]"></span></a>
+            <div class="grid grid-flow-col gap-6 place-items-center text-2xl">
+                <a href="https://github.com/World-of-Warclass" target="_blank"
+                    class="transition-transform transform-growth hover:scale-110 duration-200"><span
+                        class="icon-[ri--github-fill]"></span></a>
+                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span
+                        class="icon-[ri--facebook-circle-fill]"></span></a>
+                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span
+                        class="icon-[ri--twitter-x-line]"></span></a>
+                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span
+                        class="icon-[ri--youtube-fill]"></span></a>
+                <a href="#" class="transition-transform transform-growth hover:scale-110 duration-200"><span
+                        class="icon-[ri--soundcloud-line]"></span></a>
             </div>
         </nav>
     </footer>
+
+
 
 
 </x-guest-layout>

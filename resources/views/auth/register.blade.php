@@ -51,13 +51,13 @@
                                     'terms_of_service' =>
                                         '<a target="_blank" href="' .
                                         route('terms.show') .
-                                        '" class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 dark:focus:ring-offset-neutral-800">' .
+                                        '" class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-offset-neutral-800">' .
                                         __('Terms of Service') .
                                         '</a>',
                                     'privacy_policy' =>
                                         '<a target="_blank" href="' .
                                         route('policy.show') .
-                                        '" class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 dark:focus:ring-offset-neutral-800">' .
+                                        '" class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-offset-neutral-800">' .
                                         __('Privacy Policy') .
                                         '</a>',
                                 ]) !!}
@@ -68,7 +68,7 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 dark:focus:ring-offset-neutral-800"
+                <a class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-offset-neutral-800"
                     href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
