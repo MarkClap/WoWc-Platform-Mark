@@ -78,5 +78,5 @@ export default {
         darkTheme: 'wowc_dark',
       },
 
-    plugins: [forms, typography, require("daisyui"), addDynamicIconSelectors()],
+    plugins: [forms, typography, require("daisyui"), addDynamicIconSelectors(), require('tailwind-scrollbar')({ nocompatible: true }),],
 };

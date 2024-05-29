@@ -22,3 +22,5 @@ Route::view('/board-opcion-group', 'layouts/board-opcion-group');
 Route::view('/board-opcion-members', 'layouts/board-opcion-members');
 
 Route::view('/board2', 'layouts/board2');
+
+Route::view('/board-test', 'layouts/test-transition-page');

@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="max-h-screen overflow-hidden">
+    <div class="max-h-screen overflow-hidden relative">
         <x-welcome-header>
         </x-welcome-header>
 
@@ -12,7 +12,8 @@
             </div>
 
             <img src="https://cdn.discordapp.com/attachments/1224189197406044311/1238346409586200626/Home-WC.jpg?ex=663ef377&is=663da1f7&hm=0f8ba5bee07f0088d688568823d6a1f050a33c47c80cff29d66961732c0afc88&"
-                class="w-screen h-full" alt="Teacher and student smiling at each other in the classroom" loading="auto">
+                class="min-h-96 w-screen h-full" alt="Teacher and student smiling at each other in the classroom"
+                loading="auto">
         </div>
 
     </div>
@@ -38,7 +39,8 @@
                 </section>
             </div>
             <div class="flex-1">
-                <img src="https://cdn.discordapp.com/attachments/1224189197406044311/1238346409170829452/Home-gamificacion.png?ex=663ef377&is=663da1f7&hm=76f0f6bb9855d41f3cff2a04dad81a04f19011d90e9e93814f81d132fdfbf64d&" alt="">
+                <img src="https://cdn.discordapp.com/attachments/1224189197406044311/1239651035543240714/Home-WC.png?ex=6643b27e&is=664260fe&hm=de9dda3ed995cfad5bcd80821f9be167fc7cdf7120e8ef80870771907d19670e&"
+                    alt="">
             </div>
         </article>
     </section>
@@ -54,7 +56,8 @@
     <section class="flex flex-col gap-16 items-center bg-base-100 w-full p-32 mx-auto text-3xl text-center">
         <div class="flex flex-col gap-4">
             <h1 class="text-5xl font-bold text-center">Tenemos esto para ti</h1>
-            <p class="text-center">Sé parte de la nueva comunidad educativa del país y accede a todos los servicios digitales que te
+            <p class="text-center">Sé parte de la nueva comunidad educativa del país y accede a todos los servicios
+                digitales que te
                 ofrecemos en nuestra plataforma online.</p>
         </div>
 
@@ -64,7 +67,8 @@
                     <li class="splide__slide px-32 flex flex-col gap-4">
                         <div class="bg-red-500 w-full h-40">Image</div>
                         <p class="">
-                            Conectamos a los alumnos a través de principios recreativos para incentivar el aprendizaje y lograr desarrollar su habilidad cognitiva.
+                            Conectamos a los alumnos a través de principios recreativos para incentivar el aprendizaje y
+                            lograr desarrollar su habilidad cognitiva.
                         </p>
                     </li>
 
@@ -72,7 +76,8 @@
                     <li class="splide__slide px-32 flex flex-col gap-4">
                         <div class="bg-red-500 w-full h-40">Image</div>
                         <div>
-                            Los estudiantes acceden a una metodología de aprendizaje competitivo junto al sistema de apoyo de múltiples niveles.
+                            Los estudiantes acceden a una metodología de aprendizaje competitivo junto al sistema de
+                            apoyo de múltiples niveles.
                         </div>
                     </li>
                 </ul>
@@ -87,7 +92,7 @@
 
 
 
-    <footer class="footer p-8 bg-base text-base-content mt-auto" data-theme="wowc_neutral">
+    <footer class="footer p-8 text-base-content mt-auto" data-theme="wowc_neutral">
         <nav>
             <h6 class="footer-title">Team</h6>
             <a class="link link-hover">About us</a>
