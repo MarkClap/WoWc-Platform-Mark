@@ -85,12 +85,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -99,12 +95,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -113,12 +105,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -127,12 +115,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -141,12 +125,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -155,12 +135,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -169,12 +145,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -183,12 +155,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -197,12 +165,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -211,12 +175,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -225,12 +185,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -239,12 +195,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -253,12 +205,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -267,12 +215,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -281,12 +225,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -295,12 +235,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -309,12 +245,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -323,12 +255,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -337,12 +265,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -351,12 +275,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -365,12 +285,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -379,12 +295,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -393,12 +305,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -407,12 +315,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             <div class="w-full hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
@@ -421,12 +325,8 @@
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 50</span></p>
-                    <section class="mt-4 mb-5 justify-between ">
-                        <p>Exp.</p>
-                        <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                          <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
-                        </div>
-                    </section>
+                    <progress class="progress progress-success" value="50" max="100"></progress>
+                    <progress class="progress progress-error" value="50" max="100"></progress>
                 </div>
             </div>
             

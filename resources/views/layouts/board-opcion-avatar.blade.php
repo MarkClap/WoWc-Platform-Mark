@@ -75,7 +75,7 @@
             </div>
         </nav>
         
-            <div class=" text-black flex justify-center items-center h-screen  w-full flex-col">
+            <div class=" text-black flex justify-center items-center h-full  w-full  p-5">
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <section class="flex flex-row gap-4 items-center ">
                         <div class="avatar">
@@ -88,6 +88,7 @@
                             <p class=" text-neutral-400 text-xl font-bold">Nivel: <span class="text-xl text-pink-500">500</span></p>
                             <p class=" text-neutral-400 text-xl font-bold">Tipo: <span class="text-xl text-blue-600">Curandero</span></p>
                         </div>
+                        
                     </section>
                     
                     <section class="flex flex-row justify-between mb-2 mt-4">
@@ -98,41 +99,31 @@
                     </section>
                     <hr>
                   <div>
-                  <section class="mt-4 mb-5">
-                    <p class="text-gray-600">Puntos de experiencia:</p>
-                    <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
-                    <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                      <div class="bg-green-600 w-3/4 h-full rounded-lg shadow-md"></div>
+                    <section class="mt-4 mb-5">
+                        <p class="text-gray-600">Puntos de experiencia:</p>
+                        <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
+                        <progress class="progress progress-success w-56" value="50" max="100"></progress>
+
+                      </section>
+                      
+      
+                      <section class="mt-4 mb-5">
+                        <p class="text-gray-600">Maná:</p>
+                        <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
+                        <progress class="progress progress-info w-56" value="40" max="100"></progress>
+                      </section>
+      
+                      <section class="mt-4 mb-5">
+                        <p class="text-gray-600">Salud:</p>
+                        <div class="justify-between flex flex-row"><p>100</p><span class="icon-[material-symbols--heart-broken] bg-red-600"></span></div>
+                        <progress class="progress progress-error w-56" value="40" max="100"></progress>
+                      </section>
+      
+                      <section class="mt-4 mb-5">
+                        <p class="text-gray-600">Oro:</p>
+                        <div class="justify-between flex flex-row"><p>100000000000000000000</p><span class="icon-[mingcute--coin-3-fill] text-yellow-400"></span></div>
+                      </section>
                     </div>
-                  </section>
-
-                  <section class="mt-4 mb-5">
-                    
-                    
-                        <div class="flex justify-between mb-1">
-                        <span class="text-base font-medium text-blue-700 dark:text-black">Flowbite</span>
-                        <span class="text-sm font-medium text-blue-700 dark:text-black">45%</span>
-                        
-                        </div>
-                        <div class="justify-between flex flex-row"><p>10</p><span class="icon-[ant-design--thunderbolt-filled] bg-yellow-400"></span></div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%"></div>
-                        </div>
-
-                  </section>
-
-                  <section class="mt-4 mb-5">
-                    <p class="text-gray-600">Salud:</p>
-                    <div class="justify-between flex flex-row"><p>100</p><span class="icon-[material-symbols--heart-broken] bg-red-600"></span></div>
-                    <div class="bg-gray-400 w-full h-3 rounded-lg mt-2 overflow-hidden">
-                      <div class="bg-red-700 w-2/4 h-full rounded-lg shadow-md"></div>
-                    </div>
-                  </section>
-
-                  <section class="mt-4 mb-5">
-                    <p class="text-gray-600">Oro:</p>
-                    <div class="justify-between flex flex-row"><p>100000000000000000000</p><span class="icon-[mingcute--coin-3-fill] text-yellow-400"></span></div>
-                  </section>
                 </div>
                   
                 </div>
@@ -141,28 +132,9 @@
         
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            updateMenu();
-            document.getElementById('menu-button').addEventListener('change', function() {
-                updateMenu();
-            });
-        });
-
-        function updateMenu() {
-            const menu = document.getElementById('menu');
-            const menu_button = document.getElementById('menu-button');
-
-            if (menu_button.checked) {
-                menu.classList.remove('left-0');
-                menu.classList.add('-left-52');
-            } else {
-                menu.classList.remove('-left-52');
-                menu.classList.add('left-0');
-            }
-        }
-    </script>
-    
+    <x-script-board>
+        {{-- script componente --}}
+    </x-script-board>
 </body>
 
 </html>

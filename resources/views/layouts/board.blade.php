@@ -33,7 +33,7 @@
     <main class="flex flex-row flex-grow relative">
         <nav id="menu" class="text-white absolute h-full bottom-0 left-0 duration-500 p-2 w-52 text-center bg-neutral-700 shadow">
 
-            <div class="text-lg flex flex-row h-full justify-between w-full">
+            <div class="text-lg flex flex-row h-full justify-between w-full ">
                 <ul class="flex flex-col gap-2 w-full">
                     <x-sidebar-item name="Personaje">
                         <x-slot name="icon">
@@ -68,9 +68,13 @@
 
                         </x-slot>
                     </x-sidebar-collapse>
-
+                    <x-sidebar-item name="Misiones">
+                        <x-slot name="icon">
+                            <span class="icon-[mingcute--task-2-fill]"></span>
+                        </x-slot>
+                    </x-sidebar-item>
                 </ul>
-
+                
             </div>
         </nav>
         <div class="bg-black  w-full flex flex-col items-center">
