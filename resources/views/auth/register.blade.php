@@ -23,6 +23,24 @@
             </div>
 
             <div class="mt-4">
+                <x-label for="paternal surname" value="{{ __('Paternal_surname') }}" />
+                <x-input id="paternal_surname" class="block mt-1 w-full" type="text"
+                    name="paternal_surname" required autocomplete="" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="maternal surname" value="{{ __('Maternal_surname') }}" />
+                <x-input id="password_confirmation" class="block mt-1 w-full" type="text"
+                    name="maternal_surname" required autocomplete="" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="username" value="{{ __('Username') }}" />
+                <x-input id="username" class="block mt-1 w-full" type="text"
+                    name="username" required autocomplete="" />
+            </div>
+
+            <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
                     required autocomplete="username" />
