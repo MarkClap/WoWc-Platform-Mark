@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->integer('experience');
-            $table->integer('gold');
-            $table->integer('health');
-            $table->integer('energy');
+            $table->integer('experience')->nullable();
+            $table->integer('gold')->nullable();
+            $table->integer('health')->nullable();
+            $table->integer('energy')->nullable();
             $table->timestamps();
         });
     }
