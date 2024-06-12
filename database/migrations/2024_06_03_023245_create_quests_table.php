@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->integer('experience_reward');
-            $table->integer('gold_reward');
+            $table->integer('experience_reward')->nullable();
+            $table->integer('gold_reward')->nullable();
             $table->unsignedBigInteger('id_course');
             $table->timestamps();
 
