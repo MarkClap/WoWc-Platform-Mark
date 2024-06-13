@@ -1,4 +1,4 @@
-<div tabindex="0" class="text-black bg-white focus:text-neutral-400 collapse collapse-arrow rounded-md transition-all duration-300 cursor-pointer focus:cursor-default hover:bg-neutral-600 focus:bg-neutral-600">
+<div tabindex="0" class="text-black bg-slate-100 focus:text-yellow-500 collapse collapse-arrow rounded-lg transition-all duration-300 cursor-pointer focus:cursor-default hover:bg-neutral-200 focus:bg-neutral-700  border-2 border-gray-900">
     <div class="collapse-title">
         <div class="flex flex-row gap-2 items-center ">
             
