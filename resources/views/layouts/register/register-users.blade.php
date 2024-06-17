@@ -12,51 +12,49 @@
     </x-authentication-header>
 
     <x-authentication-card>
-        <x-validation-errors class="mb-4" />
-        <form method="POST" action="{{ route('register') }}">
+        <x-validation-errors class="mb-4 " />
+        <form method="POST" action="{{ route('register') }}" >
             @csrf
-
-            <div>
+            <h2 class="text-3xl  mb-2  flex justify-center text-yellow-500 font-semibold sm:text-2xl">Create account as an users</h2>
+            <div class="mb-3">
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
-                    required autofocus autocomplete="name" z/>
+                    required autofocus autocomplete="name" placeholder="name"/>
             </div>
 
-            <div class="mt-4">
-                <x-label for="paternal surname" value="{{ __('Paternal_surname') }}" />
+            <div class=" gap-2">
+                <x-label for="paternal_surname" value="{{ __('surnames') }}" />
+                <div class="flex flex-row gap-2">
                 <x-input id="paternal_surname" class="block mt-1 w-full" type="text"
-                    name="paternal_surname" required autocomplete="" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="maternal surname" value="{{ __('Maternal_surname') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="text"
-                    name="maternal_surname" required autocomplete="" />
+                    name="paternal_surname" required autocomplete="" placeholder="paternal_surname"/>
+                <x-input id="maternal_surname" class="block mt-1 w-full" type="text"
+                    name="maternal_surname" required autocomplete="" placeholder="maternal_surname"/>
+                </div>
             </div>
 
             <div class="mt-4">
                 <x-label for="username" value="{{ __('Username') }}" />
                 <x-input id="username" class="block mt-1 w-full" type="text"
-                    name="username" required autocomplete="" />
+                    name="username" required autocomplete="" placeholder="username"/>
             </div>
 
 
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required autocomplete="username" />
+                    required autocomplete="email" placeholder="email"/>
             </div>
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="new-password" />
+                    autocomplete="new-password" placeholder="password"/>
             </div>
 
             <div class="mt-4">
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                    name="password_confirmation" required autocomplete="new-password" />
+                    name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password"/>
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())

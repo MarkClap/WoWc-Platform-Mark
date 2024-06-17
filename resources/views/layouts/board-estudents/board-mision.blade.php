@@ -15,13 +15,25 @@
 
 <body class="bg-base-300 flex flex-col min-h-screen w-full">
     <header class="shadow-md w-full">
-        <nav class="bg-primary dark:bg-neutral-800 p-3 flex items-center gap-2 justify-between">
+        <nav class="bg-primary dark:bg-neutral-800 p-3 flex items-center gap-2 justify-between ">
+            
+            <div class="flex flex-row">
             <label class="swap swap-rotate grid place-items-center text-xl text-white">
                 <input id="menu-button" type="checkbox" class="hidden" checked/>
                 <span class="icon-[ion--navicon-round] swap-on fill-white"></span>               
                 <span class="icon-[ion--close-round] swap-off fill-white"></span>
+                
             </label>
-
+            <div class=" ml-52 h-12  duration-500 pl-4 border-l-2" id="list-navegation">
+                <div class="text-2xl breadcrumbs">
+                    <ul>
+                      <li><a>2024-BDA-AB</a></li> 
+                      <li>Avatar</li>
+                    </ul>
+                </div>
+            </div>
+              </div>
+            
             <section class="flex flex-row items-center text-3xl text-white gap-6 ">
                 
                 <div class="dropdown dropdown-end">
@@ -107,15 +119,118 @@
                 
                 
             </div>
+            
         </nav>
-        
-        
+        <div class="bg-black  w-full flex justify-center">
+            <div class="w-3/5 flex flex-col justify-center">
+            <x-mision-collapse title="Mision 1 " text=' Mongodb'>
+                
+                <x-slot name="description">
+                <p>Hacer un Login con express y mongodb</p>                        
+                </x-slot>
+                <x-slot name="button">
+                    <div class="border-t px-4 py-2 flex justify-between">
+                        <span>500 XP</span>
+                        <button x-on:click="open = false" class="px-3 py-1 bg-neutral-800 text-white  rounded-md w-full sm:w-auto"> Accept </button>
+                      </div>                       
+                </x-slot>
+                
+            </x-mision-collapse>
+            <x-mision-collapse title="Mision 1 " text=' Mongodb'>
+                
+                <x-slot name="description">
+                <p>Hacer un Login con express y mongodb</p>                        
+                </x-slot>
+                <x-slot name="button">
+                    <div class="border-t px-4 py-2 flex justify-between">
+                        <span>500 XP</span>
+                        <button x-on:click="open = false" class="px-3 py-1 bg-neutral-800 text-white  rounded-md w-full sm:w-auto"> Accept </button>
+                      </div>                       
+                </x-slot>
+                
+            </x-mision-collapse>
+            <x-mision-collapse title="Mision 1 " text=' Mongodb'>
+                
+                <x-slot name="description">
+                <p>Hacer un Login con express y mongodb</p>                        
+                </x-slot>
+                <x-slot name="button">
+                    <div class="border-t px-4 py-2 flex justify-between">
+                        <span>500 XP</span>
+                        <button x-on:click="open = false" class="px-3 py-1 bg-neutral-800 text-white  rounded-md w-full sm:w-auto"> Accept </button>
+                      </div>                       
+                </x-slot>
+                
+            </x-mision-collapse>
+            <x-mision-collapse title="Mision 1 " text=' Mongodb'>
+                
+                <x-slot name="description">
+                <p>Hacer un Login con express y mongodb</p>                        
+                </x-slot>
+                <x-slot name="button">
+                    <div class="border-t px-4 py-2 flex justify-between">
+                        <span>500 XP</span>
+                        <button x-on:click="open = false" class="px-3 py-1 bg-neutral-800 text-white  rounded-md w-full sm:w-auto"> Accept </button>
+                      </div>                       
+                </x-slot>
+                
+            </x-mision-collapse>
+            <x-mision-collapse title="Mision 1 " text=' Mongodb'>
+                
+                <x-slot name="description">
+                <p>Hacer un Login con express y mongodb</p>                        
+                </x-slot>
+                <x-slot name="button">
+                    <div class="border-t px-4 py-2 flex justify-between">
+                        <span>500 XP</span>
+                        <button x-on:click="open = false" class="px-3 py-1 bg-neutral-800 text-white  rounded-md w-full sm:w-auto"> Accept </button>
+                      </div>                       
+                </x-slot>
+                
+            </x-mision-collapse>
+            
+            <x-mision-collapse title="Mision 1 " text=' Mongodb'>
+                
+                <x-slot name="description">
+                <p>Hacer un Login con express y mongodb</p>                        
+                </x-slot>
+                <x-slot name="button">
+                    <div class="border-t px-4 py-2 flex justify-between">
+                        <span>500 XP</span>
+                        <button x-on:click="open = false" class="px-3 py-1 bg-neutral-800 text-white  rounded-md w-full sm:w-auto"> Accept </button>
+                      </div>                       
+                </x-slot>
+                
+            </x-mision-collapse>
+            
+            
+            
+            
+            </div>
+            </div>
     </main>
-
+    
     <x-script-board>
-        
+        {{-- script componente --}}
     </x-script-board>
     
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
