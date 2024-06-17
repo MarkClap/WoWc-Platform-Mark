@@ -15,11 +15,27 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::view('/board', 'layouts/board');
-Route::view('/board-opcion-avatar', 'layouts/board-opcion-avatar');
-Route::view('/board-opcion-mision', 'layouts/board-opcion-mision');
-Route::view('/board-opcion-group', 'layouts/board-opcion-group');
-Route::view('/board-opcion-members', 'layouts/board-opcion-members');
-Route::view('/board-perfil', 'layouts/board-perfil');
+// Estudiante
+Route::view('/board-students', 'layouts/board-estudents/board');
+Route::view('/students-avatar', 'layouts/board-estudents/board-avatar');
+Route::view('/students-mision', 'layouts/board-estudents/board-mision');
+Route::view('/students-group', 'layouts/board-estudents/board-group');
+Route::view('/students-members', 'layouts/board-estudents/board-members');
+Route::view('/students-perfil', 'layouts/board-estudents/board-perfil');
+
+
+// Profesor
+Route::view('/board-profesor', 'layouts/board-profesor/board');
+
+// Registro
+Route::view('/register-users', 'layouts/register/register-users');
+Route::view('/register-institutions', 'layouts/register/register-institutions');
+Route::view('/type-users', 'layouts/register/type-users');
+
+// INstitution
+
+
+
+// otros
 
 Route::view('/board-test', 'layouts/test-transition-page');
