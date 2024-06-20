@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="register-institutions">
+                <a href="{{ route('register.inst')}}">
                     <div class="text-neutral-700 bg-white rounded-md px-5 py-3 border-2 border-red-500 hover:text-neutral-700 hover:bg-neutral-200 hover:border-neutral-900">
                         <div class=" text-2xl borde-2 border-orange-300 flex justify-start ml-3 gap-10" role="button">
                             <span class="icon-[teenyicons--school-solid]"></span>

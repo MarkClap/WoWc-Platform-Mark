@@ -21,7 +21,7 @@
 
                     @if (Route::has('register'))
                         <div class="w-0.5 self-stretch bg-primary"></div>
-                        <a href="{{ route('register') }}" class="uppercase relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary-content after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100">
+                        <a href="/type-users" class="uppercase relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary-content after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100">
                             <p>{{ __('Register') }}</p>
                         </a>
                     @endif
