@@ -35,7 +35,7 @@
             
             <section class="flex flex-row items-center text-3xl text-white gap-6 ">    
                 <span class="icon-[mdi--share-variant] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span> 
-                <p class="text-xs">Compartir Configuración</p>  
+                <p class="text-xs">Compartir Configuración</p>
             </section>
         </nav>
     </header>
@@ -59,7 +59,14 @@
                         </x-slot>
                     </x-sidebar-item>
 
-                    
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            this.closest('form').submit();">
+                            {{ __('Logout') }}
+                    </a>
+                    </form>
                     </div>
                     <div class="justify-between ">
                         
@@ -79,7 +86,7 @@
         
         
     </main>
-
+    <pre>{{Auth::user()}}</pre>
     <x-script-board>
         
     </x-script-board>

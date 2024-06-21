@@ -30,7 +30,7 @@ Route::view('/students-perfil', 'layouts/board-estudents/board-perfil');
 
 
 // Profesor
-Route::view('/board-profesor', 'layouts/board-profesor/board');
+Route::view('/board-profesor', 'layouts/board-profesor/board')->middleware('auth:secondary');
 
 // Registro
 Route::view('/register-users', 'layouts/register/register-users');
@@ -38,7 +38,6 @@ Route::view('/type-users', 'layouts/register/type-users');
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::get('register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');

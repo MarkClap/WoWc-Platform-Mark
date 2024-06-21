@@ -11,7 +11,7 @@ class Institution extends Authenticatable
     use HasFactory, Notifiable;
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','phone_number' ,'email', 'password',
     ];
 
     protected $hidden = [

@@ -24,15 +24,15 @@ class RegisterInstitution extends Controller
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $institution = new Institution;
-        $institution->name = $request->name; 
-        $institution->phone_number = $request->phone_number;
-        $institution->email = $request->email;
-        $institution->password = Hash::make($request->password);
-        $institution->save(); 
+        $institution = Institution::create([
+            'name' => $request->name,
+            'phone_number' => $request->phone_number,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
 
         auth()->login($institution);
 
-        return redirect()->intended('/students-group');
+        return redirect()->intended('/board-profesor');
     }
 }
