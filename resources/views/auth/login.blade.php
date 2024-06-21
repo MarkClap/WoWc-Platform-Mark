@@ -4,7 +4,7 @@
         @section('helper_text_button', __('No account yet?'))
 
         <x-slot name="button">
-            <x-anchor-button href="{{ route('register') }}">
+            <x-anchor-button href="/type-users">
                 <p>{{ __('Register') }}</p>
             </x-anchor-button>
         </x-slot>

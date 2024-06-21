@@ -13,7 +13,7 @@
 
     <x-authentication-card>
         <x-validation-errors class="mb-4" />
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register.institution') }}">
             @csrf
             <h2 class="text-3xl mt-2 mb-4  flex justify-center text-yellow-500 font-semibold sm:text-2xl">Create account as an institution</h2>
             <div>
@@ -31,7 +31,7 @@
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email"
-                    name="maternal_surname" required autocomplete="" placeholder="Email"/>
+                    name="email" required autocomplete="" placeholder="Email"/>
             </div>
 
             <div class="mt-4">

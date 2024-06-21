@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+#use App\Http\Controllers\LoginController;
+use App\Http\Controllers\InstitutionController;
+use GuzzleHttp\Promise\Create;
+use App\Http\Controllers\Auth\RegisterInstitution;
+use App\Http\Controllers\Auth\LoginController;
 
 Route::get("/",HomeController::class);
 
@@ -24,16 +29,20 @@ Route::view('/students-members', 'layouts/board-estudents/board-members');
 Route::view('/students-perfil', 'layouts/board-estudents/board-perfil');
 
 
-// Profesor
-Route::view('/board-profesor', 'layouts/board-profesor/board');
+// Profesor pruebas con middleware 
+Route::view('/board-profesor', 'layouts/board-profesor/board')->middleware('auth:secondary');
 
 // Registro
 Route::view('/register-users', 'layouts/register/register-users');
-Route::view('/register-institutions', 'layouts/register/register-institutions');
 Route::view('/type-users', 'layouts/register/type-users');
 
-// INstitution
+//login rutas
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
 
+// INstitution register
+Route::get('register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');
+Route::post('register-institution', [RegisterInstitution::class, 'register'])->name('register.inst');
 
 
 // otros
