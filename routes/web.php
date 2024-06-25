@@ -7,6 +7,7 @@ use App\Http\Controllers\InstitutionController;
 use GuzzleHttp\Promise\Create;
 use App\Http\Controllers\Auth\RegisterInstitution;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\TeacherController;
 
 Route::get("/",HomeController::class);
 
@@ -46,5 +47,5 @@ Route::post('register-institution', [RegisterInstitution::class, 'register'])->n
 
 
 // otros
-
+Route::resource('teachers', TeacherController::class)->middleware('auth:secondary');
 Route::view('/board-test', 'layouts/test-transition-page');
