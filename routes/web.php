@@ -21,14 +21,23 @@ Route::middleware([
     })->name('dashboard');
 });
 
+//Institutions
+Route::view('/board-institutions', 'layouts/board-institutions/board');
+
+
 // Estudiante
 Route::view('/board-students', 'layouts/board-estudents/board');
 Route::view('/students-avatar', 'layouts/board-estudents/board-avatar');
 Route::view('/students-mision', 'layouts/board-estudents/board-mision');
+Route::view('/students-mision2', 'layouts/board-estudents/board-mision2');
+Route::view('/students-quizzes', 'layouts/board-estudents/board-quizzes');
+Route::view('/students-quizzes-exam', 'layouts/board-estudents/board-quizzes-exam');
+
 Route::view('/students-group', 'layouts/board-estudents/board-group');
 Route::view('/students-members', 'layouts/board-estudents/board-members');
 Route::view('/students-perfil', 'layouts/board-estudents/board-perfil');
-
+Route::view('/students-home', 'layouts/board-estudents/board-home');
+Route::view('/students-create-avatar', 'layouts/board-estudents/create-avatar');
 
 // Profesor pruebas con middleware 
 Route::view('/board-profesor', 'layouts/board-profesor/board')->middleware('auth:secondary');

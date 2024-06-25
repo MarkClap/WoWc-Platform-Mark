@@ -11,10 +11,9 @@
 
     <!-- Styles -->
     @livewireStyles
-
 </head>
 
-<body class="bg-base-100 flex flex-col min-h-screen w-full">
+<body class="bg-base-300 flex flex-col min-h-screen w-full">
     <header class="shadow-md w-full">
         <nav class="bg-primary dark:bg-neutral-800 p-3 flex items-center gap-2 justify-between ">
             
@@ -66,7 +65,7 @@
         </nav>
     </header>
 
-    <main class="flex flex-row flex-grow relative">
+    <main class="flex flex-row flex-grow relative  ">
         
         <nav id="menu" class=" text-white absolute h-full bottom-0 left-0 duration-500 p-2 w-52 text-center bg-neutral-700 shadow">
 
@@ -122,78 +121,71 @@
             </div>
             
         </nav>
-        
-            <div class=" text-black flex justify-center items-center h-full  w-full  p-5">
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <section class="flex flex-row gap-4 items-center ">
-                        <div class="avatar">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
-                          </div>
-                        <div class="flex flex-col gap-2">
-                            <h1 class="text-2xl font-bold">Marcos Chocce</h1> 
-                            <p class=" text-neutral-400 text-xl font-bold">Nivel: <span class="text-xl text-pink-500">500</span></p>
-                            <p class=" text-neutral-400 text-xl font-bold">Tipo: <span class="text-xl text-blue-600">Curandero</span></p>
-                        </div>
-                        
-                    </section>
-                    
-                    <section class="flex flex-row justify-between mb-2 mt-4">
-                        
-                            <div class="focus:bg-slate-400 w-full h-full text-center"><h1>Puntos</h1></div>
-                            <div class="focus:bg-slate-400 w-full h-full text-center"><h1>Poderes</h1></div>
-                        
-                    </section>
-                    <hr>
-                  <div>
-                    <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Puntos de experiencia:</p>
-                        <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
-                        <progress class="progress progress-success w-56" value="50" max="100"></progress>
+        <div class="bg-white w-full flex justify-center text-black flex-col gap-2 items-center">
+            <section class=" w-3/6 flex py-2 px-4 flex-col space-y-2">
+                <div class=" p-2">
+                    <h2 class="text-2xl font-bold">Nombre de mision</h2>
+                </div>
+                <div class=" p-2 border-y-2 border-black h-16">
+                    <h2 class="text-neutral-400 text-xl">Aca va algo.......</h2>
+                </div>
+            </section>
+            
+            <section class=" w-3/6 flex py-2 px-4 flex-col space-y-2 border-2 border-black">
+                <div class=" p-2 font-semibold">
+                    <h2 class="text-xl">Instruciones</h2>
+                </div>
+                <div class=" p-2">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum provident minima reiciendis at ab, rerum pariatur accusantium, blanditiis quo consequuntur neque? Totam, eos ducimus. Quod similique eaque vitae sit dolorem!</p>
+                </div>
+                <div class=" p-2 space-y-2">
+                    <hr class="border-2 border-black w-3/6">
+                    <hr class="border-2 border-black w-3/6">
+                    <hr class="border-2 border-black w-3/6">
+                </div>
 
-                      </section>
-                      
-      
-                      <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Maná:</p>
-                        <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
-                        <progress class="progress progress-info w-56" value="40" max="100"></progress>
-                      </section>
-      
-                      <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Salud:</p>
-                        <div class="justify-between flex flex-row"><p>100</p><span class="icon-[material-symbols--heart-broken] bg-red-600"></span></div>
-                        <progress class="progress progress-error w-56" value="40" max="100"></progress>
-                      </section>
-      
-                      <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Oro:</p>
-                        <div class="justify-between flex flex-row"><p>100000000000000000000</p><span class="icon-[mingcute--coin-3-fill] text-yellow-400"></span></div>
-                      </section>
-                    </div>
+            </section>
+            
+            <section class=" w-3/6 flex py-2 px-4 flex-col space-y-2 border-2 border-black">
+                <div class=" p-2 font-semibold">
+                    <h2 class="text-xl">Carge link</h2>
                 </div>
-                  
+                <div class=" p-2 space-y-1">
+                    <p>Despues de relizar la mission carge el link</p>
+                    <input type="file" class="file-input file-input-bordered file-input-warning w-full bg-slate-50 h-10" />
                 </div>
-            </div>
-                
-        
+                <div class=" p-2 flex justify-end">
+                    <button class="btn bg-yellow-500">
+                        <p class="text-lg">Entregar</p>
+                    </button>
+                </div>
+
+            </section>
+        </di
+        v>
     </main>
-
+    
     <x-script-board>
         {{-- script componente --}}
     </x-script-board>
+    
 </body>
 
 </html>
 
 
 
-{{-- <h3 class="text-xs uppercase">Current lesson:</h3>
-                  <h2 class="tracking-wide">
-                    Object in JavaScript
-                    <br />
-                    (Challenge)
-                  </h2>
-                  <button class="bg-orange-400 py-3 px-8 mt-4 rounded text-sm font-semibold hover:bg-opacity-75">Go to lesson</button>
-                </div> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
