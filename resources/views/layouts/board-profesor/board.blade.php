@@ -59,20 +59,27 @@
                         </x-slot>
                     </x-sidebar-item>
 
-                    <form method="POST" action="{{ route('logout') }}">
+                    {{-- <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                             this.closest('form').submit();">
                             {{ __('Logout') }}
                     </a>
-                    </form>
+                    </form> --}}
                     </div>
                     <div class="justify-between ">
                         
                         <x-sidebar-item name="Salida">
                             <x-slot name="icon">
-                                <span class="icon-[material-symbols--exit-to-app]"></span>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                                        {{ __('Logout') }}
+                                </a>
+                                </form>
                             </x-slot>
                         </x-sidebar-item>
                         

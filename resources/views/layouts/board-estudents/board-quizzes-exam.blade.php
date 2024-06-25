@@ -11,10 +11,9 @@
 
     <!-- Styles -->
     @livewireStyles
-
 </head>
 
-<body class="bg-base-100 flex flex-col min-h-screen w-full">
+<body class="bg-base-300 flex flex-col min-h-screen w-full">
     <header class="shadow-md w-full">
         <nav class="bg-primary dark:bg-neutral-800 p-3 flex items-center gap-2 justify-between ">
             
@@ -66,7 +65,7 @@
         </nav>
     </header>
 
-    <main class="flex flex-row flex-grow relative">
+    <main class="flex flex-row flex-grow relative  ">
         
         <nav id="menu" class=" text-white absolute h-full bottom-0 left-0 duration-500 p-2 w-52 text-center bg-neutral-700 shadow">
 
@@ -122,78 +121,141 @@
             </div>
             
         </nav>
-        
-            <div class=" text-black flex justify-center items-center h-full  w-full  p-5">
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <section class="flex flex-row gap-4 items-center ">
-                        <div class="avatar">
-                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <div class="bg-white w-full flex justify-center text-black flex-col gap-2 items-center p-2">
+            <div class="flex w-3/5 flex-col border-2 border-black">
+            <section class=" w-full flex p-2">
+                <div class="
+                 p-2 w-full flex flex-col">
+                    <h1 class="text-2xl font-semibold">Nombre de quizzes</h1>
+                    <hr class="border border-black">
+                </div>
+            </section>
+
+
+            <section class=" w-full flex p-2 flex-row gap-2">
+                <section class="w-full space-y-2 justify-center p-2 overflow-auto h-96">
+                    <div class=" p-2 flex flex-col max-h-[15rem] overflow-hidden flex-grow">
+                        
+                        <div class=" border-2 border-black border-b-0 flex flex-row justify-between bg-red-500 p-2">
+                            <h2 class="text-2">Pregunta 1</h2>
+                            <h2 class="text-2">2 pts</h2>
+                        </div>
+                        <div class="bg-white flex flex-col justify-betwee p-2 flex-grow border-2 border-black">
+                            <h3 class="text-2xl">¿Que es PLSQL?</h3>
+                            <div class="flex flex-col justify-between p-2 gap-1">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
                             </div>
-                          </div>
-                        <div class="flex flex-col gap-2">
-                            <h1 class="text-2xl font-bold">Marcos Chocce</h1> 
-                            <p class=" text-neutral-400 text-xl font-bold">Nivel: <span class="text-xl text-pink-500">500</span></p>
-                            <p class=" text-neutral-400 text-xl font-bold">Tipo: <span class="text-xl text-blue-600">Curandero</span></p>
                         </div>
                         
-                    </section>
-                    
-                    <section class="flex flex-row justify-between mb-2 mt-4">
-                        
-                            <div class="focus:bg-slate-400 w-full h-full text-center"><h1>Puntos</h1></div>
-                            <div class="focus:bg-slate-400 w-full h-full text-center"><h1>Poderes</h1></div>
-                        
-                    </section>
-                    <hr>
-                  <div>
-                    <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Puntos de experiencia:</p>
-                        <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
-                        <progress class="progress progress-success w-56" value="50" max="100"></progress>
 
-                      </section>
-                      
-      
-                      <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Maná:</p>
-                        <div class="justify-between flex flex-row"><p>10</p><p>XP</p></div>
-                        <progress class="progress progress-info w-56" value="40" max="100"></progress>
-                      </section>
-      
-                      <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Salud:</p>
-                        <div class="justify-between flex flex-row"><p>100</p><span class="icon-[material-symbols--heart-broken] bg-red-600"></span></div>
-                        <progress class="progress progress-error w-56" value="40" max="100"></progress>
-                      </section>
-      
-                      <section class="mt-4 mb-5">
-                        <p class="text-gray-600">Oro:</p>
-                        <div class="justify-between flex flex-row"><p>100000000000000000000</p><span class="icon-[mingcute--coin-3-fill] text-yellow-400"></span></div>
-                      </section>
+                        
                     </div>
-                </div>
-                  
-                </div>
-            </div>
-                
-        
-    </main>
 
+                    <div class=" p-2 flex flex-col max-h-[15rem] overflow-hidden flex-grow">
+                        
+                        <div class=" border-2 border-black border-b-0 flex flex-row justify-between bg-red-500 p-2">
+                            <h2 class="text-2">Pregunta 1</h2>
+                            <h2 class="text-2">2 pts</h2>
+                        </div>
+                        <div class="bg-white flex flex-col justify-betwee p-2 flex-grow border-2 border-black">
+                            <h3 class="text-2xl">¿Que es PLSQL?</h3>
+                            <div class="flex flex-col justify-between p-2 gap-1">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                            </div>
+                        </div>
+                        
+
+                        
+                    </div>
+
+                    <div class=" p-2 flex flex-col max-h-[15rem] overflow-hidden flex-grow">
+                        
+                        <div class=" border-2 border-black border-b-0 flex flex-row justify-between bg-red-500 p-2">
+                            <h2 class="text-2">Pregunta 1</h2>
+                            <h2 class="text-2">2 pts</h2>
+                        </div>
+                        <div class="bg-white flex flex-col justify-betwee p-2 flex-grow border-2 border-black">
+                            <h3 class="text-2xl">¿Que es PLSQL?</h3>
+                            <div class="flex flex-col justify-between p-2 gap-1">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                                <label for="opcion1" class=" border-black">
+                                    <input type="radio" name="opcion1">Opcion 1
+                                </label>
+                                <hr class="border-black">
+                            </div>
+                        </div>
+                        
+
+                        
+                    </div>
+
+                    
+                    
+                </section>
+
+
+
+
+                
+            </section>
+            
+        </div>
+        <button class="btn">
+            <p class="text-xl">Entregar</p>
+        </button>
+    </div>  
+    </main>
+    
     <x-script-board>
         {{-- script componente --}}
     </x-script-board>
+    
 </body>
 
 </html>
 
 
 
-{{-- <h3 class="text-xs uppercase">Current lesson:</h3>
-                  <h2 class="tracking-wide">
-                    Object in JavaScript
-                    <br />
-                    (Challenge)
-                  </h2>
-                  <button class="bg-orange-400 py-3 px-8 mt-4 rounded text-sm font-semibold hover:bg-opacity-75">Go to lesson</button>
-                </div> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
