@@ -25,6 +25,7 @@ Route::middleware([
 Route::view('/board-institutions', 'layouts/board-institutions/board');
 
 
+
 // Estudiante
 Route::view('/board-students', 'layouts/board-estudents/board');
 Route::view('/students-avatar', 'layouts/board-estudents/board-avatar');
@@ -38,6 +39,10 @@ Route::view('/students-members', 'layouts/board-estudents/board-members');
 Route::view('/students-perfil', 'layouts/board-estudents/board-perfil');
 Route::view('/students-home', 'layouts/board-estudents/board-home');
 Route::view('/students-create-avatar', 'layouts/board-estudents/create-avatar');
+
+// Profesor 
+Route::view('/profesor-create-clase', 'layouts/board-profesor/board-create-clase');
+
 
 // Profesor pruebas con middleware 
 Route::view('/board-profesor', 'layouts/board-profesor/board')->middleware('auth:secondary');

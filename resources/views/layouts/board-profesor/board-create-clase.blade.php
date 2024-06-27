@@ -70,18 +70,7 @@
                     </div>
                     <div class="justify-between ">
                         
-                        <x-sidebar-item name="Salida">
-                            <x-slot name="icon">
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                </form>
-                            </x-slot>
-                        </x-sidebar-item>
+                        
                         
                     </div>
                 </ul>
@@ -90,10 +79,48 @@
             </div>
             
         </nav>
-        
+
+        <div class="bg-white w-full flex flex-col gap-2">
+            
+            <section class="bg-orange-300 h-30 p-2 justify-center items-center">Section tile
+                <div class="bg-green-500 p-2 space-y-2">
+                    <p class="bg-red-300">title 1</p>
+                    <p class="bg-red-300">title 2</p>
+                </div>
+            </section>
+
+
+            <section class="bg-orange-300 h-full flex w-full flex-col gap-2 p-2">section content
+
+                <div class="bg-blue-300 h-full flex w-full flex-row gap-2 p-2">
+
+                    <div class="bg-red-500 w-4/12 flex flex-col gap-2 p-2">content-nobres
+                        <div class="flex bg-yellow-300 h-20">title-content-nombre
+
+                        </div>
+
+                        <div class="flex bg-yellow-300 h-full ">content-nombre
+
+                        </div>
+                    </div>
+
+                    <div class="bg-red-500 w-full grid-rows-2 gap-2 text-black">conten-grupos
+                        <div class="bg-white h-32 w-32">hola</div>
+                        <div class="bg-white h-32 w-32">hola</div>
+                    </div>
+
+                </div>
+
+                <div class="bg-red-400 flex justify-end p-2">
+                    <button class="btn"><p>hola</p></button>
+                </div>
+
+            </section>
+
+        </div>
         
     </main>
-    <pre>{{Auth::user()}}</pre>
+    
     <x-script-board>
         
     </x-script-board>
