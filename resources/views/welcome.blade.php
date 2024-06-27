@@ -1,9 +1,7 @@
 <x-guest-layout>
     <div class="max-h-screen overflow-hidden relative">
-        <x-welcome-header>
-        </x-welcome-header>
-
-        {{-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" /> --}}
+        
+        <x-welcome-header />
 
         <div class="w-full">
             <div class="absolute bottom-0 right-36 p-8 rounded-t-3xl bg-accent flex flex-col gap-4">
@@ -84,13 +82,7 @@
             </div>
             </div>
 
-
-
     </section>
-
-
-
-
 
     <footer class="footer p-8 text-base-content mt-auto" data-theme="wowc_neutral">
         <nav>
@@ -122,7 +114,7 @@
         </nav>
     </footer>
 
-
-
-
+    @push('scripts')
+        @vite('resources/js/welcome.js')
+    @endpush
 </x-guest-layout>

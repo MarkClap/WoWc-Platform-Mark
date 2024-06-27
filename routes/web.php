@@ -25,37 +25,33 @@ Route::middleware([
 Route::view('/board-institutions', 'layouts/board-institutions/board');
 
 
+//! Student/Player 
+Route::view('/main/create-character', 'main/player/create-character')->name('create-character');
+Route::view('/main/player', 'layouts/main/player')->name('player'); 
 
-// Estudiante
-Route::view('/board-students', 'layouts/board-estudents/board');
-Route::view('/students-avatar', 'layouts/board-estudents/board-avatar');
-Route::view('/students-mision', 'layouts/board-estudents/board-mision');
 Route::view('/students-mision2', 'layouts/board-estudents/board-mision2');
 Route::view('/students-quizzes', 'layouts/board-estudents/board-quizzes');
 Route::view('/students-quizzes-exam', 'layouts/board-estudents/board-quizzes-exam');
-
-Route::view('/students-group', 'layouts/board-estudents/board-group');
-Route::view('/students-members', 'layouts/board-estudents/board-members');
+//Unused
 Route::view('/students-perfil', 'layouts/board-estudents/board-perfil');
 Route::view('/students-home', 'layouts/board-estudents/board-home');
-Route::view('/students-create-avatar', 'layouts/board-estudents/create-avatar');
 
-// Profesor 
+//! Teacher/Master 
 Route::view('/profesor-create-clase', 'layouts/board-profesor/board-create-clase');
 
 
 // Profesor pruebas con middleware 
 Route::view('/board-profesor', 'layouts/board-profesor/board')->middleware('auth:secondary');
 
-// Registro
+// Register
 Route::view('/register-users', 'layouts/register/register-users');
 Route::view('/type-users', 'layouts/register/type-users');
 
-//login rutas
+// Login
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
-// INstitution register
+// Institution register
 Route::get('register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');
 Route::post('register-institution', [RegisterInstitution::class, 'register'])->name('register.inst');
 

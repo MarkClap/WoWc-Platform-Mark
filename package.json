@@ -20,6 +20,8 @@
         "vite": "^5.0"
     },
     "dependencies": {
-        "@splidejs/splide": "^4.1.4"
+        "@splidejs/splide": "^4.1.4",
+        "three": "^0.165.0",
+        "threejs-object-controls": "^1.2.8"
     }
 }
