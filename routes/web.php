@@ -52,8 +52,8 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
 // Institution register
-Route::get('register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');
-Route::post('register-institution', [RegisterInstitution::class, 'register'])->name('register.inst');
+Route::get('/register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');
+Route::post('/register-institution', [RegisterInstitution::class, 'register'])->name('register.inst');
 
 
 // otros

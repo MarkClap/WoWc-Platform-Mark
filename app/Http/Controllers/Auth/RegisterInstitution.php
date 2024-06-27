@@ -12,7 +12,7 @@ class RegisterInstitution extends Controller
 {
     public function showRegistrationForm()
     {
-        return view('layouts\register\register-institutions');
+        return view('layouts.register.register-institutions');
     }
 
     public function register(Request $request)
