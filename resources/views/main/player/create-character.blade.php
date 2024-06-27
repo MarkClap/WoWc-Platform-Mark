@@ -60,11 +60,11 @@
                         Género
                     </div>
                     <div class="p-2 space-x-5 flex flex-row justify-center">
-                        <div class="bg-orange-500 p-2 rounded-md">
-                            <p>Masculino</p>
+                        <div class="bg-orange-500 p-2 rounded-md text-2xl flex justify-center w-16 h-16">
+                            <span class="icon-[whh--male]"></span>
                         </div>
-                        <div class="bg-orange-500 p-2 rounded-md">
-                            <p>Femenino</p>
+                        <div class="bg-orange-500 p-2 rounded-md text-2xl flex justify-center w-16 h-16">
+                            <span class="icon-[whh--female]"></span>
                         </div>
                     </div>
                 </section>

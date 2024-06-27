@@ -1,15 +1,15 @@
 <x-guest-layout>
     <div class="max-h-screen overflow-hidden relative">
-        
+
         <x-welcome-header />
 
         <div class="w-full">
             <div class="absolute bottom-0 right-36 p-8 rounded-t-3xl bg-accent flex flex-col gap-4">
                 <h1 class="text-7xl font-extrabold">World of Warclass</h1>
-                <p class="text-3xl font-medium">Transformando al mundo</p>
+                <p class="text-3xl font-medium">Transformando tareas en verdadero aprendizaje</p>
             </div>
 
-            <img src="https://cdn.discordapp.com/attachments/1224189197406044311/1238346409586200626/Home-WC.jpg?ex=663ef377&is=663da1f7&hm=0f8ba5bee07f0088d688568823d6a1f050a33c47c80cff29d66961732c0afc88&"
+            <img src="{{ asset('/img/img1.png') }}"
                 class="min-h-96 w-screen h-full" alt="Teacher and student smiling at each other in the classroom"
                 loading="auto">
         </div>

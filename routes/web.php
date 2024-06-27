@@ -58,4 +58,3 @@ Route::post('/register-institution', [RegisterInstitution::class, 'register'])->
 
 // otros
 Route::resource('teachers', TeacherController::class)->middleware('auth:secondary');
-Route::view('/board-test', 'layouts/test-transition-page');
