@@ -15,7 +15,7 @@ class InstitutionSeeder extends Seeder
     {
         Institution::create([
             'name' => 'Test',
-            'email' => 'test@example',
+            'email' => 'tesst@example',
             'phone_number' => 98441136,
             'password' => 'test123456',
         ]);

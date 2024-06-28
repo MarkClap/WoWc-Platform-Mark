@@ -2,12 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-#use App\Http\Controllers\LoginController;
-use App\Http\Controllers\InstitutionController;
 use GuzzleHttp\Promise\Create;
 use App\Http\Controllers\Auth\RegisterInstitution;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\QuizController;
 
 Route::get("/",HomeController::class);
 
@@ -52,10 +51,13 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
 // Institution register
-Route::get('register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');
-Route::post('register-institution', [RegisterInstitution::class, 'register'])->name('register.inst');
-
+Route::view('/register-institution', 'layouts\register\register-institutions')->name('register.inst');
 
 // otros
 Route::resource('teachers', TeacherController::class)->middleware('auth:secondary');
 Route::view('/board-test', 'layouts/test-transition-page');
+
+//test-quizzes
+Route::get('/quizzes',[QuizController::class,'index'])->name('indexquiz');
+Route::get('/quizzes/result', [QuizController::class, 'result'])->name('quizzes.score');
+Route::post('/quizzes/check', [QuizController::class, 'check'])->name('quizzes.check');

@@ -1,5 +1,4 @@
-<x-guest-layout>
-    <x-authentication-header>
+<x-authentication-header>
 
         @section('helper_text_button', __('Already have an account?'))
             
@@ -8,83 +7,23 @@
                 <p>{{ __('Log in') }}</p>
             </x-anchor-button>
         </x-slot>
-
-    </x-authentication-header>
-
-    <x-authentication-card>
-        <x-validation-errors class="mb-4" />
-        <form method="POST" action="{{ route('register.institution') }}">
-            @csrf
-            <h2 class="text-3xl mt-2 mb-4  flex justify-center text-yellow-500 font-semibold sm:text-2xl">Create account as an institution</h2>
-            <div>
-                <x-label for="institution_name" value="{{ __('Institution name') }}" />
-                <x-input id="institution_name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
-                    required autofocus autocomplete="institution_name" placeholder="Institution name"/>
+</x-authentication-header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>Document</title>
+</head>
+<body class="">
+        <div class="flex place-content-center p-4">
+            <div class="text-center border w-2/3 rounded-sm p-2">
+                <h1 class="text-xl p-5">Solicitar cuenta de institución</h1>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=world.of.warclass@gmail.com&su=Solicitar%20cuenta%20de%20institucion"target="_blank" class="btn bg-red-500">Enviar correo</a>
             </div>
+        </div>
+</body>
+</html>
 
-            <div class="mt-4">
-                <x-label for="phone number" value="{{ __('Phone_number') }}" />
-                <x-input id="phone_number" class="block mt-1 w-full" type="text"
-                    name="phone_number" required autocomplete="" placeholder="Phone number"/>
-            </div>
-
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email"
-                    name="email" required autocomplete="" placeholder="Email"/>
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password"
-                    name="password" required autocomplete="" placeholder="Password"/>
-            </div>
-
-
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                    name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password"/>
-            </div>
-
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-label for="terms">
-                        <div class="flex items-center">
-                            <x-checkbox name="terms" id="terms" required />
-
-                            <div class="ms-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                    'terms_of_service' =>
-                                        '<a target="_blank" href="' .
-                                        route('terms.show') .
-                                        '" class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-offset-neutral-800">' .
-                                        __('Terms of Service') .
-                                        '</a>',
-                                    'privacy_policy' =>
-                                        '<a target="_blank" href="' .
-                                        route('policy.show') .
-                                        '" class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-offset-neutral-800">' .
-                                        __('Privacy Policy') .
-                                        '</a>',
-                                ]) !!}
-                            </div>
-                        </div>
-                    </x-label>
-                </div>
-            @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="transition-colors duration-200 underline text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 dark:focus:ring-offset-neutral-800"
-                    href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ms-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
