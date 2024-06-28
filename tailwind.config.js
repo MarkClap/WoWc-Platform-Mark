@@ -45,7 +45,7 @@ export default {
               "primary": "#dc2626",
               "primary-content": "#f5f5f5",
               "secondary": "#e5e5e5",
-              "secondary-content": "#f5f5f5",
+              "secondary-content": "#171717",
               "accent": "#ca8a04",
               "neutral": "#262626",
               "neutral-content": "#a3a3a3",

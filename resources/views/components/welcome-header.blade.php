@@ -1,11 +1,14 @@
 <header class="shadow-md w-full">
+    <nav class="h-16 xl:h-20 w-full text-white bg-neutral-900 flex justify-center items-center">
+        <p>¿Deseas unirte como una institución?  <a class="link link-accent font-semibold">¡Contáctanos!</a></p>
+        
+    </nav>
     @if (Route::has('login'))
         <nav class="h-16 xl:h-20 bg-base-100 py-4 px-8 flex items-center gap-2 justify-between" data-theme="wowc_neutral">
 
             <section class="h-full w-auto xl:py-2 flex justify-center items-center">
                 <x-authentication-card-logo />
             </section>
-
 
             <section class="flex items-center text-primary-content text-xl gap-4 h-full font-extrabold">
 
@@ -33,13 +36,4 @@
 
     {{ $slot }}
 
-    <script>
-        let theme = "light";
-
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            theme = "dark";
-        }
-
-        console.log(theme); // Outputs "light" or "dark"
-    </script>
 </header>

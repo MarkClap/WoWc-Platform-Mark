@@ -48,7 +48,7 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
 // Institution register
-Route::view('/register-institution', 'layouts\register\register-institutions')->name('register.inst');
+Route::view('/register-institution', 'layouts.register.register-institutions')->name('register.inst');
 
 
 // otros

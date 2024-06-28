@@ -86,7 +86,8 @@ const init = async () => {
         }, 100);
 
         setTimeout(() => {
-            document.getElementById("loading").style.display = "none";
+            document.getElementById("loading").classList.remove()
+            document.getElementById("loading").classList.add("hidden");
         }, 600);
     } catch (error) {
         console.error("ERROR:", error);

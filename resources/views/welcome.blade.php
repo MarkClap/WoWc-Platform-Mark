@@ -3,33 +3,39 @@
 
         <x-welcome-header />
 
-        <div class="w-full">
-            <div class="absolute bottom-0 right-36 p-8 rounded-t-3xl bg-accent flex flex-col gap-4">
-                <h1 class="text-7xl font-extrabold">World of Warclass</h1>
-                <p class="text-3xl font-medium">Transformando tareas en verdadero aprendizaje</p>
+        <section class="w-full">
+            <div class="absolute bottom-0 w-full z-10">
+                <div class="flex flex-row-reverse w-full p-0 xl:pr-16 justify-center xl:justify-normal">
+                    <div class="flex flex-col p-8 rounded-t-3xl bg-accent gap-4 bg-opacity-95 text-white text-center xl:text-left">
+                        <h1 class="text-7xl font-extrabold">World of Warclass</h1>
+                        <p class="text-3xl font-medium">Transformando tareas en verdadero aprendizaje</p>
+                    </div>
+                </div>
             </div>
-
-            <img src="{{ asset('/img/img1.png') }}" class="min-h-96 w-screen h-full"
+            <img src="{{ asset('/img/img1.png') }}" class="min-h-96 w-screen h-full brightness-[85%] -z-10"
                 alt="Teacher and student smiling at each other in the classroom" loading="auto">
-        </div>
+        </section>
 
     </div>
 
     <section class="bg-base-100 p-32 mx-auto flex flex-col gap-16 w-full">
 
-        <article class="flex flex-col-reverse lg:flex-row gap-x-0 gap-y-8 lg:gap-x-16 lg:gap-y-0 text-3xl items-center">
+        <article class="flex flex-col-reverse lg:flex-row gap-x-0 gap-y-8 lg:gap-x-16 lg:gap-y-0 text-2xl items-center">
             <div class="flex-1 flex flex-col gap-8">
                 <section class="flex flex-col gap-4">
                     <h2 class="text-5xl font-bold">¿Qué es "World of Warclass"?</h2>
-                    <p>Plataforma educativa innovadora que motiva a los estudiantes mediante misiones temáticas, recompensas y competencias.</p>
+                    <p>Plataforma educativa innovadora que motiva a los estudiantes mediante misiones temáticas y
+                        recompensas, competiendo ente ellos.</p>
                 </section>
 
                 <section class="flex flex-col gap-4">
                     <h2 class="text-5xl font-bold">Nuestros Objetivos</h2>
                     <ul>
-                        <li>Conectar con los alumnos a través de principios recreativos para incentivar el aprendizaje.
+                        <li class="list-disc">Conectar con los alumnos a través de juegos recreativos para incentivar el
+                            aprendizaje.
                         </li>
-                        <li>Facilitar la administración del proceso educativo y maximizando su eficiencia.</li>
+                        <li class="list-disc">Facilitar la administración del proceso educativo y maximizar la
+                            eficiencia.</li>
                     </ul>
                 </section>
             </div>
@@ -51,7 +57,7 @@
     <section class="flex flex-col gap-16 items-center bg-base-100 w-full p-32 mx-auto text-3xl text-center">
         <div class="flex flex-col gap-4">
             <h1 class="text-5xl font-bold text-center">Tenemos esto para ti</h1>
-            <p class="text-center">Sé parte de la nueva comunidad educativa del país y accede a todos los servicios
+            <p class="text-center">Sé parte de la nuestra comunidad y accede a todos los servicios
                 digitales que te
                 ofrecemos en nuestra plataforma online.</p>
         </div>
