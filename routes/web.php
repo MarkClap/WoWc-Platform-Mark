@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use GuzzleHttp\Promise\Create;
-use App\Http\Controllers\Auth\RegisterInstitution;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\QuizController;
