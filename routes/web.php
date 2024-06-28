@@ -2,10 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-#use App\Http\Controllers\LoginController;
-use App\Http\Controllers\InstitutionController;
 use GuzzleHttp\Promise\Create;
-use App\Http\Controllers\Auth\RegisterInstitution;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\TeacherController;
 
@@ -52,8 +49,7 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 
 // Institution register
-Route::get('register-institution', [RegisterInstitution::class, 'showRegistrationForm'])->name('register.institution');
-Route::post('register-institution', [RegisterInstitution::class, 'register'])->name('register.inst');
+Route::view('/register-institution', 'layouts\register\register-institutions')->name('register.inst');
 
 
 // otros
