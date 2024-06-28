@@ -8,7 +8,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resorces/css/board.css',
                 'resources/js/app.js',
-                'resources/js/three/character_scene/main.js',
+                'resources/js/tree/character_scene/main.js',
                 'resources/js/welcome.js',
                 'resources/js/board.js',
             ],

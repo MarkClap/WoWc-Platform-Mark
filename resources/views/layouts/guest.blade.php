@@ -8,26 +8,17 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts in public laravel-->
-    <link rel="stylesheet" href="{{ asset('font/Inter/') }}">
-    
-
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/fonts.css', 'resources/js/app.js'])
     @stack('scripts')
 
     <!-- Styles -->
     @livewireStyles
-    <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-        }
-    </style>
-    <!-- MDB -->
+
 </head>
 
 <body class="flex flex-col min-h-screen">
-    <div class="min-h-screen flex flex-col font-sans text-base-content antialiased">
+    <div class="min-h-screen flex flex-col text-base-content antialiased">
         {{ $slot }}
     </div>
 

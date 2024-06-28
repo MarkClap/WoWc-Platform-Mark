@@ -1,10 +1,4 @@
 <x-guest-layout>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        
     <div class="max-h-screen overflow-hidden relative w-full">
 
         <x-welcome-header />
@@ -15,7 +9,7 @@
                 <p class="text-3xl font-medium">Transformando tareas en verdadero aprendizaje</p>
             </div>
 
-            <img src="{{ asset('resources/img/img1.png') }}" class="min-h-96 w-screen h-full"
+            <img src="{{ asset('/img/img1.png') }}" class="min-h-96 w-screen h-full"
                 alt="Teacher and student smiling at each other in the classroom" loading="auto">
         </div>
 
@@ -27,14 +21,13 @@
             <div class="flex-1 flex flex-col gap-8">
                 <section class="flex flex-col gap-4">
                     <h2 class="text-5xl font-bold">¿Qué es "World of Warclass"?</h2>
-                    <p>Plataforma educativa innovadora que motiva a los estudiantes mediante
-                        misiones temáticas, recompensas y competencias, fomentando un clima escolar positivo.</p>
+                    <p>Plataforma educativa innovadora que motiva a los estudiantes mediante misiones temáticas, recompensas y competencias.</p>
                 </section>
 
                 <section class="flex flex-col gap-4">
                     <h2 class="text-5xl font-bold">Nuestros Objetivos</h2>
                     <ul>
-                        <li>Conectar a los alumnos a través de principios recreativos para incentivar el aprendizaje.
+                        <li>Conectar con los alumnos a través de principios recreativos para incentivar el aprendizaje.
                         </li>
                         <li>Facilitar la administración del proceso educativo y maximizando su eficiencia.</li>
                     </ul>
