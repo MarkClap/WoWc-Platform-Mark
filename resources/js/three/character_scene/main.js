@@ -16,8 +16,8 @@ const fetchJSON = (url) =>
 const init = async () => {
     try {
         const [dataAmbience, timeData] = await Promise.all([
-            fetchJSON("/Scene3D/character_scene/config/ambience.json"),
-            fetchJSON("/Scene3D/character_scene/config/time.json"),
+            fetchJSON("/three/character_scene/config/ambience.json"),
+            fetchJSON("/three/character_scene/config/time.json"),
         ]);
 
         const sceneElement = document.getElementById("scene");

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero</title>
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/Scene3D/character_scene/main.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/three/character_scene/main.js'])
 
     <!-- Styles -->
     @livewireStyles

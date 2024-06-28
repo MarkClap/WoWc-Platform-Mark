@@ -104,7 +104,7 @@ export class BasicCharacterController {
     async _LoadModels() {
         const loader = new FBXLoader();
         loader.setPath(
-            "/Scene3D/character_scene/models/Character/Warrior/Female/"
+            "/three/character_scene/models/Character/Warrior/Female/"
         );
         const object = await new Promise((resolve, reject) => {
             loader.load("warrior.fbx", resolve, undefined, reject);
@@ -132,7 +132,7 @@ export class BasicCharacterController {
 
         const animationLoader = new FBXLoader();
         animationLoader.setPath(
-            "/Scene3D/character_scene/models/Character/Warrior/Female/State/"
+            "/three/character_scene/models/Character/Warrior/Female/State/"
         );
         await Promise.all([
             new Promise((resolve) =>
