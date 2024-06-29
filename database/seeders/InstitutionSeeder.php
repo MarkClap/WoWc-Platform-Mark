@@ -19,5 +19,12 @@ class InstitutionSeeder extends Seeder
             'phone_number' => 98441136,
             'password' => bcrypt('test123456'),
         ]);
+
+        Institution::create([
+            'name' => 'Test2',
+            'email' => 'tesst2@example',
+            'phone_number' => 98441136,
+            'password' => bcrypt('test1234567'),
+        ]);
     }
 }
