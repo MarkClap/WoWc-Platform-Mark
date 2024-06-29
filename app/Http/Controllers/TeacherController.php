@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Teacher;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use App\Http\Requests\TeacherRequest;
 use App\Models\Institution;
 use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
@@ -41,12 +40,29 @@ class TeacherController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(TeacherRequest $request): RedirectResponse
+    public function store(Request $request)
     {
-        Teacher::create($request->validated());
+        $request->validate([
+            'email' => 'required|email|exists:users,email',
+            'id_institution' => 'required|exists:institutions,id',
+        ]);
 
-        return Redirect::route('teachers.index')
-            ->with('success', 'Teacher created successfully.');
+        $user = User::where('email', $request->email)->firstOrFail();
+
+        $Teacher_exists = Teacher::where('id_user', $user->id)
+                         ->where('id_institution', $request->id_institution)
+                         ->exists();
+
+        if ($Teacher_exists) {
+            return redirect()->back()->withErrors(['email' => 'The user is already registered as a teacher at this institution.'])->withInput();
+        }
+
+        Teacher::create([
+            'id_user' => $user->id,
+            'id_institution' => $request->id_institution,
+        ]);
+
+        return redirect()->route('teachers.index')->with('success', 'Teacher created successfully.');
     }
 
     /**
