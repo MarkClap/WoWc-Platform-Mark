@@ -1,24 +1,24 @@
 <nav x-data="{ open: false }" class="bg-white dark:bg-neutral-800 border-b border-neutral-100 dark:border-neutral-700">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div class="flex justify-between h-16"> 
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
+            <div class="shrink-0 flex items-center">
+                <a href="{{ route('dashboard') }}">
+                    <section class="h-12 w-auto xl:py-2 flex justify-center items-center">
+                        <x-authentication-card-logo />
+                    </section>
+                    {{-- <x-application-mark class="block h-9 w-auto" /> --}}
+                </a>
             </div>
 
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <!-- Navigation Links -->
+                
+            <div class="flex items-center">
+                <p class="text-3xl text-yellow-500 font-bold"> Hogar</p>
+            </div>
+
+            <div class="hidden  sm:flex sm:items-center sm:ms-6">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ms-3 relative">
