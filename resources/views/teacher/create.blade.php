@@ -20,14 +20,9 @@
                     <div class="col-md-12">
     
                         <div class="form-group mb-2 mb20">
-                            <label for="id_user" class="block text-black">{{ __('Users') }}</label>
-                            <select class="hover:select-all text-black" name="id_user" id="inputUsuario" required>
-                                <option value="">Seleccione una opción</option>
-                                @foreach ($users as $user)
-                                    <option value="{{ $user->id }}">{{ $user->name }} ({{ $user->email }})</option>
-                                @endforeach
-                            </select>
-                            {!! $errors->first('id_user', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+                            <label class="block text-black">{{ __('Email') }}</label>
+                            <input type="text" name="email" class="text-black">
+                            {!! $errors->first('email', '<div class="text-red-600" role="alert"><strong>:message</strong></div>') !!}
                         </div>
                         <input type="hidden" name="id_institution"
                             class="form-control @error('id_institution') is-invalid @enderror" value="{{ $institutionId }}"
