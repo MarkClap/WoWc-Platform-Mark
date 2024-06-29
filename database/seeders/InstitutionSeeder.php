@@ -17,7 +17,7 @@ class InstitutionSeeder extends Seeder
             'name' => 'Test',
             'email' => 'tesst@example',
             'phone_number' => 98441136,
-            'password' => 'test123456',
+            'password' => bcrypt('test123456'),
         ]);
     }
 }
