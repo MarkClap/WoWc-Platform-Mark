@@ -1,6 +1,6 @@
 @extends('layouts.main.player')
 
-@component('content')
+@section('content')
     <section class=" mx-auto px-4 sm:px-6 lg:px-4 py-14">
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -333,4 +333,4 @@
             </div>
         </div>
     </section>
-@endcomponent
+@endsection

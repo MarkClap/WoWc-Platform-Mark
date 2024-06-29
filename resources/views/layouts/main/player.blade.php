@@ -19,54 +19,31 @@
 <body class="bg-base-100 flex flex-col h-screen w-screen overflow-hidden">
 
     <header class="shadow-md w-full">
-        <x-player-navigation />
+        <x-player-navigation name="{{ $name ?? 'Player' }}"/>
     </header>
 
     <main class="flex flex-row flex-grow relative h-full w-full max-h-full max-w-full">
         <x-main-sidebar>
             <div>
-                <x-sidebar-item name="Personaje">
-                    <x-slot name="icon">
-                        <span class="icon-[heroicons--user-solid]"></span>
-                    </x-slot>
-                </x-sidebar-item>
+                <x-sidebar-item href="player.character" name="Personaje" icon="icon-[heroicons--user-solid]" />
 
-                <x-sidebar-item name="Misiones">
-                    <x-slot name="icon">
-                        <span class="icon-[mingcute--task-2-fill]"></span>
-                    </x-slot>
-                </x-sidebar-item>
+                <x-sidebar-item href="player.quests" name="Misiones" icon="icon-[mingcute--task-2-fill]" />
 
-                <x-sidebar-collapse name="Gremio">
-                    <x-slot name="icon">
-                        <span class="icon-[game-icons--vertical-banner]"></span>
-                    </x-slot>
-
+                <x-sidebar-collapse name="Gremio" icon="icon-[game-icons--vertical-banner]">
                     <x-slot name="items">
+                        <x-sidebar-item href="player.members" name="Miembros"
+                            icon="icon-[heroicons--user-group-solid]" />
 
-                        <x-sidebar-item name="Miembros">
-                            <x-slot name="icon">
-                                <span class="icon-[heroicons--user-group-solid]"></span>
-                            </x-slot>
-                        </x-sidebar-item>
-
-                        <x-sidebar-item name="Grupo">
-                            <x-slot name="icon">
-                                <span class="icon-[heroicons--users-solid]"></span>
-                            </x-slot>
-                        </x-sidebar-item>
-
+                        <x-sidebar-item href="player.groups" name="Grupo"
+                            icon="icon-[heroicons--users-solid]" />
                     </x-slot>
                 </x-sidebar-collapse>
             </div>
-            <div class="justify-between ">
 
-                <x-sidebar-item name="Salida">
-                    <x-slot name="icon">
-                        <span class="icon-[material-symbols--exit-to-app]"></span>
-                    </x-slot>
-                </x-sidebar-item>
+            <div>
+                <x-sidebar-item href="" name="Salida" icon="icon-[material-symbols--exit-to-app]" />
             </div>
+
         </x-main-sidebar>
 
         @yield('content')

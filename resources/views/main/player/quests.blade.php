@@ -1,6 +1,6 @@
 @extends('layouts.main.player')
 
-@component('content')
+@section('content')
     <div class="bg-black  w-full flex justify-center">
         <div class="w-3/5 flex flex-col justify-center">
             <x-mision-collapse title="Mision 1 " text=' Mongodb'>
@@ -97,4 +97,4 @@
 
         </div>
     </div>
-@endcomponent
+@endsection

@@ -30,7 +30,7 @@ Route::prefix('main')->group(function () {
         })->name('player');
 
         Route::get('/create-character', 'createCharacter')->name('player.create-character');
-        Route::get('/character', 'player')->name('player.character');
+        Route::get('/character', 'character')->name('player.character');
         Route::get('/groups', 'groups')->name('player.groups');
         Route::get('/members', 'members')->name('player.members');
         Route::get('/quests', 'quests')->name('player.quests');

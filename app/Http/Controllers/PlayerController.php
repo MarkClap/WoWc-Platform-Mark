@@ -11,23 +11,27 @@ class PlayerController extends Controller
         return view('main.player.create-character');
     }
 
-    public function player()
+    public function character()
     {
-        return view('main.player.character');
-    }
-
-    public function groups()
-    {
-        return view('main.player.groups');
-    }
-
-    public function members()
-    {
-        return view('main.player.members');
+        $name = 'Character';
+        return view('main.player.character', compact('name'));
     }
 
     public function quests()
     {
-        return view('main.player.quests');
+        $name = 'Quests';
+        return view('main.player.quests', compact('name'));
+    }
+
+    public function groups()
+    {
+        $name = 'Groups';
+        return view('main.player.groups', compact('name'));
+    }
+
+    public function members()
+    {
+        $name = 'Members';
+        return view('main.player.members', compact('name'));
     }
 }

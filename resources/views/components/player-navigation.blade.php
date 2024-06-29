@@ -13,7 +13,7 @@
             <div id="navigation-path" class="text-2xl breadcrumbs">
                 <ul>
                     <li><a>2024-BDA-AB</a></li>
-                    <li>Personaje</li>
+                    <li>{{ $name ?? 'Undefined' }}</li>
                 </ul>
             </div>
         </div>
