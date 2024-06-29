@@ -1,3 +1,7 @@
+@extends('layouts.main.player')
+
+@section('content')
+
 <div class="bg-black  w-full flex flex-col items-center overflow-hidden">
     <div class="w-9/12 h-full  p-5  shadow-lg rounded-sm  text-black ">
         <header class="px-5 py-4 border-b border-gray-100">
@@ -759,3 +763,4 @@
         </div>
     </div>
 </div>
+@endsection

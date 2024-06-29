@@ -15,7 +15,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 2;
+renderer.toneMappingExposure = 2.7;
 renderer.setPixelRatio(window.devicePixelRatio);
 
 const canvas = renderer.domElement;
@@ -29,7 +29,9 @@ new FBXLoader().load("/three/welcome_scene/models/Dragon_WoWc.fbx", (object) => 
     object.scale.set(0.02, 0.02, 0.02);
     object.position.set(0, -4, 0);
     mixer = new THREE.AnimationMixer(object);
-    mixer.clipAction(object.animations[0]).play();
+    const action = mixer.clipAction(object.animations[0]);
+    action.setLoop(THREE.LoopPingPong);
+    action.play();
     scene.add(object);
 });
 
@@ -57,7 +59,7 @@ function resizeRenderer() {
     camera.updateProjectionMatrix();
 }
 window.addEventListener("resize", resizeRenderer);
-resizeRenderer(); // Llamar inicialmente para establecer el tamaño
+resizeRenderer();
 
 document.addEventListener("DOMContentLoaded", () => {
     new Splide(".splide", { type: "loop", autoplay: true }).mount();

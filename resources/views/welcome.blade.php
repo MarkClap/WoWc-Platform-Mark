@@ -21,8 +21,8 @@
 
     <section class="bg-base-100 p-32 mx-auto flex flex-col gap-16 w-full max-w-[100vw] h-full">
         <article
-            class="flex flex-col-reverse lg:flex-row gap-x-0 gap-y-8 lg:gap-x-16 lg:gap-y-0 text-2xl items-center w-full h-full">
-            <div class="flex-1 flex flex-col gap-8 w-1/2 h-full">
+            class="flex flex-col-reverse lg:flex-row gap-x-0 gap-y-8 lg:gap-x-16 lg:gap-y-0  items-center w-full h-full text-2xl text-center lg:text-left text-pretty ">
+            <div class="flex-1 flex flex-col gap-8 lg:w-1/2 h-full z-20">
                 <section class="flex flex-col gap-4">
                     <h2 class="text-5xl font-bold">¿Qué es "World of Warclass"?</h2>
                     <p>Plataforma educativa innovadora que motiva a los estudiantes mediante misiones temáticas y
@@ -32,16 +32,17 @@
                 <section class="flex flex-col gap-4">
                     <h2 class="text-5xl font-bold">Nuestros Objetivos</h2>
                     <ul>
-                        <li class="list-disc">Conectar con los alumnos a través de juegos recreativos para incentivar el
+                        <li class="lg:list-disc">Conectar con los alumnos a través de juegos recreativos para incentivar
+                            el
                             aprendizaje.
                         </li>
-                        <li class="list-disc">Facilitar la administración del proceso educativo y maximizar la
+                        <li class="lg:list-disc">Facilitar la administración del proceso educativo y maximizar la
                             eficiencia.</li>
                     </ul>
                 </section>
             </div>
-            <div class="flex justify-center flex-1 w-1/2 h-full aspect-square">
-                <canvas id="canvas" class=""></canvas>
+            <div class="flex justify-center flex-1 w-1/2 h-auto aspect-square z-10">
+                <canvas id="canvas"></canvas>
             </div>
         </article>
     </section>
