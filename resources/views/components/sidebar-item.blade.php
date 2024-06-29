@@ -20,7 +20,7 @@
     @endphp
 
     <a href="{{ $href ?? '' }}"
-        class="p-4 gap-2 w-full flex flex-row items-center rounded-md duration-300 transition-all cursor-pointer hover:bg-neutral-500">
+        class="p-4 gap-2 w-full flex flex-row items-center rounded-md duration-300 transition-all cursor-pointer hover:bg-white hover:bg-opacity-[0.265]">
         <div class="text-xl grid place-items-center">
             <span class="{{ $icon ?? '' }}">
 

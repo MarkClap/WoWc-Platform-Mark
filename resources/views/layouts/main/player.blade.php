@@ -8,7 +8,7 @@
     <title>Tablero</title>
     <!-- Scripts -->
 
-    @vite(['resources/css/app.css', 'resources/css/board.css', 'resources/js/app.js', 'resources/js/main-dashboard.js'])
+    @vite(['resources/css/app.css', 'resources/css/board.css', 'resources/js/app.js', 'resources/js/main-dashboard.js', 'resources/js/main-player.js'])
     @stack('scripts')
 
     <!-- Styles -->
@@ -19,7 +19,7 @@
 <body class="bg-base-100 flex flex-col h-screen w-screen overflow-hidden">
 
     <header class="shadow-md w-full">
-        <x-player-navigation name="{{ $name ?? 'Player' }}"/>
+        <x-player-navigation name="{{ $name ?? 'Player' }}" />
     </header>
 
     <main class="flex flex-row flex-grow relative h-full w-full max-h-full max-w-full">
@@ -29,13 +29,12 @@
 
                 <x-sidebar-item href="player.quests" name="Misiones" icon="icon-[mingcute--task-2-fill]" />
 
-                <x-sidebar-collapse name="Gremio" icon="icon-[game-icons--vertical-banner]">
+                <x-sidebar-collapse id="guild-collapse" name="Gremio" icon="icon-[game-icons--vertical-banner]">
                     <x-slot name="items">
                         <x-sidebar-item href="player.members" name="Miembros"
                             icon="icon-[heroicons--user-group-solid]" />
 
-                        <x-sidebar-item href="player.groups" name="Grupo"
-                            icon="icon-[heroicons--users-solid]" />
+                        <x-sidebar-item href="player.groups" name="Grupo" icon="icon-[heroicons--users-solid]" />
                     </x-slot>
                 </x-sidebar-collapse>
             </div>
