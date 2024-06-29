@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const isSidebarExpanded =
+        localStorage.getItem("sidebarExpanded") === "true";
+    const menu_button = document.getElementById("menu-button");
+    menu_button.checked = isSidebarExpanded;
+
     updateMenu();
     updateListNavegation();
     updateBreadcrumbsClass();
@@ -27,6 +32,7 @@ function updateMenu() {
         menu.classList.remove("-left-52");
         menu.classList.add("left-0");
     }
+    localStorage.setItem("sidebarExpanded", menu_button.checked);
 }
 
 function updateListNavegation() {
@@ -34,6 +40,9 @@ function updateListNavegation() {
     const menu_section = document.getElementById("menu-section");
     const menu_button = document.getElementById("menu-button");
     const isNarrowScreen = window.innerWidth < 640;
+
+    menu_section.classList.remove("opacity-0");
+    navigation_list.classList.remove("opacity-0");
 
     if (menu_button.checked) {
         if (isNarrowScreen) {
@@ -55,6 +64,7 @@ function updateListNavegation() {
             navigation_list.classList.add("px-6");
         }
     }
+    localStorage.setItem("sidebarExpanded", menu_button.checked);
 }
 
 function updateBreadcrumbsClass() {

@@ -8,7 +8,7 @@
     <title>Tablero</title>
     <!-- Scripts -->
 
-    @vite(['resources/css/app.css', 'resources/css/board.css', 'resources/js/app.js', 'resources/js/board.js'])
+    @vite(['resources/css/app.css', 'resources/css/board.css', 'resources/js/app.js', 'resources/js/main-dashboard.js'])
     @stack('scripts')
 
     <!-- Styles -->
@@ -41,7 +41,7 @@
             </div>
 
             <div>
-                <x-sidebar-item href="" name="Salida" icon="icon-[material-symbols--exit-to-app]" />
+                <x-sidebar-item href="/dashboard" name="Salida" icon="icon-[material-symbols--exit-to-app]" />
             </div>
 
         </x-main-sidebar>

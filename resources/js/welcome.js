@@ -45,8 +45,8 @@ const clock = new THREE.Clock();
 function animate() {
     requestAnimationFrame(animate);
     if (mixer) mixer.update(clock.getDelta());
-    camera.position.x += (-mouseX - camera.position.x) * 0.05;
-    camera.position.y += (mouseY - camera.position.y) * 0.05;
+    camera.position.x += (-mouseX - camera.position.x) * 0.06;
+    camera.position.y += (mouseY - camera.position.y) * 0.06;
     camera.lookAt(scene.position);
     renderer.render(scene, camera);
 }
