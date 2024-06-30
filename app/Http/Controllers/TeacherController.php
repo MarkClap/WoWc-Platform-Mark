@@ -22,7 +22,7 @@ class TeacherController extends Controller
         $teachers = Teacher::where('id_institution', $institutionId)->paginate();
         $users = User::all();
         $institutions = Institution::all();
-        return view('teacher.index', compact('teachers','users','institutions'))
+        return view('teacher.index', compact('teachers','users','institutions','institutionId'))
             ->with('i', ($request->input('page', 1) - 1) * $teachers->perPage());
     }
 

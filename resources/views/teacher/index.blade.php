@@ -18,11 +18,39 @@
                             <span class="text-2xl text-black ">
                                 {{ __('Teachers') }}
                             </span>
-                            <div class="">
-                                <a href="{{ route('teachers.create') }}" class=" btn bg-yellow-500 hover:bg-yellow-400 text-black border-2">
+                            <div class="" onclick="my_modal_1.showModal()">
+                                <p class=" btn bg-yellow-500 hover:bg-yellow-400 text-black border-2">
                                 {{ __('Create New') }}
-                                </a>
+                                </p>
                             </div>
+
+                            <section class=" py-1 flex justify-end">
+
+
+
+                                <dialog id="my_modal_1" class="modal">
+                                    <div class="modal-box p-8 text-black bg-white border">
+                                      <h3 class="font-bold text-2xl justify-center flex w-ful">Introduce el código del Alumno</h3>
+                                      <div class="modal-action">
+                                        <form method="POST" class="w-full p-3" action="{{ route('teachers.store') }}">
+                                            @csrf
+                                
+                                            <div class="mb-4">
+                                                <label class="block text-gray-700 mb-2" for="email">{{ __('Email') }}</label>
+                                                <input type="text" name="email" id="email" class="form-input w-full text-black">
+                                            {!! $errors->first('email', '<div class="text-red-500" role="alert"><strong>:message</strong></div>') !!}
+                                            </div>
+                                
+                                            <input type="hidden" name="id_institution" value="{{ $institutionId }}" class="hidden">  <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700">
+                                            {{ __('Submit') }}
+                                            </button>
+                                            </form>
+                                      </div>
+                                    </div>
+                                  </dialog>
+
+
+                            </section>
                         
                     </div>
                     
@@ -59,7 +87,6 @@
                                             <td class="text-left p-3 px-5">{{ $teacher->institution->name }}</td>
                                             <td class="p-3 px-5 text-left">
                                                 <form action="{{ route('teachers.destroy', $teacher->id) }}" method="POST" class="flex flex-row justify-center items-center mb-0 gap-4" >
-                                                    <a class="bg-yellow-200 hover:bg-yellow border-2 border-black rounded-md p-2" href="{{ route('teachers.show', $teacher->id) }}"><span class="icon-[bx--show]"></span></a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="bg-red-500 hover:bg-red-700 border-2 border-black rounded-md p-2" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><span class="icon-[mi--delete]"></span></button>
