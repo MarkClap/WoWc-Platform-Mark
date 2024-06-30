@@ -65,11 +65,11 @@ async function loadGLTFModel(
 export async function createAmbience1(scene) {
     const ambience = new Ambience();
     const bg1 = await loadGLTFModel(
-        "three/character_scene/models/Ambience/Ambience1/bg1_optimized.glb",
+        "/three/character_scene/models/Ambience/Ambience1/bg1_optimized.glb",
         scene
     );
     const lake = await loadGLTFModel(
-        "three/character_scene/models/Ambience/Ambience1/lake.glb",
+        "/three/character_scene/models/Ambience/Ambience1/lake.glb",
         scene,
         1,
         { x: 5, y: -0.45, z: -2.5 }
@@ -87,7 +87,7 @@ export async function createAmbience1(scene) {
 export async function createAmbience2(scene) {
     const ambience = new Ambience();
     const waterfall = await loadGLTFModel(
-        "three/character_scene/models/Ambience/Ambience2/Waterfall_scene.glb",
+        "/three/character_scene/models/Ambience/Ambience2/Waterfall_scene.glb",
         scene,
         2.5
     );
@@ -103,7 +103,7 @@ export async function createAmbience2(scene) {
 export async function createAmbience3(scene) {
     const ambience = new Ambience();
     const desert = await loadGLTFModel(
-        "three/character_scene/models/Ambience/Ambience3/Desert.glb",
+        "/three/character_scene/models/Ambience/Ambience3/Desert.glb",
         scene,
         0.05
     );
@@ -119,7 +119,7 @@ export async function createAmbience3(scene) {
 export async function createAmbience4(scene) {
     const ambience = new Ambience();
     const forest = await loadGLTFModel(
-        "three/character_scene/models/Ambience/Ambience4/Forest_scene_optimized.glb",
+        "/three/character_scene/models/Ambience/Ambience4/Forest_scene_optimized.glb",
         scene,
         5
     );

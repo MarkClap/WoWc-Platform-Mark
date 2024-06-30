@@ -11,8 +11,7 @@
     @livewireStyles
 </head>
 <body class="bg-red-300 flex flex-grow h-screen">
-    <div class="
-    bg-[url('https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1.jpg')] bg-no-repeat text-black bg-white border-2 border-black rounded-lg flex-col justify-center items-center flex w-full">
+    <div class=" bg-no-repeat text-black bg-white border-2 border-black rounded-lg flex-col justify-center items-center flex w-full">
         <div class="w-56 h-56 ">
         <h1>Quiz Result</h1>
         <p>Your score: {{ $result }}%</p>

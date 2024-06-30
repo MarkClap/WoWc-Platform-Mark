@@ -31,7 +31,7 @@
         <div class=" rounded-lg border border-black">
             <div class="bg-red-600 p-4 flex justify-between rounded-t-lg items-center">
                 <p class="text-xl font-semibold text-white">
-                    Clase 1
+                    2024-BDA-AB
                 </p>
                 <div class=" flex justify-between gap-3 items-center text-white">
                     <div class="dropdown dropdown-bottom dropdown-end flex">
@@ -82,9 +82,9 @@
 
 
 
-                    <button class="rounded-3xl border-[3px] py-1 px-2 hover:border-yellow-400 hover:bg-red-700">
+                    <a href="/main/player" class="cursor-pointer rounded-3xl border-[3px] py-1 px-2 hover:border-yellow-400 hover:bg-red-700">
                         <p class="mx-3 font-semibold text-xl">Jugar</p>
-                    </button>
+                    </a>
                     
                     
                 </div>
@@ -96,12 +96,12 @@
             </div>
             <div class="p-2 h-32 bg-neutral-100 flex justify-center items-center rounded-b-lg">
                 <p class="text-lg text-neutral-400">
-                    hola mundo como estan
+                    ¿Estás listo para esta aventura?
                 </p>
             </div>
         </div>
 
-        <div class=" rounded-lg border border-black">
+        <div hidden class=" rounded-lg border border-black">
             <div class="bg-red-600 p-4 flex justify-between rounded-t-lg items-center">
                 <p class="text-xl font-semibold text-white">
                     Clase 1
