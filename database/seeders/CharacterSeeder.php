@@ -23,6 +23,8 @@ class CharacterSeeder extends Seeder
         Character::create([
             'name' => 'Torres Ismael',
             'gender'=>'M',
+            'time'=>'night',
+            'ambience'=>'Ambience2',
             'id_class' => 1,
             'id_inscription' => 2,
         ]);
@@ -30,6 +32,7 @@ class CharacterSeeder extends Seeder
         Character::create([
             'name' => 'Rojas Cristian',
             'gender'=>'M',
+            'ambience'=>'Ambience3',
             'id_class' => 1,
             'id_inscription' => 3,
         ]);
@@ -37,6 +40,8 @@ class CharacterSeeder extends Seeder
         Character::create([
             'name' => 'Jimenez Pedro',
             'gender'=>'M',
+            'time'=>'night',
+            'ambience'=>'Ambience4',
             'id_class' => 1,
             'id_inscription' => 4,
         ]);
@@ -44,6 +49,8 @@ class CharacterSeeder extends Seeder
         Character::create([
             'name' => 'Lopez Tomas',
             'gender'=>'M',
+            'time'=>'day',
+            'ambience'=>'Ambience5',
             'id_class' => 1,
             'id_inscription' => 5,
         ]);
@@ -51,6 +58,8 @@ class CharacterSeeder extends Seeder
         Character::create([
             'name' => 'Sanchez Karen',
             'gender'=>'F',
+            'time'=>'night',
+            'ambience'=>'Ambience1',
             'id_class' => 1,
             'id_inscription' => 6,
         ]);
