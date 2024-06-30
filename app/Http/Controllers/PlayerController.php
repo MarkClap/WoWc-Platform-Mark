@@ -50,4 +50,17 @@ class PlayerController extends Controller
 
         return response()->json(['appearance' => $appearance]);
     }
+
+    public function get_ambience($id)
+    {
+        $character = \App\Models\Character::find($id);
+        if (!$character) {
+            return response()->json(['error' => 'Character not found'], 404);
+        }
+
+        $time = $character->time;
+        $ambience = $character->ambience;
+
+        return response()->json(['time' => $time, 'ambience' => $ambience]);
+    }
 }

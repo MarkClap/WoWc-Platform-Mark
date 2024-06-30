@@ -15,6 +15,10 @@ const fetchJSON = (url) =>
 
 const init = async () => {
     try {
+        const characterAmbienceData = await fetchJSON(
+            "http://127.0.0.1:8000/character/ambience/1"
+        );
+
         const [dataAmbience, timeData] = await Promise.all([
             fetchJSON("/three/character_scene/config/ambience.json"),
             fetchJSON("/three/character_scene/config/time.json"),
@@ -22,10 +26,20 @@ const init = async () => {
 
         const sceneElement = document.getElementById("scene");
 
-        const test_ambience = "Ambience5";
-        const ambience = dataAmbience[test_ambience];
+        const characterAmbience = characterAmbienceData.ambience || "Ambience1";
+
+        const ambience = dataAmbience[characterAmbience];
         const { focusPosition, cameraPosition, lights: lightsData } = ambience;
-        const time = "night";
+
+        let time;
+        if (timeData[characterAmbience.time]) {
+            time = characterAmbience.time;
+        } else if (ambience["time"] && timeData[ambience["time"]]) {
+            time = ambience["time"];
+        } else {
+            console.error("Time configuration not found, using default.");
+            time = "day";
+        }
 
         const renderer = initRenderer(timeData[time]["exposure"]);
         const canvas = renderer.domElement;
@@ -74,7 +88,7 @@ const init = async () => {
 
         lights.add(scene);
 
-        await loadAmbience(test_ambience, scene, character);
+        await loadAmbience(characterAmbience, scene, character);
 
         startRendering(renderer, scene, camera, controls);
 
@@ -86,7 +100,7 @@ const init = async () => {
         }, 100);
 
         setTimeout(() => {
-            document.getElementById("loading").classList.remove()
+            document.getElementById("loading").classList.remove();
             document.getElementById("loading").classList.add("hidden");
         }, 600);
     } catch (error) {
@@ -165,4 +179,30 @@ const startRendering = (renderer, scene, camera, controls) => {
 
 window.addEventListener("load", () => {
     setTimeout(init, 500);
+
+    fetch("http://127.0.0.1:8000/character/appearance/1")
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            const appearanceData = JSON.parse(data.appearance);
+            console.log(appearanceData);
+
+            console.log("Hair:", appearanceData.Appearance.Hair);
+            console.log("Eyes:", appearanceData.Appearance.Eyes);
+            console.log("Skin:", appearanceData.Appearance.Skin);
+            console.log("Shirt:", appearanceData.Appearance.Shirt);
+            console.log("Pants:", appearanceData.Appearance.Pants);
+            console.log("Shoes:", appearanceData.Appearance.Shoes);
+        })
+        .catch((error) => {
+            console.error(
+                "There has been a problem with your fetch operation:",
+                error
+            );
+        });
 });
