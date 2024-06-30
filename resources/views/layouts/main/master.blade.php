@@ -25,14 +25,23 @@
     <main class="flex flex-row flex-grow relative h-full w-full max-h-full max-w-full">
         <x-main-sidebar>
             <div>
-                <x-sidebar-item href="master.groups" name="Grupos" icon="icon-[heroicons--user-solid]" />
-
-                <x-sidebar-collapse id="quests-collapse" name="Y" icon="icon-[mingcute--task-2-fill]">
+                
+                <x-sidebar-item href="master.groups" name="Hogar" icon="icon-[heroicons--user-solid]" />
+                <x-sidebar-collapse id="gremio-collapse" name="Gremio" icon="icon-[mingcute--task-2-fill]">
                     <x-slot name="items">
-                        <x-sidebar-item href="/" name="X" icon="icon-[icomoon-free--books]" />
-                        <x-sidebar-item href="/" name="X" icon="icon-[material-symbols--quiz]" />
+                        <x-sidebar-item href="master.members" name="members" icon="icon-[icomoon-free--books]" />
+                        <x-sidebar-item href="/" name="groups" icon="icon-[material-symbols--quiz]" />
                     </x-slot>
                 </x-sidebar-collapse>
+
+                <x-sidebar-collapse id="quests-collapse" name="Misiones" icon="icon-[mingcute--task-2-fill]">
+                    <x-slot name="items">
+                        <x-sidebar-item href="master.tasks" name="Tarreas" icon="icon-[icomoon-free--books]" />
+                        <x-sidebar-item href="/" name="Examenes" icon="icon-[material-symbols--quiz]" />
+                    </x-slot>
+                </x-sidebar-collapse>
+
+                
                 
             </div>
 

@@ -19,26 +19,6 @@
         </div>
     </div>
 
-    <section class="flex flex-row items-center justify-center text-3xl text-white gap-6 px-6 pt-2">
-        <div class="dropdown dropdown-end justify-center">
-            <span tabindex="0" role="button"
-                class="icon-[ph--scroll-fill] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
-            <div class="bg-white dropdown-content z-[1] menu w-60 rounded-lg rounded-tr-none mt-6" tabindex="0">
-                <div class="flex justify-center items-center">
-                    <h1 class="text-2xl">Acciones de jugador</h1>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown dropdown-end">
-            <span tabindex="0" role="button"
-                class="icon-[emojione-monotone--broken-heart] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
-
-            <div class="bg-white dropdown-content z-[1] menu w-60 rounded-lg rounded-tr-none mt-6" tabindex="0">
-                <div class="flex justify-center items-center">
-                    <h1 class="text-2xl">Daño inferido</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     
 </nav>
