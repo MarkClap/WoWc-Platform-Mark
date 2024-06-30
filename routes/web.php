@@ -44,6 +44,10 @@ Route::prefix('main')->group(function () {
         })->name('master');
 
         Route::get('/groups', 'groups')->name('master.groups');
+        Route::get('/members', 'members')->name('master.members');
+        Route::get('/tasks', 'tasks')->name('master.tasks');
+
+
         
     });
 });

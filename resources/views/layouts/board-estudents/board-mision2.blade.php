@@ -161,8 +161,7 @@
                 </div>
 
             </section>
-        </di
-        v>
+        </div>
     </main>
     
     <x-script-board>
