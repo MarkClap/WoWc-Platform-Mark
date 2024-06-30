@@ -14,8 +14,8 @@ class CharacterSeeder extends Seeder
     public function run(): void
     {
         Character::create([
-            'name' => 'Mark_Clap',
-            'appearance' => 'hello',
+            'name' => 'TestCharacter',
+            'appearance' => 'intruduce_appearance',
             'gender'=>'F',
             'id_class' => 1,
             'id_inscription' => 1,
