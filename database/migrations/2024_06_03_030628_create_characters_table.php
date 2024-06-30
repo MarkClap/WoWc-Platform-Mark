@@ -17,11 +17,13 @@ return new class extends Migration
             $table->integer('experience')->default(0);
             $table->integer('gold')->default(0);
             $table->text('appearance');
+            $table->enum('gender',['M','F']);
+            $table->enum('time',['day','night'])->default('day');
+            $table->string('Ambience')->default('Ambience1');
             $table->unsignedBigInteger('id_class');
             $table->unsignedBigInteger('id_group')->nullable();
             $table->unsignedBigInteger('id_inscription');
             $table->timestamps();
-
 
             $table->foreign('id_class')->references('id')->on('classes');
             $table->foreign('id_group')->references('id')->on('groups');

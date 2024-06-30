@@ -13,13 +13,13 @@ class CourseSeeder extends Seeder
     public function run(): void
     {
         Course::create([
-            'name' => 'Big Data',
-            'description' => 'description big data',
+            'name' => 'Database',
+            'description' => 'description database',
         ]);
 
         Course::create([
-            'name' => 'Database',
-            'description' => 'description database',
+            'name' => 'Big Data',
+            'description' => 'description big data',
         ]);
 
         Course::create([

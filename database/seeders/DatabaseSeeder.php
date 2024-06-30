@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
             TeacherSeeder::class,
             Teacher_CourseSeeder::class,
             EventSeeder::class,
+            ClasseSeeder::class,
+            InscriptionSeeder::class,
+            CharacterSeeder::class,
         ]);
     }
 }

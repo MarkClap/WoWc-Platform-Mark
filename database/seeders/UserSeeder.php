@@ -29,5 +29,41 @@ class UserSeeder extends Seeder
             'email' => 'test2@example',
             'password' => 'test1234567',
         ]);
+
+        User::factory()->create([
+            'name' => 'test3',
+            'paternal_surname' => 'Test User 3',
+            'maternal_surname' => 'Test User 3',
+            'username' => 'Test 3',
+            'email' => 'test3@example',
+            'password' => 'test12345678',
+        ]);
+
+        User::factory()->create([
+            'name' => 'test4',
+            'paternal_surname' => 'Test User 4',
+            'maternal_surname' => 'Test User 4',
+            'username' => 'Test 4',
+            'email' => 'test4@example',
+            'password' => 'test123456789',
+        ]);
+
+        User::factory()->create([
+            'name' => 'test5',
+            'paternal_surname' => 'Test User 5',
+            'maternal_surname' => 'Test User 5',
+            'username' => 'Test 5',
+            'email' => 'test5@example',
+            'password' => 'test1234567890',
+        ]);
+
+        User::factory()->create([
+            'name' => 'test6',
+            'paternal_surname' => 'Test User 6',
+            'maternal_surname' => 'Test User 6',
+            'username' => 'Test 6',
+            'email' => 'test6@example',
+            'password' => 'test12345678901',
+        ]);
     }
 }
