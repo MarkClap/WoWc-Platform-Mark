@@ -79,6 +79,7 @@ Route::resource('teachers', TeacherController::class)->middleware('auth:secondar
 Route::get('/quizzes', [QuizController::class, 'index'])->name('indexquiz');
 Route::get('/quizzes/result', [QuizController::class, 'result'])->name('quizzes.score');
 Route::post('/quizzes/check', [QuizController::class, 'check'])->name('quizzes.check');
+Route::get('/quizzes/before', [QuizController::class, 'beforequiz'])->name('quizzes.before');
 
 //test json
 Route::get('/character/appearance/{id}', [PlayerController::class, 'get_character_sheet']);
