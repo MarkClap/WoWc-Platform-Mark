@@ -7,33 +7,24 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Create Teacher</title>
 </head>
-<body>
-    <div class="bg-black">
-        <div class="bg-white text-black p-2 flex">
-            <h1 class="text-xl font-semibold leading-7 text-gray-900">Create Teachers</h1>
-        </div>
-        <div class=" bg-white">
-            <form method="POST" action="{{ route('teachers.store') }}" role="form" enctype="multipart/form-data">
-                @csrf
-    
-                <div class="row padding-1 p-1">
-                    <div class="col-md-12">
-    
-                        <div class="form-group mb-2 mb20">
-                            <label class="block text-black">{{ __('Email') }}</label>
-                            <input type="text" name="email" class="text-black">
-                            {!! $errors->first('email', '<div class="text-red-600" role="alert"><strong>:message</strong></div>') !!}
-                        </div>
-                        <input type="hidden" name="id_institution"
-                            class="form-control @error('id_institution') is-invalid @enderror" value="{{ $institutionId }}"
-                            id="id_institution" placeholder="Id Institution">
-                    </div>
-                    <div class="">
-                        <button type="submit" class="btn btn-success">{{ __('Submit') }}</button>
-                    </div>
-                </div>
+<body class="flex h-screen bg-white">
+    <div class="bg-white-400 flex w-full justify-center items-center">
+        <div class="py-4 flex w-6/12 border-2 border-black flex-col items-center">  
+            <h1 class="text-3xl text-black">Create Teachers</h1>
+
+            <form method="POST" class="w-full p-3" action="{{ route('teachers.store') }}">
+            @csrf
+
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="email">{{ __('Email') }}</label>
+                <input type="text" name="email" id="email" class="form-input w-full text-black">
+            {!! $errors->first('email', '<div class="text-red-500" role="alert"><strong>:message</strong></div>') !!}
+            </div>
+
+            <input type="hidden" name="id_institution" value="{{ $institutionId }}" class="hidden">  <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700">
+            {{ __('Submit') }}
+            </button>
             </form>
         </div>
     </div>
 </body>
-</html>
