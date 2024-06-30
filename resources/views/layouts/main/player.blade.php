@@ -27,13 +27,17 @@
             <div>
                 <x-sidebar-item href="player.character" name="Personaje" icon="icon-[heroicons--user-solid]" />
 
-                <x-sidebar-item href="player.quests" name="Misiones" icon="icon-[mingcute--task-2-fill]" />
-
+                <x-sidebar-collapse id="quests-collapse" name="Misiones" icon="icon-[mingcute--task-2-fill]">
+                    <x-slot name="items">
+                        <x-sidebar-item href="player.tasks" name="Tareas" icon="icon-[icomoon-free--books]" />
+                        <x-sidebar-item href="player.quizzes" name="Exámenes" icon="icon-[material-symbols--quiz]" />
+                    </x-slot>
+                </x-sidebar-collapse>
+                
                 <x-sidebar-collapse id="guild-collapse" name="Gremio" icon="icon-[game-icons--vertical-banner]">
                     <x-slot name="items">
                         <x-sidebar-item href="player.members" name="Miembros"
                             icon="icon-[heroicons--user-group-solid]" />
-
                         <x-sidebar-item href="player.groups" name="Grupo" icon="icon-[heroicons--users-solid]" />
                     </x-slot>
                 </x-sidebar-collapse>

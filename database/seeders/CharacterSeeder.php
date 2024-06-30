@@ -15,7 +15,6 @@ class CharacterSeeder extends Seeder
     {
         Character::create([
             'name' => 'Chocce Marco',
-            'appearance' => 'appearance',
             'gender'=>'M',
             'id_class' => 1,
             'id_inscription' => 1,
@@ -23,7 +22,6 @@ class CharacterSeeder extends Seeder
 
         Character::create([
             'name' => 'Torres Ismael',
-            'appearance' => 'appearance',
             'gender'=>'M',
             'id_class' => 1,
             'id_inscription' => 2,
@@ -31,7 +29,6 @@ class CharacterSeeder extends Seeder
 
         Character::create([
             'name' => 'Rojas Cristian',
-            'appearance' => 'appearance',
             'gender'=>'M',
             'id_class' => 1,
             'id_inscription' => 3,
@@ -39,7 +36,6 @@ class CharacterSeeder extends Seeder
 
         Character::create([
             'name' => 'Jimenez Pedro',
-            'appearance' => 'appearance',
             'gender'=>'M',
             'id_class' => 1,
             'id_inscription' => 4,
@@ -47,7 +43,6 @@ class CharacterSeeder extends Seeder
 
         Character::create([
             'name' => 'Lopez Tomas',
-            'appearance' => 'appearance',
             'gender'=>'M',
             'id_class' => 1,
             'id_inscription' => 5,
@@ -55,7 +50,6 @@ class CharacterSeeder extends Seeder
 
         Character::create([
             'name' => 'Sanchez Karen',
-            'appearance' => 'appearance',
             'gender'=>'F',
             'id_class' => 1,
             'id_inscription' => 6,

@@ -25,7 +25,7 @@ const init = async () => {
         const test_ambience = "Ambience5";
         const ambience = dataAmbience[test_ambience];
         const { focusPosition, cameraPosition, lights: lightsData } = ambience;
-        const time = dataAmbience[test_ambience]["time"];
+        const time = "night";
 
         const renderer = initRenderer(timeData[time]["exposure"]);
         const canvas = renderer.domElement;

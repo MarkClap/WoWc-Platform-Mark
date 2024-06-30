@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->integer('experience')->default(0);
             $table->integer('gold')->default(0);
-            $table->text('appearance');
+            //test json
+            $table->text('appearance')->default('{"Appearance":{"Hair":"#350077","Eyes":"#000000","Skin":"#FFDAB9","Shirt":"#FF0000","Pants":"#0000FF","Shoes":"#000000"}}');
             $table->enum('gender',['M','F']);
             $table->enum('time',['day','night'])->default('day');
             $table->string('Ambience')->default('Ambience1');
@@ -24,7 +25,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_group')->nullable();
             $table->unsignedBigInteger('id_inscription');
             $table->timestamps();
-
             $table->foreign('id_class')->references('id')->on('classes');
             $table->foreign('id_group')->references('id')->on('groups');
             $table->foreign('id_inscription')->references('id')->on('inscriptions');

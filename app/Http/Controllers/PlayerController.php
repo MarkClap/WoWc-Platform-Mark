@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class PlayerController extends Controller
 {
     public function createCharacter()
@@ -17,10 +15,16 @@ class PlayerController extends Controller
         return view('main.player.character', compact('name'));
     }
 
-    public function quests()
+    public function tasks()
     {
-        $name = 'Quests';
-        return view('main.player.quests', compact('name'));
+        $name = 'Tasks';
+        return view('main.player.tasks', compact('name'));
+    }
+
+    public function quizzes()
+    {
+        $name = 'Quizzes';
+        return view('main.player.quizzes', compact('name'));
     }
 
     public function groups()
@@ -33,5 +37,18 @@ class PlayerController extends Controller
     {
         $name = 'Members';
         return view('main.player.members', compact('name'));
+    }
+
+    public function get_character_sheet($id)
+    {
+        $character = \App\Models\Character::find($id);
+
+        if (!$character) {
+            return response()->json(['error' => 'Character not found'], 404);
+        }
+
+        $appearance = $character->appearance;
+
+        return response()->json(['appearance' => $appearance]);
     }
 }
