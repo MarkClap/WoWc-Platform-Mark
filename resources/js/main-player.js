@@ -3,11 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.getItem("guildButtonExpanded") === "true";
     const guild_collapse = document.getElementById("guild-collapse");
     const guild_button = guild_collapse.querySelector("input");
+
+    const isQuestsButtonExpanded =
+        localStorage.getItem("questsButtonExpanded") === "true";
+    const quests_collapse = document.getElementById("quests-collapse");
+    const quests_button = quests_collapse.querySelector("input");
+
     if (guild_button) {
         guild_button.checked = isGuildButtonExpanded;
         updateCollapseButton();
 
         guild_button.addEventListener("change", function () {
+            updateCollapseButton();
+        });
+    }
+
+    if (quests_button) {
+        quests_button.checked = isQuestsButtonExpanded;
+        updateCollapseButton();
+
+        quests_button.addEventListener("change", function () {
             updateCollapseButton();
         });
     }
