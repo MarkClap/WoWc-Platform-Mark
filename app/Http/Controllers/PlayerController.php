@@ -42,7 +42,6 @@ class PlayerController extends Controller
     public function get_character_sheet($id)
     {
         $character = \App\Models\Character::find($id);
-
         if (!$character) {
             return response()->json(['error' => 'Character not found'], 404);
         }

@@ -8,7 +8,8 @@
     <title>Tablero</title>
     <!-- Scripts -->
 
-    @vite(['resources/css/app.css', 'resources/css/board.css', 'resources/js/app.js', 'resources/js/board.js', 'resources/js/three/character_scene/main.js'])
+    @vite(['resources/css/app.css', 'resources/css/board.css', 'resources/js/app.js', 'resources/js/main-dashboard.js', 'resources/js/main-master.js'])
+    @stack('scripts')
 
     <!-- Styles -->
     @livewireStyles
@@ -18,10 +19,32 @@
 <body class="bg-base-100 flex flex-col h-screen w-screen overflow-hidden">
 
     <header class="shadow-md w-full">
-        <x-board-navigation />
+        <x-master-navigation name="{{ $name ?? 'Master' }}" />
     </header>
 
-    @livewire('master-content')
+    <main class="flex flex-row flex-grow relative h-full w-full max-h-full max-w-full">
+        <x-main-sidebar>
+            <div>
+                <x-sidebar-item href="master.groups" name="Grupos" icon="icon-[heroicons--user-solid]" />
+
+                <x-sidebar-collapse id="quests-collapse" name="Y" icon="icon-[mingcute--task-2-fill]">
+                    <x-slot name="items">
+                        <x-sidebar-item href="/" name="X" icon="icon-[icomoon-free--books]" />
+                        <x-sidebar-item href="/" name="X" icon="icon-[material-symbols--quiz]" />
+                    </x-slot>
+                </x-sidebar-collapse>
+                
+            </div>
+
+            <div>
+                <x-sidebar-item href="/dashboard" name="Salida" icon="icon-[material-symbols--exit-to-app]" />
+            </div>
+
+        </x-main-sidebar>
+
+        @yield('content')
+
+    </main>
 
 </body>
 

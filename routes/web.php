@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MasterController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\TeacherController;
@@ -35,7 +36,15 @@ Route::prefix('main')->group(function () {
         Route::get('/members', 'members')->name('player.members');
         Route::get('/tasks', 'tasks')->name('player.tasks');
         Route::get('/quizzes', 'quizzes')->name('player.quizzes');
+    });
 
+    Route::prefix('master')->controller(MasterController::class)->group(function () {
+        Route::get('/', function () {
+            return redirect('/main/master/groups');
+        })->name('master');
+
+        Route::get('/groups', 'groups')->name('master.groups');
+        
     });
 });
 
@@ -71,4 +80,5 @@ Route::get('/quizzes', [QuizController::class, 'index'])->name('indexquiz');
 Route::get('/quizzes/result', [QuizController::class, 'result'])->name('quizzes.score');
 Route::post('/quizzes/check', [QuizController::class, 'check'])->name('quizzes.check');
 
+//test json
 Route::get('/character/appearance/{id}', [PlayerController::class, 'get_character_sheet']);
