@@ -28,9 +28,9 @@
     
     <section class=" w-3/6 flex py-2 px-4 flex-col space-y-2">
         <div class=" p-2 flex justify-end">
-            <button class="btn bg-yellow-500">
+            <a class="btn bg-yellow-500" href="/quizzes" >
                 <p class="text-lg">Realizar</p>
-            </button>
+            </a>
         </div>
         
 

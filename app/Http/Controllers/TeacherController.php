@@ -22,7 +22,7 @@ class TeacherController extends Controller
         $teachers = Teacher::where('id_institution', $institutionId)->paginate();
         $users = User::all();
         $institutions = Institution::all();
-        return view('teacher.index', compact('teachers','users','institutions','institutionId'))
+        return view('layouts.board-institutions.board', compact('teachers','users','institutions','institutionId'))
             ->with('i', ($request->input('page', 1) - 1) * $teachers->perPage());
     }
     /**
@@ -53,11 +53,12 @@ class TeacherController extends Controller
         return redirect()->route('teachers.index')->with('success', 'Teacher created successfully.');
     }
 
-    public function destroy($id): RedirectResponse
+    public function destroy(string $id)
     {
-        Teacher::find($id)->delete();
+            $album = Teacher::find($id);
+            $album->delete();
+            return redirect()->route('teachers.index')->with('success', 'Teacher deleted successfully');
+        
+    } 
 
-        return Redirect::route('teachers.index')
-            ->with('success', 'Teacher deleted successfully');
-    }
 }

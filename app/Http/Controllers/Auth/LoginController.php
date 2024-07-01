@@ -30,7 +30,7 @@ class LoginController extends Controller
         }
 
         if (Auth::guard('secondary')->attempt($credentials)) {
-            return redirect()->intended('/board-profesor');
+            return redirect()->intended('/board-insitution');
         }
 
         return back()->withErrors([

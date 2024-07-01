@@ -19,7 +19,13 @@
 <body class="bg-base-100 flex flex-col h-screen w-screen overflow-hidden">
 
     <header class="shadow-md w-full">
-        <x-player-navigation name="{{ $name ?? 'Player' }}" />
+        <x-player-navigation name="{{ $name ?? 'Player' }}">
+            <h1 class="text-center menu-title text-black text-2xl">History</h1>
+            @foreach ($allhistory as $history)
+            <h1 class="text-center gap-3 border">{{$history->character->name}} quiz{{$history->quiz}} score: {{$history->score}}% </h1>
+            @endforeach
+        </x-player-navigation>
+        
     </header>
 
     <main class="flex flex-row flex-grow relative h-full w-full max-h-full max-w-full">

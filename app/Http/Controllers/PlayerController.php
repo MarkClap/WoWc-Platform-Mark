@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Quizzes_History;
+use Illuminate\Console\View\Components\Component;
+use Livewire\Attributes\Layout;
+
 class PlayerController extends Controller
 {
     public function createCharacter()
@@ -12,31 +16,36 @@ class PlayerController extends Controller
     public function character()
     {
         $name = 'Character';
-        return view('main.player.character', compact('name'));
+        $allhistory=Quizzes_History::all();
+        return view('main.player.character', compact('name', 'allhistory'));
     }
 
     public function tasks()
     {
         $name = 'Tasks';
-        return view('main.player.tasks', compact('name'));
+        $allhistory=Quizzes_History::all();
+        return view('main.player.tasks', compact('name', 'allhistory'));
     }
 
     public function quizzes()
     {
         $name = 'Quizzes';
-        return view('main.player.quizzes', compact('name'));
+        $allhistory=Quizzes_History::all();
+        return view('main.player.quizzes', compact('name', 'allhistory'));
     }
 
     public function groups()
     {
         $name = 'Groups';
-        return view('main.player.groups', compact('name'));
+        $allhistory=Quizzes_History::all();
+        return view('main.player.groups', compact('name', 'allhistory'));
     }
 
     public function members()
     {
         $name = 'Members';
-        return view('main.player.members', compact('name'));
+        $allhistory=Quizzes_History::all();
+        return view('main.player.members', compact('name','allhistory'));
     }
 
     public function get_character_sheet($id)
@@ -61,6 +70,12 @@ class PlayerController extends Controller
         $time = $character->time;
         $ambience = $character->ambience;
 
+        
         return response()->json(['time' => $time, 'ambience' => $ambience]);
+    }
+    public function get_history(){
+        $allhistory=Quizzes_History::all();
+
+        return view('layouts\main\player', compact('allhistory'));
     }
 }
