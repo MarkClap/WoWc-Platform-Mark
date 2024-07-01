@@ -34,7 +34,7 @@
                     </x-slot>
                 </x-sidebar-collapse>
                 
-                <x-sidebar-collapse id="guild-collapse" name="Gremio" icon="icon-[game-icons--vertical-banner]">
+                <x-sidebar-collapse id="guild-collapse" name="Gremio" icon="icon-[material-symbols--home]">
                     <x-slot name="items">
                         <x-sidebar-item href="player.members" name="Miembros"
                             icon="icon-[heroicons--user-group-solid]" />

@@ -1,4 +1,4 @@
-<nav class="flex w-full bg-primary dark:bg-neutral-800 py-3 items-center gap-2 justify-between ">
+<nav class="flex w-full bg-neutral-800  dark:bg-neutral-800 py-3 items-center gap-2 justify-between ">
 
     <div class="flex flex-row">
         <div id="menu-section" class="px-2 transition-all duration-500 flex items-center opacity-0">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="h-12 opacity-0 duration-500" id="navigation-list">
-            <div id="navigation-path" class="text-2xl breadcrumbs">
+            <div id="navigation-path" class="text-2xl breadcrumbs text-white">
                 <ul>
                     <li><a href="{{ route("player") }}">2024-BDA-AB</a></li>
                     <li>{{ $name ?? 'Undefined' }}</li>
@@ -26,6 +26,7 @@
             <div class="bg-neutral-700 dark:bg-white dark:text-black font-bold dropdown-content z-[1] menu w-60 rounded-lg rounded-tr-none mt-6" tabindex="0">
                 <div class="flex justify-center items-center">
                     <h1 class="text-xl">Acciones de jugador</h1>
+
                 </div>
             </div>
         </div>

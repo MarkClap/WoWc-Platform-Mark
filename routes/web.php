@@ -42,7 +42,7 @@ Route::prefix('main')->group(function () {
         Route::get('/', function () {
             return redirect('/main/master/groups');
         })->name('master');
-
+        Route::get('/create-group', 'createGroup')->name('player.create-group');
         Route::get('/groups', 'groups')->name('master.groups');
         Route::get('/members', 'members')->name('master.members');
         Route::get('/tasks', 'tasks')->name('master.tasks');

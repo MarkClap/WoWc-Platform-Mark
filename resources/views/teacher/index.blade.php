@@ -15,7 +15,7 @@
                     {{-- content-title --}}
                     <div class="p-3 flex justify-between w-11/12 items-center border-b-2 border-black">
                         
-                            <span class="text-2xl text-black ">
+                            <span class="text-2xl text-black font-bold">
                                 {{ __('Teachers') }}
                             </span>
                             <section class=" py-1 flex justify-end">
@@ -75,7 +75,7 @@
 									<th class="text-left p-3 px-5" >Teacher</th>
 									<th class="text-left p-3 px-5">Email</th>
 									<th class="text-left p-3 px-5">Institution</th>
-									<th class="text-left p-3 px-5">Eliminar</th>
+									<th class="text-center p-3 px-5">Eliminar</th>
 
                                         <th></th>
                                     </tr>
@@ -87,7 +87,7 @@
                                             <td class="text-left p-3 px-5">{{ $teacher->user->name }}</td>
                                             <td class="text-left p-3 px-5" >{{ $teacher->user->email }}</td>
                                             <td class="text-left p-3 px-5">{{ $teacher->institution->name }}</td>
-                                            <td class="p-3 px-5 flex justify-start">
+                                            <td class="p-3 px-5 flex justify-center">
                                                 <form action="{{ route('teachers.destroy', $teacher->id) }}" method="POST" class="flex flex-row justify-center items-center mb-0" >
                                                     @csrf
                                                     @method('DELETE')

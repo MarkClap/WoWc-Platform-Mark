@@ -26,11 +26,11 @@
         <x-main-sidebar>
             <div>
                 
-                <x-sidebar-item href="master.groups" name="Hogar" icon="icon-[heroicons--user-solid]" />
-                <x-sidebar-collapse id="gremio-collapse" name="Gremio" icon="icon-[mingcute--task-2-fill]">
+                <x-sidebar-item href="master.groups" name="Hogar" icon="icon-[material-symbols--home]" />
+                <x-sidebar-collapse id="gremio-collapse" name="Gremio" icon="icon-[material-symbols--home]">
                     <x-slot name="items">
-                        <x-sidebar-item href="master.members" name="members" icon="icon-[icomoon-free--books]" />
-                        <x-sidebar-item href="master.groups" name="groups" icon="icon-[material-symbols--quiz]" />
+                        <x-sidebar-item href="master.members" name="members" icon="icon-[heroicons--users-solid]" />
+                        <x-sidebar-item href="master.groups" name="groups" icon="icon-[heroicons--user-group-solid]" />
                     </x-slot>
                 </x-sidebar-collapse>
 
