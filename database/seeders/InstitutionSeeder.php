@@ -15,8 +15,6 @@ class InstitutionSeeder extends Seeder
     {
         $institution = User::factory()->create([
             'name' => 'Tecsup',
-            'paternal_surname' => 'X',
-            'maternal_surname' => 'Y',
             'username' => 'TECSUP',
             'email' => 'tecsup@tecsup.edu.pe',
             'password' => 'Tecsup2024',
