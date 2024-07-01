@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('characters_quizzes', function (Blueprint $table) {
+        Schema::create('quizzes_history', function (Blueprint $table) {
             $table->id();
+            $table->integer('quiz')->default(0);
+            $table->string('score');
             $table->unsignedBigInteger('id_character');
-            $table->unsignedBigInteger('id_quiz');
-            $table->string('result');
             $table->timestamps();
 
             $table->foreign('id_character')->references('id')->on('characters');
-            $table->foreign('id_quiz')->references('id')->on('quizzes');
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('characters_quizzes');
+        Schema::dropIfExists('quizzes_history');
     }
 };

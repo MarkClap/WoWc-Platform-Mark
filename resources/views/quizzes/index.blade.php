@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <pre>{{Auth::user()}}</pre>
     <div class="bg-white w-full flex justify-center text-black flex-col gap-2 items-center p-2 h-screen">
         <div class="flex w-4/5 flex-col border-2 border-black h-full">
         <section class=" w-full flex p-2">
@@ -30,7 +31,7 @@
                         @foreach($quizzes as $quiz)
                         <div>
                             <div class=" border-2 border-black border-b-0 flex flex-row justify-between bg-red-500 p-2">
-                                <h3 class="text-2xl">Pregunta</h3>
+                                <h3 class="text-2xl">Pregunta {{$i++}} </h3>
                                 <h2 class="text-2">2 pts</h2>
                         
                             </div>
@@ -42,7 +43,7 @@
                             @foreach($quiz->answers as $answer)
                                 <div class="flex flex-col justify-between p-2 gap-1">
                                     <div class="flex flex-row gap-1 items-center">
-                                        <input type="radio" name="answerselected[{{ $quiz->id }}]" value="{{ $answer }}">
+                                        <input type="radio" required name="answerselected[{{ $quiz->id }}]" value="{{ $answer }}">
                                         <label for="{{ $answer }}{{ $quiz->id }}">{{ $answer }}</label>
                                     </div>
                                 </div>

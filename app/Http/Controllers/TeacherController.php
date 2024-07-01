@@ -22,21 +22,9 @@ class TeacherController extends Controller
         $teachers = Teacher::where('id_institution', $institutionId)->paginate();
         $users = User::all();
         $institutions = Institution::all();
-        return view('teacher.index', compact('teachers','users','institutions'))
+        return view('teacher.index', compact('teachers','users','institutions','institutionId'))
             ->with('i', ($request->input('page', 1) - 1) * $teachers->perPage());
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create(): View
-    {
-        $teacher = new Teacher();
-        $users = User::all();
-        $institutionId = Auth::user()->id;
-        return view('teacher.create', compact('teacher','institutionId','users'));
-    }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -54,7 +42,7 @@ class TeacherController extends Controller
                          ->exists();
 
         if ($Teacher_exists) {
-            return redirect()->back()->withErrors(['email' => 'The user is already registered as a teacher at this institution.'])->withInput();
+            return redirect()->route('teachers.index')->withErrors(['email' => 'The user is already registered as a teacher at this institution.']);
         }
 
         Teacher::create([
@@ -63,18 +51,6 @@ class TeacherController extends Controller
         ]);
 
         return redirect()->route('teachers.index')->with('success', 'Teacher created successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show($id): View
-    {
-        $institutionId = Auth::user()->id;
-        $teacher = Teacher::where('id_institution', $institutionId)->find($id);
-        $users = User::all();
-
-        return view('teacher.show', compact('teacher','institutionId','users'));
     }
 
     public function destroy($id): RedirectResponse
