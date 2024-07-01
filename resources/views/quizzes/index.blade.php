@@ -12,7 +12,6 @@
 </head>
 <body>
 
-    <pre>{{Auth::user()}}</pre>
     <div class="bg-white w-full flex justify-center text-black flex-col gap-2 items-center p-2 h-screen">
         <div class="flex w-4/5 flex-col border-2 border-black h-full">
         <section class=" w-full flex p-2">

@@ -111,7 +111,7 @@
                             <div class="border-t border-neutral-200 dark:border-neutral-600"></div>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}" x-data>
+                            <form method="POST" action="{{ route('logoutall') }}" x-data>
                                 @csrf
 
                                 <x-dropdown-link href="{{ route('logout') }}"

@@ -29,9 +29,7 @@
 
         <div class="p-1 flex justify-between border-b-2 items-center text-xl font-semibold">
             <p>Examen 1</p>
-            <button class="btn bg-yellow-500">
-                <p class="text-lg">Realizar</p>
-            </button>
+            <a class="btn bg-yellow-500" href="/quizzes" >Realizar</a>
         </div>
 
         <div class="p-1 flex justify-between border-b-2 items-center text-xl font-semibold">

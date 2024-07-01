@@ -15,7 +15,7 @@
         <div class="w-56 h-56 ">
         <h1>Quiz Result</h1>
         <p>Your score: {{ $result }}%</p>
-        <a href="{{ route('indexquiz') }}" class="btn bg-yellow-300 text-black">Try Again</a>
+        <a href="{{ route('player') }}" class="btn bg-yellow-300 text-black">Back</a>
         <progress class="progress progress-error w-56 bg-black" value='{{$result}}' max="100"></progress>
         
         
