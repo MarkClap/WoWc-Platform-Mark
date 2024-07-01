@@ -8,9 +8,7 @@
            <div
                 class="w-full h-full  hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-3 ">
-                    <img class="object-center object-cover rounded-full h-16 w-16"
-                        src="{{ asset('/img/user01.jpeg') }}"
-                        alt="photo">
+                    <span class="icon-[twemoji--man-pouting-medium-light-skin-tone] object-center object-cover rounded-full h-16 w-16"></span>
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-black dark:text-white font-bold mb-2">Chooce Marcos -<span class="text-pink-600"> Nvl 35</span>
@@ -22,10 +20,9 @@
             <div
                 class="w-full h-full  hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-3 ">
-                    <img class="object-center object-cover rounded-full h-16 w-16"
-                        src="{{ asset('/img/user02.jpg') }}"
-                        alt="photo">
+                    <span class="icon-[twemoji--man-pouting-medium-light-skin-tone] object-center object-cover rounded-full h-16 w-16"></span>
                 </div>
+
                 <div class="text-center text-xs">
                     <p class=" text-black dark:text-white font-bold mb-2">Torres Ismael -<span class="text-pink-600"> Nvl 20</span>
                     </p>
@@ -37,9 +34,8 @@
             <div
                 class="w-full h-full  hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-3 ">
-                    <img class="object-center object-cover rounded-full h-16 w-16"
-                        src="{{ asset('/img/user03.jpg') }}"
-                        alt="photo">
+                        
+                        <span class="icon-[twemoji--man-pouting-medium-light-skin-tone] object-center object-cover rounded-full h-16 w-16"></span>
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-black dark:text-white font-bold mb-2">Rojas Cristian -<span class="text-pink-600"> Nvl 20</span>
@@ -51,9 +47,7 @@
             <div
                 class="w-full h-full  hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-3 ">
-                    <img class="object-center object-cover rounded-full h-16 w-16"
-                        src="{{ asset('/img/user04.jpg') }}"
-                        alt="photo">
+                    <span class="icon-[twemoji--man-pouting-medium-light-skin-tone] object-center object-cover rounded-full h-16 w-16"></span>
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-black dark:text-white font-bold mb-2">Jimenez Pedro -<span class="text-pink-600"> Nvl 20</span>
@@ -65,9 +59,7 @@
             <div
                 class="w-full h-full  hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-3 ">
-                    <img class="object-center object-cover rounded-full h-16 w-16"
-                        src="{{ asset('/img/user05.jpg') }}"
-                        alt="photo">
+                    <span class="icon-[twemoji--man-pouting-medium-light-skin-tone] object-center object-cover rounded-full h-16 w-16"></span>
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-black dark:text-white font-bold mb-2">Lopez Tomas -<span class="text-pink-600"> Nvl 15</span>
@@ -79,9 +71,7 @@
             <div
                 class="w-full h-full  hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-3 ">
-                    <img class="object-center object-cover rounded-full h-16 w-16"
-                        src="{{ asset('/img/user06.jpeg') }}"
-                        alt="photo">
+                    <span class="icon-[twemoji--woman-pouting-medium-light-skin-tone] object-center object-cover rounded-full h-16 w-16"></span>
                 </div>
                 <div class="text-center text-xs">
                     <p class=" text-black dark:text-white font-bold mb-2">Sanches Karen -<span class="text-pink-600"> Nvl 40</span>

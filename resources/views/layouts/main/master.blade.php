@@ -36,7 +36,7 @@
 
                 <x-sidebar-collapse id="quests-collapse" name="Misiones" icon="icon-[mingcute--task-2-fill]">
                     <x-slot name="items">
-                        <x-sidebar-item href="master.tasks" name="Tarreas" icon="icon-[icomoon-free--books]" />
+                        <x-sidebar-item href="master.tasks" name="Tareas" icon="icon-[icomoon-free--books]" />
                         <x-sidebar-item href="master.quizzes" name="Examenes" icon="icon-[material-symbols--quiz]" />
                     </x-slot>
                 </x-sidebar-collapse>
