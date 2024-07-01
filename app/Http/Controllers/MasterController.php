@@ -5,7 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class MasterController extends Controller
-{
+{   
+    public function createGroup()
+    {
+        return view('main.master.create-group');
+    }
+
     public function members()
     {
         $name = 'Members';

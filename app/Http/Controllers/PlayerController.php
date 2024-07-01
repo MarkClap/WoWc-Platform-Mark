@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 class PlayerController extends Controller
-{
+{   
+
+    
     public function createCharacter()
     {
         return view('main.player.create-character');
