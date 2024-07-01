@@ -20,9 +20,15 @@
 
     <header class="shadow-md w-full">
         <x-player-navigation name="{{ $name ?? 'Player' }}">
-            <h1 class="text-center menu-title text-black text-2xl">History</h1>
+            <div class="bg-red-500 w-full flex justify-center border-b-2 border-black">
+            <h1 class="text-center menu-title text-white text-3xl font-bold">History</h1>
+            </div>
             @foreach ($allhistory as $history)
-            <h1 class="text-center gap-3 border">{{$history->character->name}} quiz{{$history->quiz}} score: {{$history->score}}% </h1>
+            <div class="flex border-b-2 rounded-md border-neutral-400  p-2 items-center justify-center">
+                <p class="text-blue-700 border-r-2 flex border-neutral-300 w-full text-center">{{$history->character->name}} </p>
+                <p class="border-r-2 flex border-neutral-300 w-full justify-center">Quizz {{$history->quiz}} </p>
+                <p class="text-yellow-500 flex w-full justify-center">{{$history->score}}%</p>
+            </div>
             @endforeach
         </x-player-navigation>
     </header>

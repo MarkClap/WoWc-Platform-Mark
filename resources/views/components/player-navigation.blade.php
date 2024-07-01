@@ -23,8 +23,8 @@
         <div class="dropdown dropdown-end justify-center">
             <span tabindex="0" role="button"
                 class="icon-[ph--scroll-fill] transition-transform transform-growth hover:scale-110 duration-200 cursor-pointer"></span>
-            <div class="bg-neutral-700 dark:bg-white dark:text-black font-bold dropdown-content z-[1] menu w-60 rounded-lg rounded-tr-none mt-6" tabindex="0">
-                <div class="">
+            <div class="bg-neutral-700 dark:bg-white dark:text-black font-bold dropdown-content z-[1] menu w-[20rem] rounded-lg rounded-tr-none mt-6 max-h-[40rem] overflow-x-auto" tabindex="0">
+                <div class="w-full flex flex-col border-2 border-black pb-1 rounded-md">
                     {{$slot}}
 
                 </div>

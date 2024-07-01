@@ -14,7 +14,7 @@
             <h2 class="text-xl">Instruciones</h2>
         </div>
         <div class=" p-2">
-            <p>Lee atentamente las preguntas y selecciona una respuesta, el resultado del examen saldra al terminar el terminar</p>
+            <p>Lee atentamente las preguntas y selecciona una respuesta, el resultado del examen saldra al terminar de responder</p>
         </div>
         <div class=" p-2 space-y-2">
             <hr class="border-2 border-black w-3/6 dark:border-white">
@@ -30,22 +30,7 @@
         <div class="p-1 flex justify-between border-b-2 items-center text-xl font-semibold">
             <p>Examen 1</p>
             <a class="btn bg-yellow-500" href="/quizzes" >Realizar</a>
-        </div>
-
-        <div class="p-1 flex justify-between border-b-2 items-center text-xl font-semibold">
-            <p>Examen 1</p>
-            <button class="btn bg-yellow-500">
-                <p class="text-lg">Realizar</p>
-            </button>
-        </div>
-
-        <div class="p-1 flex justify-between border-b-2 items-center text-xl font-semibold">
-            <p>Examen 1</p>
-            <button class="btn bg-yellow-500">
-                <p class="text-lg">Realizar</p>
-            </button>
-        </div>
-        
+        </div>        
 
     </section>
     
