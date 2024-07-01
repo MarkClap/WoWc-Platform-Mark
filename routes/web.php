@@ -63,7 +63,8 @@ Route::view('/students-home', 'layouts/board-estudents/board-home');
 Route::view('/profesor-create-clase', 'layouts/board-profesor/board-create-clase');
 
 // Profesor pruebas con middleware
-Route::view('/board-profesor', 'layouts/board-profesor/board')->middleware('auth:secondary');
+Route::post('/logouts', [LoginController::class,'logout'])->name('logoutall');
+
 
 // Register
 Route::view('/register-users', 'layouts/register/register-users');
@@ -77,13 +78,15 @@ Route::post('login', [LoginController::class, 'login']);
 Route::view('/register-institution', 'layouts.register.register-institutions')->name('register.inst');
 
 // otros
-Route::resource('teachers', TeacherController::class)->middleware('auth:secondary');
+Route::get('/board-insitution', [TeacherController::class, 'index'])->middleware('auth:secondary')->name('teachers.index');
+Route::post('/teachers-store', [TeacherController::class, 'store'])->middleware('auth:secondary')->name('teachers.store');
+Route::get('/teachers/delete/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
 
 //test-quizzes
 Route::get('/quizzes', [QuizController::class, 'index'])->name('indexquiz');
 Route::get('/quizzes/result', [QuizController::class, 'result'])->name('quizzes.score');
 Route::post('/quizzes/check', [QuizController::class, 'check'])->name('quizzes.check');
-Route::get('/quizzes/before', [QuizController::class, 'beforequiz'])->name('quizzes.before');
+
 
 //test json
 Route::get('/character/appearance/{id}', [PlayerController::class, 'get_character_sheet']);
