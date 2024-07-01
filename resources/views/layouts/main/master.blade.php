@@ -30,14 +30,14 @@
                 <x-sidebar-collapse id="gremio-collapse" name="Gremio" icon="icon-[mingcute--task-2-fill]">
                     <x-slot name="items">
                         <x-sidebar-item href="master.members" name="members" icon="icon-[icomoon-free--books]" />
-                        <x-sidebar-item href="/" name="groups" icon="icon-[material-symbols--quiz]" />
+                        <x-sidebar-item href="master.groups" name="groups" icon="icon-[material-symbols--quiz]" />
                     </x-slot>
                 </x-sidebar-collapse>
 
                 <x-sidebar-collapse id="quests-collapse" name="Misiones" icon="icon-[mingcute--task-2-fill]">
                     <x-slot name="items">
                         <x-sidebar-item href="master.tasks" name="Tarreas" icon="icon-[icomoon-free--books]" />
-                        <x-sidebar-item href="/" name="Examenes" icon="icon-[material-symbols--quiz]" />
+                        <x-sidebar-item href="master.quizzes" name="Examenes" icon="icon-[material-symbols--quiz]" />
                     </x-slot>
                 </x-sidebar-collapse>
 
