@@ -23,4 +23,10 @@ class MasterController extends Controller
         $name = 'Task';
         return view('main.master.tasks', compact('name'));
     }
+
+    public function quizzes()
+    {
+        $name = 'Quizzes';
+        return view('main.master.quizzes', compact('name'));
+    }
 }
