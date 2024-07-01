@@ -98,8 +98,10 @@
 
                 </div>
 
-                <div class="flex justify-end pr-2">
-                    <button class="btn btn-success"><p class="text-lg font-semibold">Comfirmar</p></button>
+                <div class="flex justify-between pr-2">
+                    <a class="btn btn-error" href="{{route('master.groups')}}"><p class="text-lg font-semibold">Salir</p></a>
+
+                    <button class="btn btn-success"><p class="text-lg font-semibold">Confirmar</p></button>
                 </div>
 
             </section>

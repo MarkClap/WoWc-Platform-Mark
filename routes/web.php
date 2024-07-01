@@ -91,3 +91,10 @@ Route::post('/quizzes/check', [QuizController::class, 'check'])->name('quizzes.c
 //test json
 Route::get('/character/appearance/{id}', [PlayerController::class, 'get_character_sheet']);
 Route::get('/character/ambience/{id}', [PlayerController::class, 'get_ambience']);
+
+//! Institutions
+Route::middleware('role:admin')->group(function () {
+        Route::get('/admin', function () {
+            return view('admin.index');
+        })->name('admin.index');
+    });

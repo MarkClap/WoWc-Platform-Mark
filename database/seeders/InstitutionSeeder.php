@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Institution;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,18 +13,16 @@ class InstitutionSeeder extends Seeder
      */
     public function run(): void
     {
-        Institution::create([
-            'name' => 'Test',
-            'email' => 'tesst@example',
-            'phone_number' => 98441136,
-            'password' => bcrypt('test123456'),
+        $institution = User::factory()->create([
+            'name' => 'Tecsup',
+            'paternal_surname' => 'X',
+            'maternal_surname' => 'Y',
+            'username' => 'TECSUP',
+            'email' => 'tecsup@tecsup.edu.pe',
+            'password' => 'Tecsup2024',
+            'institution' => true,
         ]);
 
-        Institution::create([
-            'name' => 'Test2',
-            'email' => 'tesst2@example',
-            'phone_number' => 98441136,
-            'password' => bcrypt('test1234567'),
-        ]);
+        $institution->assignRole('admin');
     }
 }

@@ -29,9 +29,6 @@ class LoginController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        if (Auth::guard('secondary')->attempt($credentials)) {
-            return redirect()->intended('/board-insitution');
-        }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
@@ -42,10 +39,6 @@ class LoginController extends Controller
     {
         if (Auth::guard('web')->check()) {
             Auth::guard('web')->logout();
-        }
-
-        if (Auth::guard('secondary')->check()) {
-            Auth::guard('secondary')->logout();
         }
 
         $request->session()->invalidate();
