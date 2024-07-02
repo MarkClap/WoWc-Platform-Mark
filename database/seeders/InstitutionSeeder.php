@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Institution;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class InstitutionSeeder extends Seeder
@@ -13,14 +13,19 @@ class InstitutionSeeder extends Seeder
      */
     public function run(): void
     {
-        $institution = User::factory()->create([
-            'name' => 'Tecsup',
-            'username' => 'TECSUP',
+        Institution::create([
+            'id_user' => 6,
+            'name' => 'TECSUP',
             'email' => 'tecsup@tecsup.edu.pe',
-            'password' => 'Tecsup2024',
-            'institution' => true,
+            'phone_number' => 98441136,
         ]);
 
-        $institution->assignRole('admin');
+        Institution::create([
+            'id_user' => 7,
+            'name' => 'UTEC',
+            'email' => 'utec@utec.edu.pe',
+            'phone_number' => 98441136,
+        ]);
     }
+
 }

@@ -26,9 +26,14 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::guard('web')->attempt($credentials)) {
-            return redirect()->intended('dashboard');
+            if (Auth::guard('web')->user()->role === 'user') {
+                return redirect()->intended('/dashboard');
+            } else if (Auth::guard('web')->user()->role === 'institution'){
+                return redirect()->intended('/institution'); 
+            } else {
+                return redirect()->intended('/');
+            }
         }
-
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',

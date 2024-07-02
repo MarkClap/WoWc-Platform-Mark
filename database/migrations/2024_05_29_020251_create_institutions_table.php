@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('institutions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedInteger('id_user');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('phone_number');
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('id_user')->references('id')->on('users')->cascadeOnDelete();
         });
     }
 

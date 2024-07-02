@@ -22,7 +22,7 @@ class TeacherController extends Controller
         $teachers = Teacher::where('id_institution', $institutionId)->paginate();
         $users = User::all();
         $institutions = Institution::all();
-        return view('layouts.board-institutions.board', compact('teachers','users','institutions','institutionId'))
+        return view('institution.index', compact('teachers','users','institutions','institutionId'))
             ->with('i', ($request->input('page', 1) - 1) * $teachers->perPage());
     }
     /**
@@ -32,7 +32,7 @@ class TeacherController extends Controller
     {
         $request->validate([
             'email' => 'required|email|exists:users,email',
-            'id_institution' => 'required|exists:institutions,id',
+            'id_institution' => 'required',
         ]);
 
         $user = User::where('email', $request->email)->firstOrFail();

@@ -78,9 +78,6 @@ Route::post('login', [LoginController::class, 'login']);
 Route::view('/register-institution', 'layouts.register.register-institutions')->name('register.inst');
 
 // otros
-Route::get('/board-insitution', [TeacherController::class, 'index'])->middleware('auth:secondary')->name('teachers.index');
-Route::post('/teachers-store', [TeacherController::class, 'store'])->middleware('auth:secondary')->name('teachers.store');
-Route::get('/teachers/delete/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
 
 //test-quizzes
 Route::get('/quizzes', [QuizController::class, 'index'])->name('indexquiz');
@@ -93,8 +90,9 @@ Route::get('/character/appearance/{id}', [PlayerController::class, 'get_characte
 Route::get('/character/ambience/{id}', [PlayerController::class, 'get_ambience']);
 
 //! Institutions
-Route::middleware('role:admin')->group(function () {
-        Route::get('/admin', function () {
-            return view('admin.index');
-        })->name('admin.index');
-    });
+Route::middleware('role:institution')->group(function () {
+    Route::get('/institution', [TeacherController::class, 'index'])->name('teachers.index');
+    Route::post('/teachers-store', [TeacherController::class, 'store'])->name('teachers.store');
+Route::get('/teachers/delete/{id}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
+
+});

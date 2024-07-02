@@ -2,15 +2,15 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Seeder;
+
 class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         User::factory()->create([
             'name' => 'test',
@@ -65,5 +65,25 @@ class UserSeeder extends Seeder
             'email' => 'test6@example',
             'password' => 'test12345678901',
         ]);
+
+        $institution1 = User::factory()->create([
+            'name' => 'Pedro',
+            'username' => 'Pedro',
+            'email' => 'pedro.flores@tecsup.edu.pe',
+            'password' => bcrypt('Tecsup2024'),
+            'role' => 'institution',
+        ]);
+
+        $institution2 = User::factory()->create([
+            'name' => 'Jaime',
+            'username' => 'Jaime',
+            'email' => 'jaime.gomez@tecsup.edu.pe',
+            'password' => bcrypt('Tecsup2024'),
+            'role' => 'institution',
+        ]);
+
+        $institution1->assignRole('institution');
+
+        $institution2->assignRole('institution');
     }
 }
