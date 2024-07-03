@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use App\Models\User;
-use App\Models\Institution;
 
 class LoginController extends Controller
 {
@@ -26,13 +25,21 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::guard('web')->attempt($credentials)) {
-            if (Auth::guard('web')->user()->role === 'user') {
+
+            $user = Auth::guard('web')->user()->id;
+
+            $role = Role::where('model_id', $user)->first();
+
+            if ($role->role_id === 2) {
                 return redirect()->intended('/dashboard');
-            } else if (Auth::guard('web')->user()->role === 'institution'){
-                return redirect()->intended('/institution'); 
+            } else if ($role->role_id === 1) {
+                return redirect()->intended('/institution');
             } else {
-                return redirect()->intended('/');
+                return back()->withErrors([
+                    'email' => 'The provided credentials do not match our records.',
+                ]);
             }
+
         }
 
         return back()->withErrors([

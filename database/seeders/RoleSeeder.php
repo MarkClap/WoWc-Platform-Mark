@@ -10,11 +10,13 @@ class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * 
      */
     public function run(): void
     {
         Role::firstOrCreate(['name' => 'institution']);
         Role::firstOrCreate(['name' => 'user']);
+        Role::firstOrCreate(['name' => 'teacher']);
     }
 
 }

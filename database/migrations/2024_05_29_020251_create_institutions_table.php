@@ -19,7 +19,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('phone_number');
             $table->timestamps();
-
             $table->foreign('id_user')->references('id')->on('users')->cascadeOnDelete();
         });
     }

@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +16,6 @@ class RoleMiddleware
 
         foreach ($roles as $role) {
             if (Auth::user()->hasRole($role)) {
-                // Si el usuario tiene el rol 'admin', redirigir a la vista admin.index
                 if ($role === 'institution') {
                     return $next($request);
                 }

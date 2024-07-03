@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'username' => 'Test',
             'email' => 'test@example',
             'password' => 'test123456',
-        ]);
+        ])->assignRole('user');
 
         User::factory()->create([
             'name' => 'test2',
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'username' => 'Test 2',
             'email' => 'test2@example',
             'password' => 'test1234567',
-        ]);
+        ])->assignRole('user');
 
         User::factory()->create([
             'name' => 'test3',
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
             'username' => 'Test 3',
             'email' => 'test3@example',
             'password' => 'test12345678',
-        ]);
+        ])->assignRole('user');
 
         User::factory()->create([
             'name' => 'test4',
@@ -46,7 +46,7 @@ class UserSeeder extends Seeder
             'username' => 'Test 4',
             'email' => 'test4@example',
             'password' => 'test123456789',
-        ]);
+        ])->assignRole('user');
 
         User::factory()->create([
             'name' => 'test5',
@@ -55,7 +55,7 @@ class UserSeeder extends Seeder
             'username' => 'Test 5',
             'email' => 'test5@example',
             'password' => 'test1234567890',
-        ]);
+        ])->assignRole('user');
 
         User::factory()->create([
             'name' => 'test6',
@@ -64,26 +64,21 @@ class UserSeeder extends Seeder
             'username' => 'Test 6',
             'email' => 'test6@example',
             'password' => 'test12345678901',
-        ]);
+        ])->assignRole('user');
 
-        $institution1 = User::factory()->create([
+        // institutions
+        User::factory()->create([
             'name' => 'Pedro',
             'username' => 'Pedro',
             'email' => 'pedro.flores@tecsup.edu.pe',
             'password' => bcrypt('Tecsup2024'),
-            'role' => 'institution',
-        ]);
+        ])->assignRole('institution');
 
-        $institution2 = User::factory()->create([
+        User::factory()->create([
             'name' => 'Jaime',
             'username' => 'Jaime',
             'email' => 'jaime.gomez@tecsup.edu.pe',
             'password' => bcrypt('Tecsup2024'),
-            'role' => 'institution',
-        ]);
-
-        $institution1->assignRole('institution');
-
-        $institution2->assignRole('institution');
+        ])->assignRole('institution');
     }
 }

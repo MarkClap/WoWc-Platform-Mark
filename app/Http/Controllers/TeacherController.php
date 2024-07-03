@@ -18,11 +18,11 @@ class TeacherController extends Controller
      */
     public function index(Request $request): View
     {
-        $institutionId = Auth::user()->id;
-        $teachers = Teacher::where('id_institution', $institutionId)->paginate();
+        $user = Auth::user()->id;
+        $institution=Institution::where('id_user',$user)->first();
+        $teachers = Teacher::where('id_institution', $institution->id)->paginate();
         $users = User::all();
-        $institutions = Institution::all();
-        return view('institution.index', compact('teachers','users','institutions','institutionId'))
+        return view('main.institution.index', compact('teachers','users','user','institution'))
             ->with('i', ($request->input('page', 1) - 1) * $teachers->perPage());
     }
     /**
@@ -36,6 +36,8 @@ class TeacherController extends Controller
         ]);
 
         $user = User::where('email', $request->email)->firstOrFail();
+
+
 
         $Teacher_exists = Teacher::where('id_user', $user->id)
                          ->where('id_institution', $request->id_institution)
