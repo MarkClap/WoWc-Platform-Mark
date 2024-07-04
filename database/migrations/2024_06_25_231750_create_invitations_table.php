@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('invitations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('code',8);
-            $table->string('email');
+            $table->string('code')->nullable()->unique();
+            $table->string('email')->nullable();
             $table->boolean('used')->default(false);
             $table->unsignedBigInteger('id_course');
             $table->timestamps();

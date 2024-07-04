@@ -6,6 +6,8 @@ use App\Models\Institution;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Course;
+use App\Models\Invitation;
 
 
 class MasterController extends Controller
@@ -16,7 +18,7 @@ class MasterController extends Controller
         $id_user= Auth()->user()->id;
         $teacher = Teacher::where('id_user', $id_user)->first();
 
-        return view('main.master.create-courses', compact('teacher','id_institution'));
+        return view('main.create-courses', compact('teacher','id_institution'));
     }
 
     public function createGroup()
@@ -46,5 +48,36 @@ class MasterController extends Controller
     {
         $name = 'Quizzes';
         return view('main.master.quizzes', compact('name'));
+    }
+
+    public function createInvitation(string $token)
+    {
+        $course = Course::where('token', $token)->firstOrFail();
+        return view('main.master.create-invitation', compact('course'));
+    }
+
+    public function invitations(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'id_course'=>'required|integer',
+        ]);
+
+        $invitation = Invitation::create([
+            'name' => $request->name,
+            'id_course' => $request->id_course,
+        ]);
+
+        $code = base64_encode($invitation->name . '&' . $invitation->id);
+        
+
+        if ($request->email){
+            $invitation->email = $request->email;
+        }
+
+        $invitation->code = $code;
+        $invitation->save();
+
+        return redirect()->route('dashboard');
     }
 }

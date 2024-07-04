@@ -1,3 +1,4 @@
+@props(['token'])
 <nav class="flex w-full bg-neutral-800  dark:bg-neutral-800 py-3 items-center gap-2 justify-between ">
 
     <div class="flex flex-row">
@@ -12,8 +13,7 @@
         <div class="h-12 opacity-0 duration-500" id="navigation-list">
             <div id="navigation-path" class="text-2xl breadcrumbs text-white">
                 <ul>
-                    <li><a href="{{ route("player") }}">2024-BDA-AB</a></li>
-                    <li>{{ $name ?? 'Undefined' }}</li>
+                    <li><a href="{{ route('player', ['token' => $token]) }}">2024-BDA-AB</a></li>                    <li>{{ $name ?? 'Undefined' }}</li>
                 </ul>
             </div>
         </div>

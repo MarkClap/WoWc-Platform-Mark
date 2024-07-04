@@ -18,7 +18,7 @@
         <div class="bg-white-400 flex w-full justify-center items-center flex-col">
 
             <h1 class="text-yellow-500 text-5xl py-10 text-center underline">Panel Administrativo</h1>
-            <div class="px-3 py-4 flex w-8/12 border-2 border-black dark:border-white flex-col items-center">
+            <div class="px-3 py-4 flex w-8/12 border-2 border-black dark:border-white flex-col items-center rounded-lg">
 
                 {{-- content-title --}}
                 <div class="p-3 flex justify-between w-11/12 items-center border-b-2 border-black">
@@ -35,22 +35,21 @@
                                 <h3 class="font-bold text-2xl justify-center flex w-ful">Introduce el correo del usuario
                                 </h3>
                                 <div class="modal-action">
-                                    <form method="POST" class="w-full flex gap-4 flex-col " action="{{ route('teachers.store') }}">
+                                    <form method="POST" class="w-full flex gap-4 flex-col "
+                                        action="{{ route('teachers.store') }}">
                                         @csrf
                                         <div class="flex flex-col gap-2">
                                             <label class=" text-neutral-700 text-xl justify-start"
                                                 for="email">{{ __('Email') }} :
                                             </label>
-                                        
-                                            <input
-                                                type="text"
-                                                name="email"
-                                                name="email"
+
+                                            <input type="text" name="email" name="email"
                                                 placeholder="user@example.com"
                                                 class="input input-bordered input-warning w-full bg-white" />
                                         </div>
-                                        <input type="text" name="id_institution" value=" {{$institution->id}} " class="hidden">
-                                        
+                                        <input type="text" name="id_institution" value=" {{ $institution->id }} "
+                                            class="hidden">
+
                                         <button type="submit"
                                             class="btn btn-success text-neutral-100 w-2/6  text-lg hover:border-green-700 border-2">
                                             {{ __('Submit') }}
@@ -65,12 +64,12 @@
 
                     <div class="" onclick="my_modal_1.showModal()">
                         <button class="btn btn-warning text-neutral-100 text-base">
-                        <span class="icon-[mdi--plus-circle-outline] text-2xl"></span>
-                        <p >
-                            {{ __('Create New') }}
-                        </p>
+                            <span class="icon-[mdi--plus-circle-outline] text-2xl"></span>
+                            <p>
+                                {{ __('Create New') }}
+                            </p>
                         </button>
-                </div>
+                    </div>
 
 
 
@@ -78,12 +77,12 @@
 
                 {{-- content-title --}}
                 {!! $errors->first('email', '<div class="text-red-500" role="alert"><strong>:message</strong></div>') !!}
-                
 
-                <div class="rounded-sm flex w-full items-center overflow-x-scroll">
+
+                <div class="rounded-sm flex w-full items-center overflow-x-scroll md:overflow-x-hidden">
 
                     <table class="w-full text-md shadow-md">
-                        
+
                         <thead class="border-b p-2 text-black dark:text-yellow-500">
                             <tr>
 
@@ -92,9 +91,9 @@
                                 <th class="text-left p-3 px-5">Institution</th>
                                 <th class=" p-3 px-5">Eliminar</th>
 
-                                  
+
                             </tr>
-                            
+
                         </thead>
                         <tbody class=" text-black space-y-2 dark:text-neutral-100">
                             @foreach ($teachers as $teacher)
@@ -121,18 +120,17 @@
                 </div>
             </div>
             {!! $teachers->withQueryString()->links() !!}
-            
+
         </div>
-        
+
     </main>
     @if ($message = Session::get('success'))
-                    
         <div class="toast" id="alert">
             <div class="alert alert-success">
                 <span class="icon-[wpf--approval] text-2xl"></span>
                 <p class="text-xl">{{ $message }}</p>
             </div>
-            
+
         </div>
     @endif
 </body>
@@ -145,7 +143,8 @@
             setTimeout(() => {
                 toast.remove();
             }, 300);
-        }, 4000);
+        }, 5000);
     }
 </script>
+
 </html>

@@ -16,18 +16,42 @@ class CourseController extends Controller
             'id_institution' => 'required|integer',
         ]);
 
-        $id_course = Course::create([
+        $course = Course::create([
             'name' => $request->name,
             'description' => $request->description,
-        ])->id;
+        ]);
+        $token = base64_encode(Auth::user()->email . '&' . $course->id);
+        
+        $course->token = $token;
+        $course->save();
         
         $id_teacher=Teacher::where('id_institution', $request->id_institution)->first();
         
         Teachers_Course::create([
             'id_teacher' => $id_teacher->id,
-            'id_course' => $id_course,
+            'id_course' => $course->id,
         ]);
 
         return redirect()->route('dashboard');
     }
+
+    public function inscriptionCourse(string $token)
+    {
+        $course = Course::where('token', $token)->firstOrFail();
+    
+        // Pasar 'course' y 'token' usando compact
+        return view('main.inscription-courses', compact('course', 'token'));
+    }
 }
+
+// public function showInscriptionForm($token)
+// {
+//     Asegúrate de que este método no redirija de nuevo a 'inscriptionCourse'
+//     $course = session('course');
+//     if (!$course) {
+//         $course = Course::where('token', $token)->firstOrFail();
+//         session(['course' => $course]);
+//     }
+//     Retorna una vista que muestre el formulario de inscripción o la información del curso
+//     return view('course.inscription', compact('course'));
+// }

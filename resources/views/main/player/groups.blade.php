@@ -1,10 +1,6 @@
-@extends('layouts.main.master')
+@extends('layouts.main.player')
 
 @section('content')
-
-
-
-
 
 
     <div class="bg-white dark:bg-black  w-full flex flex-col items-center justify-center">

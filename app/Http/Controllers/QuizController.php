@@ -11,14 +11,8 @@ use App\Models\Quizzes_History;
 
 class QuizController extends Controller
 {
-    public function index()
-    {
-        $i = 1;
-        $quizzes = Quiz::inRandomOrder()->take(10)->get();
-        return view('/quizzes/index', compact('quizzes','i'));   
-    }
 
-    public function check(Request $request){
+    public function check(Request $request,string $token){
 
         $i =1;
         
@@ -73,16 +67,9 @@ class QuizController extends Controller
             ]);
         }
 
-        return redirect()->route('quizzes.score')->with('score', $result);
-    }
-    public function result()
-    {
-        $result = session('score');
-        return view('/quizzes/score', compact('result'));
+
+        return redirect()->route('player.character', ['token' => $request->token]);
     }
 
-    public function beforequiz(){
-        $character = Auth::user()->id;
-        return view('/quizzes/before', compact('character'));
-    }
+
 }

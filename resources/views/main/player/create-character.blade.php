@@ -37,20 +37,21 @@
 
         <section class="w-1/3 p-2 flex justify-between">
             <div class="w-3/4 p-2 flex flex-col justify-between">
-                <section class=" p-2 space-y-2 flex flex-col flex-grow justify-center">
+                <section class=" p-2 space-y-2 flex flex-col flex-grow justify-center border-2 border-yellow-500 hover:bg-transparent">
                     <div class=" p-2 flex justify-center">
-                        <h1>Personajes</h1>
+                        <h1 class="font-bold text-white text-2xl">Personajes</h1>
                     </div>
                     <div class=" p-2 space-y-4 flex flex-col items-center">
-                        <div class="bg-orange-500 p-2 w-2/5 rounded-md flex justify-center ">
-                            <p>Mago</p>
-                        </div>
-                        <div class="bg-orange-500 p-2 w-2/5 rounded-md flex justify-center">
-                            <p>Guerrero</p>
-                        </div>
-                        <div class="bg-orange-500 p-2 w-2/5 rounded-md flex justify-center">
-                            <p>Sanador</p>
-                        </div>
+                        <button class="btn btn-info">
+                            <span class="icon-[fluent-emoji-high-contrast--man-mage] text-4xl text-white"></span>
+                        </button>
+                        <button class="btn btn-error">
+                            <span class="icon-[hugeicons--spartan-helmet] text-4xl text-white"></span>
+                        </button>
+                        <button class="btn btn-success">
+                            <span class="icon-[game-icons--woman-elf-face] text-4xl text-white"></span>
+                        </button>
+                        
                     </div>
                 </section>
 
@@ -60,43 +61,43 @@
                         Género
                     </div>
                     <div class="p-2 space-x-5 flex flex-row justify-center">
-                        <div class="bg-orange-500 p-2 rounded-md text-2xl flex justify-center w-16 h-16">
+                        <button class="btn btn-warning"> 
                             <span class="icon-[whh--male]"></span>
-                        </div>
-                        <div class="bg-orange-500 p-2 rounded-md text-2xl flex justify-center w-16 h-16">
+                        </button>
+                        <button class="btn btn-warning"> 
                             <span class="icon-[whh--female]"></span>
-                        </div>
+                        </button>
+                        
                     </div>
                 </section>
 
                 <section class=" p-2 space-y-2 flex flex-col items-center justify-center flex-grow">
                     <div class="p-2 flex flex-row justify-between w-4/5">
                         <div class=" flex items-center px-3">
-                            <p>Color de pelo</p>
+                            <p class="text-base font-semibold text-white">Color de pelo</p>
                         </div>
                         <div class= "flex flex-row p-2 gap-4 justify-between">
-                            <div class="bg-yellow-300 px-3 rounded-lg">
-                                <p>
-                                    < </p>
-                            </div>
-                            <div class="bg-yellow-300 px-3 rounded-lg">
-                                <p> > </p>
-                            </div>
+                            <button class="btn bg-yellow-400">
+                                <span class="icon-[fa-solid--less-than]"></span>
+                            </button>
+                            <button class="btn bg-yellow-400">
+                                <span class="icon-[fa-solid--greater-than]"></span>
+                            </button>
                         </div>
                     </div>
 
                     <div class=" p-2 flex flex-row justify-between w-4/5">
                         <div class="flex  items-center px-3">
-                            <p>color de piel</p>
+                            <p class="text-base font-semibold text-white">color de piel</p>
                         </div>
                         <div class="flex flex-row p-2 gap-4 justify-between">
-                            <div class="bg-yellow-300 px-3 rounded-lg">
-                                <p>
-                                    < </p>
-                            </div>
-                            <div class="bg-yellow-300 px-3 rounded-lg">
-                                <p> > </p>
-                            </div>
+                            <button class="btn bg-yellow-400">
+                                <span class="icon-[fa-solid--less-than]"></span>
+                            </button>
+                            <button class="btn bg-yellow-400">
+                                <span class="icon-[fa-solid--greater-than]"></span>
+                            </button>
+                            
                         </div>
                     </div>
                 </section>

@@ -55,7 +55,7 @@
             conduce a estudiantes más felices y comprometidos.</p>
     </section>
 
-    <section class="flex flex-col gap-16 items-center bg-base-100 w-full p-32 mx-auto text-3xl text-center">
+    <section class="flex flex-col gap-24 items-center bg-base-100 w-full p-32 mx-auto text-3xl text-center">
         <div class="flex flex-col gap-4">
             <h1 class="text-5xl font-bold text-center">Tenemos esto para ti</h1>
             <p class="text-center">Sé parte de la nuestra comunidad y accede a todos los servicios
@@ -67,13 +67,6 @@
             <div class="splide__track card-body">
                 <ul class="splide__list">
                     <li class="splide__slide px-32 flex flex-col gap-4">
-                        <div class="bg-red-500 w-full h-40">
-                            <div class="flex w-full h-full">
-                                <img class="object-center object-cover h-full w-full"
-                                src="{{ asset('/img/img-clase.jpg') }}"
-                                alt="photo">
-                            </div>
-                        </div>
                         <p class="">
                             Conectamos a los alumnos a través de principios recreativos para incentivar el aprendizaje y
                             lograr desarrollar su habilidad cognitiva.
@@ -82,13 +75,6 @@
 
 
                     <li class="splide__slide px-32 flex flex-col gap-4">
-                        <div class="bg-red-500 w-full h-40">
-                            <div class="flex w-full h-full">
-                                <img class="object-center object-cover h-full w-full"
-                                src="{{ asset('/img/img-clase2.jpg') }}"
-                                alt="photo">
-                            </div>
-                        </div>
                         <div>
                             Los estudiantes acceden a una metodología de aprendizaje competitivo junto al sistema de
                             apoyo de múltiples niveles.
