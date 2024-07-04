@@ -50,6 +50,7 @@ export default {
               "neutral": "#262626",
               "neutral-content": "#a3a3a3",
               "base-100": "#171717",
+              "base-200": "#262626",
               "base-content": "#f5f5f5",
               "info": "#0ea5e9",
               "success": "#22c55e",

@@ -12,19 +12,6 @@ class TeacherSeeder extends Seeder
      */
     public function run(): void
     {
-        Teacher::create([
-            'id_user' => 1,
-            'id_institution' => 2,
-        ]);
-
-        Teacher::create([
-            'id_user' => 2,
-            'id_institution' => 2,
-        ]);
-
-        Teacher::create([
-            'id_user' => 2,
-            'id_institution' => 1,
-        ]);
+        //
     }
 }

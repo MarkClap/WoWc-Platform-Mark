@@ -50,7 +50,7 @@ class TeacherController extends Controller
         Teacher::create([
             'id_user' => $user->id,
             'id_institution' => $request->id_institution,
-        ]);
+        ])->assignRole('master');
 
         return redirect()->route('teachers.index')->with('success', 'Teacher created successfully.');
     }

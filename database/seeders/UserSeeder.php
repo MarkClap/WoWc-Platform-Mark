@@ -65,20 +65,5 @@ class UserSeeder extends Seeder
             'email' => 'test6@example',
             'password' => 'test12345678901',
         ])->assignRole('user');
-
-        // institutions
-        User::factory()->create([
-            'name' => 'Pedro',
-            'username' => 'Pedro',
-            'email' => 'pedro.flores@tecsup.edu.pe',
-            'password' => bcrypt('Tecsup2024'),
-        ])->assignRole('institution');
-
-        User::factory()->create([
-            'name' => 'Jaime',
-            'username' => 'Jaime',
-            'email' => 'jaime.gomez@tecsup.edu.pe',
-            'password' => bcrypt('Tecsup2024'),
-        ])->assignRole('institution');
     }
 }

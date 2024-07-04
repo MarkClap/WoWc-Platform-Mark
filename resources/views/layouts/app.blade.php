@@ -17,7 +17,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="bg-base-300 flex flex-col min-h-screen w-full">
+    <body class="bg-base-300 flex flex-col min-h-screen w-full overflow-y-scroll ">
         @livewire('navigation-menu')
 
             <!-- Page Heading -->

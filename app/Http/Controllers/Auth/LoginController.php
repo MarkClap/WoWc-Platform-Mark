@@ -28,7 +28,7 @@ class LoginController extends Controller
 
             $user = Auth::guard('web')->user()->id;
 
-            $role = Role::where('model_id', $user)->first();
+            $role = Role::where('model_id', $user)->where('model_type', 'App\Models\User')->first();
 
             if ($role->role_id === 2) {
                 return redirect()->intended('/dashboard');

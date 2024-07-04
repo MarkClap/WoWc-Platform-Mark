@@ -1,9 +1,8 @@
 <x-app-layout>
-    <pre>
-        {{ Auth::user()}}
-    </pre>
     <x-slot name="header">
-    <x-welcome>
-        
-    </x-welcome>
+
+        <x-welcome :teacher="$teacher" :institution_courses="$institution_courses">
+
+        </x-welcome>
+
 </x-app-layout>

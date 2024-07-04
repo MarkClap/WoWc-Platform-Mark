@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Class Teacher
@@ -21,6 +22,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Teacher extends Model
 {
+    use HasRoles;
+
+    protected $guard_name = 'web';
     
     protected $perPage = 20;
 
@@ -47,13 +51,4 @@ class Teacher extends Model
     {
         return $this->belongsTo(\App\Models\User::class, 'id_user', 'id');
     }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function teachersCourses()
-    {
-        return $this->hasMany(\App\Models\Teachers_Course::class, 'id', 'id_teacher');
-    }
-    
 }

@@ -13,23 +13,6 @@
 </head>
 
 <body class="bg-base-300 flex flex-col min-h-screen w-full font-semibold">
-
-    <pre>
-        @auth
-            {{ Auth::user() }}
-            
-        @endauth
-    </pre>
-
-    @if ($institution !== null)
-        <h1>
-            {{ $institution->id }}
-        </h1>
-    @else
-        <h1>
-            No hay institución
-        </h1>
-    @endif
     @livewire('navigation-menu')
     <main class="flex flex-row flex-grow relative items-center justify-center bg-neutral-100">
         <div class="bg-white-400 flex w-full justify-center items-center flex-col">
