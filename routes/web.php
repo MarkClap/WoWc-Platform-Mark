@@ -41,6 +41,8 @@ Route::middleware('role:user')->group(function () {
                 Route::get('/groups', 'groups')->name('master.groups');
                 Route::get('/members', 'members')->name('master.members');
                 Route::get('/tasks', 'tasks')->name('master.tasks');
+                Route::get('/quizzes', 'quizzes')->name('master.quizzes');
+
             });
         });
 
