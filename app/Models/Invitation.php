@@ -18,4 +18,9 @@ class Invitation extends Model
         'used',
         'id_course',
     ];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class, 'id_course');
+    }
 }

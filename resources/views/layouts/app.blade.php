@@ -23,7 +23,7 @@
             <!-- Page Heading -->
             
             <!-- Page Content -->
-            <main class="flex justify-center items-center flex-grow h-full">
+            <main class="flex justify-center items-start flex-grow h-full pt-20">
                 {{ $slot }}
             </main>
         

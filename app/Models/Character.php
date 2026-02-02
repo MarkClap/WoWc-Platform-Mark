@@ -21,4 +21,9 @@ class Character extends Model
         'id_group',
         'id_inscription',
     ];
+
+    public function inscription()
+    {
+        return $this->belongsTo(Inscription::class, 'id_inscription');
+    }
 }

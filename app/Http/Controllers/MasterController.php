@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Invitation;
+use App\Models\Character;
+use App\Models\Inscription;
 
 
 class MasterController extends Controller
@@ -26,10 +28,16 @@ class MasterController extends Controller
         return view('main.master.create-group');
     }
 
-    public function members()
+    public function members($token)
     {
+        $course = Course::where('token', $token)->firstOrFail();
+        $inscriptions = Inscription::where('id_course', $course->id)->pluck('id');
+        $characters = Character::whereIn('id_inscription', $inscriptions)->get();
+        // Calculate level: experience / 100 (example logic)
+        // Or simply pass characters and handle logic in view or accessor
+
         $name = 'Members';
-        return view('main.master.members', compact('name'));
+        return view('main.master.members', compact('name', 'characters', 'course'));
     }
 
     public function groups()

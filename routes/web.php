@@ -86,7 +86,7 @@ Route::middleware('role:user')->group(function () {
                     Route::get('/quizzes/score', 'score')->name('player.quizzes.score');
 
                     Route::get('/', function () {
-                        return redirect()->route('player.character');
+                        return redirect()->route('player.character',['token' => request()->route('token')]);
                     })->name('player');
                 });
             //});

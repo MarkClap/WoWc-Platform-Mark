@@ -24,4 +24,9 @@ class Inscription extends Model
     {
         return $this->belongsTo(Course::class, 'id_course');
     }
+
+    public function character()
+    {
+        return $this->hasOne(Character::class, 'id_inscription');
+    }
 }

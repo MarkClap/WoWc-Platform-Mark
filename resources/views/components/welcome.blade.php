@@ -1,116 +1,153 @@
 @props(['teacher', 'institution_courses', 'inscriptions', 'teachers_courses'])
 
-<div class="flex justify-center flex-col w-full gap-3 bg-white my-20 mx-10 p-5 rounded-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 
-    <section class=" py-1 flex justify-end">
-
-        <button
-            class="flex bg-yellow-500 py-1 px-3 gap-3 border-[3px] rounded-3xl items-center text-xl hover:border-yellow-600 text-white"
-            onclick="my_modal_1.showModal()">
-            <span class="icon-[fluent-mdl2--circle-addition-solid]"></span>
-            <p class="font-bold">Unirse a una clase</p>
+    <!-- Header & Actions -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Dashboard</h1>
+            <p class="text-gray-500 dark:text-gray-400">Bienvenido a tu panel de control</p>
+        </div>
+        
+        <button onclick="my_modal_join_class.showModal()" class="btn bg-yellow-500 hover:bg-yellow-600 text-white border-none gap-2 shadow-lg hover:shadow-yellow-500/30 transition-all">
+            <span class="icon-[fluent--add-circle-24-filled] w-6 h-6"></span>
+            Unirse a una Clase
         </button>
+    </div>
 
-        <dialog id="my_modal_1" class="modal">
-            <div class="modal-box p-8 text-black bg-white border">
-                <h3 class="font-bold text-2xl justify-center flex w-ful">Introduce el código del Alumno</h3>
-                <div class="modal-action">
-                    <form method="dialog" class="flex flex-col w-full justify-center items-center gap-4">
-                        <div class="flex flex-col w-full gap-4">
-                            <label for="code-union" class="text-lg font-semibold">Código de alumno: </label>
-                            <input type="text" id="code-union" class="text-neutral-700 rounded-lg flex w-full"
-                                placeholder="Introduce código">
-                        </div>
+    <!-- Student Section: Enrolled Courses -->
+    <section>
+        <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2">
+            <span class="icon-[fluent--hat-graduation-24-filled] text-blue-500"></span>
+            Mis Cursos (Estudiante)
+        </h2>
 
-                        <button
-                            class="btn w-full bg-yellow-500 flex justify-center hover:bg-yellow-400 hover:border-red-800 hover:text-neutral-300">Confirmar</button>
-                    </form>
-                </div>
+        @if($inscriptions->isEmpty())
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 text-center border-2 border-dashed border-gray-300 dark:border-neutral-700">
+                <span class="icon-[fluent--book-question-mark-24-regular] w-12 h-12 text-gray-400 mb-2 block mx-auto"></span>
+                <p class="text-gray-500 dark:text-gray-400">No estás inscrito en ningún curso.</p>
+                <button onclick="my_modal_join_class.showModal()" class="text-yellow-600 hover:underline mt-2 font-medium">¡Únete a uno ahora!</button>
             </div>
-        </dialog>
+        @else
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach ($inscriptions as $item)
+                    @if($item->course)
+                    <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-neutral-700 flex flex-col h-full">
+                        <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">{{ $item->course->name }}</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 mb-4 flex-1">
+                                {{ $item->course->description ?? 'Sin descripción disponible.' }}
+                            </p>
+                            
+                            <form action="{{ route('player', ['token' => $item->course->token]) }}" method="get" class="mt-auto">
+                                <button type="submit" class="btn btn-outline btn-info w-full gap-2 group">
+                                    Ingresar al Curso
+                                    <span class="icon-[fluent--arrow-right-24-filled] group-hover:translate-x-1 transition-transform"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    @endif
+                @endforeach
+            </div>
+        @endif
     </section>
 
-    @foreach ($inscriptions as $item)
-        <p>{{ $item->course->name }}</p>
-        <form action="{{ route('player', ['token' => $item->course->token]) }}" method="get">
-            <input type="text" name="token" value="{{ $item->course->token }}">
-            <button class="btn w-full bg-yellow-500 flex justify-center hover:bg-yellow-400 hover:border-red-800 hover:text-neutral-300" type="submit">Unirse</button>
-        </form>
-        
-    @endforeach
-
+    <!-- Teacher Section -->
     @if (count($teacher) > 0)
-        <section class="text-black flex gap-3 flex-col flex-wrap">
-            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-neutral-300 duration-300 rounded-md">
-                <input type="checkbox" class="w-full" />
-                <div class="collapse-title text-xl font-medium">Teacher</div>
-                <div class="collapse-content flex flex-wrap flex-col gap-2 ">
+    <section class="pt-8 border-t border-gray-200 dark:border-neutral-700">
+        <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2">
+            <span class="icon-[fluent--book-24-filled] text-green-500"></span>
+            Panel de Profesor
+        </h2>
 
-                    @foreach ($teacher as $teachers)
-                        <div tabindex="0" class="collapse collapse-arrow duration-500 border-base-300 bg-neutral-50">
-                            <input type="checkbox" class="w-full" />
-                            <div class="collapse-title text-xl font-medium">
-                                <h2>{{ $teachers->institution->name }}
-                                </h2>
-                            </div>
-
-                            <div class="collapse-content flex gap-3 flex-col flex-wrap">
-                                <form class="w-full" method="GET"
-                                    action="{{ route('master.create-courses', ['id' => $teachers->institution->id]) }}">
-                                    @csrf
-                                    <button class="btn">Crear Clase</button>
-                                </form>
-
-                                @foreach ($institution_courses as $institution_course)
-                                    @if ($institution_course->teacher->institution->id == $teachers->institution->id)
-                                        <div class=" rounded-lg">
-
-
-                                            <div class="bg-red-600 p-4 flex justify-between rounded-t-lg items-center">
-
-                                                <p class="text-xl font-semibold text-white">
-                                                    {{ $institution_course->course->name }}
-                                                </p>
-
-
-                                                <div class=" flex justify-between gap-3 items-center text-white">
-                                                    <div class="dropdown dropdown-bottom dropdown-end flex">
-                                                        <span
-                                                            class=" icon-[material-symbols--colors] text-4xl hover:bg-red-300"
-                                                            tabindex="0" role="button"
-                                                            onclick="my_modal_1.showModal()"></span>
-                                                    </div>
-
-                                                    <form method="GET"
-                                                        action="{{ route('invitation.course', ['token' => $institution_course->course->token]) }}"
-                                                        class="cursor-pointer rounded-3xl border-[3px] py-1 px-2 hover:border-yellow-400 hover:bg-red-700">
-                                                        <button type="submit"
-                                                            class="mx-3 font-semibold text-xl">Invitar
-                                                            alumno</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="p-2 h-32 bg-neutral-100 flex justify-center items-center rounded-b-lg">
-                                                <p class="text-lg text-neutral-400">
-                                                    {{ $institution_course->course->description }}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    @endif
-                                @endforeach
-
-                            </div>
+        <div class="space-y-6">
+            @foreach ($teacher as $teach)
+            <div class="collapse collapse-arrow bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-xl shadow-sm">
+                <input type="checkbox" checked /> 
+                <div class="collapse-title text-lg font-medium flex items-center gap-3">
+                    <span class="icon-[fluent--building-24-filled] text-gray-400"></span>
+                    {{ $teach->institution->name }}
+                </div>
+                
+                <div class="collapse-content">
+                    <div class="p-4 pt-0">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 class="font-semibold text-gray-600 dark:text-gray-300">Cursos Gestionados</h4>
+                            <form method="GET" action="{{ route('master.create-courses', ['id' => $teach->institution->id]) }}">
+                                @csrf
+                                <button class="btn btn-sm btn-ghost text-green-600 hover:bg-green-50 gap-2">
+                                    <span class="icon-[fluent--add-24-filled]"></span> Crear Curso
+                                </button>
+                            </form>
                         </div>
-                    @endforeach
 
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            @foreach ($institution_courses as $inst_course)
+                                @if ($inst_course->teacher->institution->id == $teach->institution->id)
+                                <div class="border border-gray-200 dark:border-neutral-600 rounded-lg p-4 hover:border-green-300 transition-colors bg-gray-50 dark:bg-neutral-700/30">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h5 class="font-bold text-gray-800 dark:text-white">{{ $inst_course->course->name }}</h5>
+                                        <span class="badge badge-success text-white text-xs">Activo</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">
+                                        {{ $inst_course->course->description }}
+                                    </p>
+                                    
+                                    <div class="flex gap-2">
+                                        <form method="GET" action="{{ route('invitation.course', ['token' => $inst_course->course->token]) }}" class="flex-1">
+                                            <button type="submit" class="btn btn-xs btn-outline w-full gap-1">
+                                                <span class="icon-[fluent--share-24-regular]"></span> Invitar
+                                            </button>
+                                        </form>
+                                        {{-- Add Link to Course Management if exists --}}
+                                        <!-- <a href="#" class="btn btn-xs btn-primary">Gestionar</a> -->
+                                    </div>
+                                </div>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        </section>
-
+            @endforeach
+        </div>
+    </section>
     @endif
 
 </div>
 
-</div>
+<!-- Modal: Join Class -->
+<dialog id="my_modal_join_class" class="modal">
+    <div class="modal-box bg-white dark:bg-neutral-800 text-gray-800 dark:text-white">
+        <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+            <span class="icon-[fluent--ticket-24-filled] text-yellow-500"></span>
+            Unirse a una Clase
+        </h3>
+        
+        <form action="{{ route('validation.inscription') }}" method="POST" class="space-y-4">
+            @csrf
+            
+            <div>
+                <label for="code-union" class="label">
+                    <span class="label-text font-medium text-gray-700 dark:text-gray-300">Código de Invitación</span>
+                </label>
+                <input type="text" name="code" id="code-union" 
+                    class="input input-bordered w-full focus:input-warning bg-gray-50 dark:bg-neutral-900" 
+                    placeholder="Ej: ABC-123-XYZ" required>
+                <p class="text-xs text-gray-500 mt-1">Pide el código a tu profesor.</p>
+            </div>
+
+            <div class="modal-action">
+                <button type="button" onclick="my_modal_join_class.close()" class="btn btn-ghost">Cancelar</button>
+                <button type="submit" class="btn bg-yellow-500 hover:bg-yellow-600 text-white border-none">
+                    Unirse
+                </button>
+            </div>
+        </form>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>

@@ -13,7 +13,7 @@
         <div class="h-12 opacity-0 duration-500" id="navigation-list">
             <div id="navigation-path" class="text-2xl breadcrumbs text-white">
                 <ul>
-                    <li><a href="{{ route('player', ['token' => $token]) }}">2024-BDA-AB</a></li>                    <li>{{ $name ?? 'Undefined' }}</li>
+                    <li><a href="{{ route('player.character', ['token' => $token]) }}">2024-BDA-AB</a></li>                    <li>{{ $name ?? 'Curso' }}</li>
                 </ul>
             </div>
         </div>

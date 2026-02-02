@@ -24,9 +24,9 @@ class CourseController extends Controller
         
         $course->token = $token;
         $course->save();
-        
-        $id_teacher=Teacher::where('id_institution', $request->id_institution)->first();
-        
+
+        $id_teacher=Teacher::where('id_user', Auth::user()->id)->first();
+
         Teachers_Course::create([
             'id_teacher' => $id_teacher->id,
             'id_course' => $course->id,
